@@ -18,7 +18,7 @@ export default function Nav() {
           <Link
             key={to}
             to={to}
-            className={`text-xs tracking-[0.18em] font-display font-normal transition-opacity ${
+            className={`text-4xl tracking-[0.18em] font-display font-normal transition-opacity ${
               active ? 'text-white' : 'text-white/60 hover:text-white/90'
             }`}
           >
