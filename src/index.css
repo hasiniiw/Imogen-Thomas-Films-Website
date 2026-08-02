@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;800&family=Inter:wght@300;400&family=Space+Mono:wght@400&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --font-display: 'Barlow Condensed', Impact, 'Arial Narrow', sans-serif;
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-mono: 'Space Mono', monospace;
+  --color-site-dark: #3d3c3a;
+  --color-site-darker: #2a2927;
+  --color-site-light: #b0aba4;
+  --color-site-footer: #252320;
+}
+
+html, body {
+  background-color: #3d3c3a;
+  color: #ffffff;
+}
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #555; border-radius: 2px; }
