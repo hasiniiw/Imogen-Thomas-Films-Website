@@ -70,7 +70,7 @@ export default function Home() {
       </section>
 
       {/* ── Full-width horizontal image ── */}
-      <div className="w-full bg-[#2a2927] overflow-hidden" style={{ height: 'clamp(280px, 38vw, 540px)' }}>
+      <div className="w-full bg-[#2a2927] overflow-hidden" style={{ height: 'clamp(260px, 32vw, 440px)' }}>
         <img
           src={locationImg}
           alt="Imogen Thomas standing on a street in a country town on location"
@@ -79,7 +79,7 @@ export default function Home() {
       </div>
 
       {/* ── Bio section ── */}
-      <section className="bg-[#525050] text-center px-6 py-16 md:py-24">
+      <section className="bg-[#525050] text-center px-6 pt-8 pb-16 md:pt-12 md:pb-24">
         <h2
           className="text-white text-3xl md:text-4xl font-display font-extrabold uppercase tracking-widest mb-6"
           style={{ fontFamily: 'var(--font-display)', fontWeight: 800 }}
