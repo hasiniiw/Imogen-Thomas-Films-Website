@@ -173,37 +173,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── Full-width horizontal image ── */}
-      <div className="w-full bg-[#2a2927] overflow-hidden" style={{ height: 'clamp(260px, 32vw, 440px)' }}>
-        <img
-          src={locationImg}
-          alt="Imogen Thomas standing on a street in a country town on location"
-          className="w-full h-full object-cover object-center"
-        />
-      </div>
-
-      {/* ── Bio section ── */}
-      <section className="bg-[#525050] text-center px-6 pt-8 pb-16 md:pt-12 md:pb-24">
-        <h2
-          className="text-white text-3xl md:text-4xl font-display font-extrabold uppercase tracking-widest mb-6"
-          style={{ fontFamily: 'var(--font-display)', fontWeight: 800 }}
-        >
-          Imogen Thomas
-        </h2>
-        <p className="text-white/75 text-sm font-sans font-light leading-relaxed max-w-md mx-auto mb-8">
-          Imogen Thomas is an Australian director and screenwriter known for her emotionally rich
-          storytelling and collaborative filmmaking style. Her work spans feature films, short
-          fiction, and documentaries—each marked by authenticity, compassion, and a deep commitment
-          to inclusive storytelling.
-        </p>
-        <Link
-          to="/about"
-          className="inline-block border border-white/60 text-white text-[11px] tracking-[0.25em] uppercase font-sans px-6 py-2 hover:bg-white hover:text-[#3d3c3a] transition-all duration-200"
-        >
-          Learn More
-        </Link>
-      </section>
-
       <Footer />
     </div>
   )
