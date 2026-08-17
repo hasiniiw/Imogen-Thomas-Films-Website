@@ -43,7 +43,7 @@ export default function Home() {
         </div>
 
         {/* Vignette */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/10 to-black/55 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/20 to-black/70 pointer-events-none" />
 
         {/* Nav */}
         <div className="relative z-10">
@@ -55,17 +55,17 @@ export default function Home() {
           
           <div className="flex flex-col items-center gap-3">
             <h1
-              className="text-white text-5xl md:text-7xl lg:text-[6rem] font-bold uppercase tracking-wider text-center drop-shadow-lg"
+              className="text-[#e9e6df] text-5xl md:text-7xl lg:text-[6rem] font-bold uppercase tracking-wider text-center drop-shadow-[0_8px_24px_rgba(0,0,0,0.7)]"
               style={{ fontFamily: 'var(--font-hero)' }}
             >
               Imogen Thomas
             </h1>
             
             <h2 
-              className="text-white/95 text-sm md:text-lg lg:text-xl font-bold uppercase tracking-[0.2em] text-center" 
+              className="text-[#e9e6df]/95 text-sm md:text-lg lg:text-xl font-bold uppercase tracking-[0.2em] text-center" 
               style={{ fontFamily: 'var(--font-sans)' }}
             >
-              Director <span className="mx-3 text-white/60 font-light">|</span> Screenwriter <span className="mx-3 text-white/60 font-light">|</span> Filmmaker
+              Director <span className="mx-3 text-[#e9e6df]/60 font-light">|</span> Screenwriter <span className="mx-3 text-[#e9e6df]/60 font-light">|</span> Filmmaker
             </h2>
           </div>
 
@@ -76,7 +76,7 @@ export default function Home() {
               { id: 'yt', icon: <><path d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 11.75a29 29 0 00.46 5.33 2.78 2.78 0 001.94 2c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 001.94-2 29 29 0 00.46-5.33 29 29 0 00-.46-5.33z" /><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" /></> },
               { id: 'ig', icon: <><rect x="2" y="2" width="20" height="20" rx="5" ry="5" /><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" /><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" /></> }
             ].map(social => (
-              <a key={social.id} href="#" className="w-10 h-10 rounded-full border border-white/60 flex items-center justify-center hover:bg-white hover:text-black transition-colors text-white">
+              <a key={social.id} href="#" className="w-10 h-10 rounded-full border border-[#e9e6df]/60 flex items-center justify-center hover:bg-[#e9e6df] hover:text-[#1a1917] transition-colors text-[#e9e6df]">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4">
                   {social.icon}
                 </svg>
@@ -87,10 +87,10 @@ export default function Home() {
 
         {/* Scroll cue */}
         <div className="relative z-10 flex flex-col items-center pb-10 gap-2">
-          <span className="text-white/60 text-[10px] tracking-[0.45em] uppercase font-sans">
+          <span className="text-[#e9e6df]/60 text-[10px] tracking-[0.45em] uppercase font-sans">
             Scroll
           </span>
-          <div className="w-px h-8 bg-white/30 animate-pulse" />
+          <div className="w-px h-8 bg-[#e9e6df]/30 animate-pulse" />
         </div>
       </section>
 
