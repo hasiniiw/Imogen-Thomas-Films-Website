@@ -96,7 +96,7 @@ export default function Home() {
 
       {/* ── About Section ── */}
       <section className="bg-[#e9e6df] text-[#2a2927] py-20 lg:py-0">
-        <div className="max-w-[1400px] mx-auto w-full flex flex-col lg:flex-row min-h-[80vh]">
+        <div className="max-w-[1400px] mx-auto w-full flex flex-col lg:flex-row min-h-screen">
           
           {/* Image Left */}
           <div className="w-full lg:w-[45%] p-6 lg:p-16 flex items-center justify-center">
