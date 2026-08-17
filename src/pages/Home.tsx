@@ -81,10 +81,10 @@ export default function Home() {
 
         {/* Scroll cue */}
         <div className="relative z-10 flex flex-col items-center pb-10 gap-2">
-          <span className="text-[#e9e6df]/60 text-[10px] tracking-[0.45em] uppercase font-sans">
+          <span className="inline-block text-[#e9e6df]/60 text-[10px] tracking-[0.45em] uppercase font-sans translate-y-14">
             Scroll
           </span>
-          <div className="w-px h-8 bg-[#e9e6df]/30 animate-pulse" />
+          <div className="w-px h-8 bg-transparent" />
         </div>
       </section>
 
