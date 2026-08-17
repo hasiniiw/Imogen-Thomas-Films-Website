@@ -95,16 +95,16 @@ export default function Home() {
       </section>
 
       {/* ── About Section ── */}
-      <section className="bg-[#e9e6df] text-[#2a2927] py-20 lg:py-0">
+      <section className="bg-[#1a1917] text-[#e9e6df] py-20 lg:py-0">
         <div className="max-w-[1400px] mx-auto w-full flex flex-col lg:flex-row min-h-screen">
           
           {/* Image Left */}
           <div className="w-full lg:w-[45%] p-6 lg:p-16 flex items-center justify-center">
-            <div className="w-full max-w-[500px] aspect-[4/5] relative overflow-hidden bg-[#d1cec7]">
+            <div className="w-full max-w-[500px] aspect-[4/5] relative overflow-hidden bg-[#111]">
               <img
                 src={aboutImg}
                 alt="Imogen Thomas portrait"
-                className="w-full h-full object-cover grayscale brightness-90 contrast-125"
+                className="w-full h-full object-cover grayscale contrast-125 opacity-90"
               />
             </div>
           </div>
@@ -129,32 +129,32 @@ export default function Home() {
               </h2>
               
               {/* Paragraphs */}
-              <div className="text-[#525050] text-[15px] font-sans font-light leading-[1.8] space-y-6 mb-12">
+              <div className="text-white/70 text-[15px] font-sans font-light leading-[1.8] space-y-6 mb-12">
                 <p>
                   Imogen Thomas is an Australian director and screenwriter known for her emotionally rich storytelling and collaborative filmmaking style. Her work spans feature films, short fiction, and documentaries—each marked by authenticity, compassion, and a deep commitment to inclusive storytelling.
                 </p>
               </div>
               
               {/* Divider */}
-              <div className="w-full h-px bg-[#d1cec7] mb-12"></div>
+              <div className="w-full h-px bg-white/10 mb-12"></div>
               
               {/* Stats */}
               <div className="grid grid-cols-3 gap-6 mb-16">
                 <div>
                   <div className="text-4xl mb-3 font-bold" style={{ fontFamily: 'var(--font-hero)' }}>15</div>
-                  <div className="text-[#8c8a86] text-[9px] tracking-[0.25em] uppercase font-sans leading-relaxed font-bold">
+                  <div className="text-white/40 text-[9px] tracking-[0.25em] uppercase font-sans leading-relaxed font-bold">
                     Years<br />Directing
                   </div>
                 </div>
                 <div>
                   <div className="text-4xl mb-3 font-bold" style={{ fontFamily: 'var(--font-hero)' }}>40+</div>
-                  <div className="text-[#8c8a86] text-[9px] tracking-[0.25em] uppercase font-sans leading-relaxed font-bold">
+                  <div className="text-white/40 text-[9px] tracking-[0.25em] uppercase font-sans leading-relaxed font-bold">
                     Brand & Agency<br />Clients
                   </div>
                 </div>
                 <div>
                   <div className="text-4xl mb-3 font-bold" style={{ fontFamily: 'var(--font-hero)' }}>9</div>
-                  <div className="text-[#8c8a86] text-[9px] tracking-[0.25em] uppercase font-sans leading-relaxed font-bold">
+                  <div className="text-white/40 text-[9px] tracking-[0.25em] uppercase font-sans leading-relaxed font-bold">
                     Festival<br />Selections
                   </div>
                 </div>
@@ -163,7 +163,7 @@ export default function Home() {
               {/* CTA Link */}
               <Link 
                 to="/about" 
-                className="inline-block text-[#2a2927] text-[10px] tracking-[0.3em] uppercase font-sans hover:text-[#9c6a46] transition-colors font-medium"
+                className="inline-block text-[#e9e6df] text-[10px] tracking-[0.3em] uppercase font-sans hover:text-[#9c6a46] transition-colors font-medium"
               >
                 Read the full story
               </Link>
