@@ -164,7 +164,7 @@ export default function Home() {
               {/* CTA Link */}
               <Link 
                 to="/about" 
-                className="inline-block text-[#e9e6df] text-[10px] tracking-[0.3em] uppercase font-sans hover:text-[#9c6a46] transition-colors font-medium"
+                className="inline-block text-[#e9e6df] text-[10px] tracking-[0.3em] uppercase font-sans hover:text-[#9c6a46] transition-colors font-medium border-b border-[#e9e6df]/30 pb-1 hover:border-[#9c6a46]"
               >
                 Read the full story
               </Link>
