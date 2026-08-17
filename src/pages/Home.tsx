@@ -3,8 +3,9 @@ import { Link } from 'react-router-dom'
 import Nav from '../components/Nav'
 import Footer from '../components/Footer'
 import heroImg from '../imports/hero-camera-hq.png'
-import locationImg from '../imports/Emu_Runner-2533__1_.jpg'
+import locationImg from '../imports/emu-feeding.jpg'
 import aboutImg from '../imports/Imogen_Thomas.jpeg'
+import quietHourImg from '../imports/quiet-hour.jpg'
 
 export default function Home() {
   const heroRef = useRef<HTMLElement>(null)
@@ -170,6 +171,79 @@ export default function Home() {
             </div>
           </div>
           
+        </div>
+      </section>
+
+      {/* ── Selected Works Section ── */}
+      <section className="bg-[#141311] text-[#e9e6df] py-20 lg:py-0 min-h-screen flex flex-col justify-center">
+        <div className="max-w-[1400px] mx-auto w-full px-6 lg:px-16">
+          
+          {/* Section Header */}
+          <div className="flex items-center justify-between mb-16">
+            <div className="flex flex-col gap-4">
+              <div className="flex items-center gap-4 text-[#9c6a46] text-xs font-sans tracking-[0.2em] uppercase">
+                <span>02</span>
+                <div className="w-12 h-px bg-[#9c6a46]/40"></div>
+                <span>Selected Works</span>
+              </div>
+              <h2 className="text-3xl md:text-5xl font-bold uppercase tracking-tight" style={{ fontFamily: 'var(--font-hero)' }}>
+                Featured Projects
+              </h2>
+            </div>
+            
+            <Link 
+              to="/work" 
+              className="hidden md:inline-block text-[#e9e6df] text-[10px] tracking-[0.3em] uppercase font-sans hover:text-[#9c6a46] transition-colors font-medium border-b border-[#e9e6df]/30 pb-1 hover:border-[#9c6a46]"
+            >
+              View Full Portfolio
+            </Link>
+          </div>
+
+          {/* Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 max-w-5xl mx-auto">
+            
+            {/* Project 1 */}
+            <Link to="/work/emu-runner" className="group block relative aspect-[4/3] overflow-hidden bg-black">
+              <img 
+                src={locationImg} 
+                alt="Emu Runner" 
+                className="w-full h-full object-cover opacity-90 group-hover:opacity-40 group-hover:scale-105 transition-all duration-700 ease-out" 
+              />
+              <div className="absolute inset-0 p-8 flex flex-col justify-end">
+                <div className="translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+                  <h3 className="text-2xl font-bold uppercase tracking-wider mb-2 text-white" style={{ fontFamily: 'var(--font-hero)' }}>Emu Runner</h3>
+                  <p className="text-white/80 text-xs tracking-[0.2em] uppercase font-sans">Feature Film</p>
+                </div>
+              </div>
+            </Link>
+
+            {/* Project 2 */}
+            <Link to="/work/quiet-hour" className="group block relative aspect-[4/3] overflow-hidden bg-black">
+              <img 
+                src={quietHourImg} 
+                alt="Quiet Hour Project" 
+                className="w-full h-full object-cover opacity-90 group-hover:opacity-40 group-hover:scale-105 transition-all duration-700 ease-out" 
+              />
+              <div className="absolute inset-0 p-8 flex flex-col justify-end">
+                <div className="translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+                  <h3 className="text-2xl font-bold uppercase tracking-wider mb-2 text-white" style={{ fontFamily: 'var(--font-hero)' }}>Quiet Hour</h3>
+                  <p className="text-white/80 text-xs tracking-[0.2em] uppercase font-sans">Film</p>
+                </div>
+              </div>
+            </Link>
+
+          </div>
+
+          {/* Mobile CTA */}
+          <div className="mt-12 text-center md:hidden">
+            <Link 
+              to="/work" 
+              className="inline-block text-[#e9e6df] text-[10px] tracking-[0.3em] uppercase font-sans hover:text-[#9c6a46] transition-colors font-medium border-b border-[#e9e6df]/30 pb-1"
+            >
+              View Full Portfolio
+            </Link>
+          </div>
+
         </div>
       </section>
 
