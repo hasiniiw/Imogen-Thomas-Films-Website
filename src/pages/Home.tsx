@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
+import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import Nav from '../components/Nav'
 import Footer from '../components/Footer'
@@ -54,7 +55,12 @@ export default function Home() {
         {/* Hero Content */}
         <div className="relative z-10 flex-1 flex flex-col items-center justify-end pb-40 gap-8">
           
-          <div className="flex flex-col items-center gap-3">
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
+            className="flex flex-col items-center gap-3"
+          >
             <h1
               className="text-[#e9e6df] text-5xl md:text-7xl lg:text-[6rem] font-bold uppercase tracking-wider text-center drop-shadow-[0_8px_24px_rgba(0,0,0,0.7)]"
               style={{ fontFamily: 'var(--font-hero)' }}
@@ -68,7 +74,7 @@ export default function Home() {
             >
               Director <span className="mx-3 text-[#e9e6df]/60 font-light">|</span> Screenwriter <span className="mx-3 text-[#e9e6df]/60 font-light">|</span> Filmmaker
             </h2>
-          </div>
+          </motion.div>
 
           <div className="flex items-center gap-4 mt-4">
             {[
@@ -101,18 +107,30 @@ export default function Home() {
           
           {/* Image Left */}
           <div className="w-full lg:w-[45%] p-6 lg:p-16 flex items-center justify-center">
-            <div className="w-full max-w-[500px] aspect-[4/5] relative overflow-hidden bg-[#111]">
+            <motion.div 
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+              className="w-full max-w-[500px] aspect-[4/5] relative overflow-hidden bg-[#111]"
+            >
               <img
                 src={aboutImg}
                 alt="Imogen Thomas portrait"
                 className="w-full h-full object-cover grayscale contrast-125 opacity-90"
               />
-            </div>
+            </motion.div>
           </div>
           
           {/* Content Right */}
           <div className="w-full lg:w-[55%] p-8 lg:p-20 flex flex-col justify-center">
-            <div className="max-w-xl">
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
+              className="max-w-xl"
+            >
               {/* Section Header */}
               <div className="flex items-center gap-4 mb-8 text-[#9c6a46] text-xs font-sans tracking-[0.2em] uppercase">
                 <span>01</span>
@@ -162,7 +180,7 @@ export default function Home() {
               >
                 Read the full story
               </Link>
-            </div>
+            </motion.div>
           </div>
           
         </div>
@@ -197,34 +215,48 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 max-w-5xl mx-auto">
             
             {/* Project 1 */}
-            <Link to="/work/emu-runner" className="group block relative aspect-[4/3] overflow-hidden bg-black">
-              <img 
-                src={locationImg} 
-                alt="Emu Runner" 
-                className="w-full h-full object-cover opacity-90 group-hover:opacity-40 group-hover:scale-105 transition-all duration-700 ease-out" 
-              />
-              <div className="absolute inset-0 p-8 flex flex-col justify-end">
-                <div className="translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
-                  <h3 className="text-2xl font-bold uppercase tracking-wider mb-2 text-white" style={{ fontFamily: 'var(--font-hero)' }}>Emu Runner</h3>
-                  <p className="text-white/80 text-xs tracking-[0.2em] uppercase font-sans">Feature Film</p>
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+            >
+              <Link to="/work/emu-runner" className="group block relative aspect-[4/3] overflow-hidden bg-black h-full">
+                <img 
+                  src={locationImg} 
+                  alt="Emu Runner" 
+                  className="w-full h-full object-cover opacity-90 group-hover:opacity-40 group-hover:scale-105 transition-all duration-700 ease-out" 
+                />
+                <div className="absolute inset-0 p-8 flex flex-col justify-end">
+                  <div className="translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+                    <h3 className="text-2xl font-bold uppercase tracking-wider mb-2 text-white" style={{ fontFamily: 'var(--font-hero)' }}>Emu Runner</h3>
+                    <p className="text-white/80 text-xs tracking-[0.2em] uppercase font-sans">Feature Film</p>
+                  </div>
                 </div>
-              </div>
-            </Link>
+              </Link>
+            </motion.div>
 
             {/* Project 2 */}
-            <Link to="/work/quiet-hour" className="group block relative aspect-[4/3] overflow-hidden bg-black">
-              <img 
-                src={quietHourImg} 
-                alt="Quiet Hour Project" 
-                className="w-full h-full object-cover opacity-90 group-hover:opacity-40 group-hover:scale-105 transition-all duration-700 ease-out" 
-              />
-              <div className="absolute inset-0 p-8 flex flex-col justify-end">
-                <div className="translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
-                  <h3 className="text-2xl font-bold uppercase tracking-wider mb-2 text-white" style={{ fontFamily: 'var(--font-hero)' }}>Quiet Hour</h3>
-                  <p className="text-white/80 text-xs tracking-[0.2em] uppercase font-sans">Film</p>
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
+            >
+              <Link to="/work/quiet-hour" className="group block relative aspect-[4/3] overflow-hidden bg-black h-full">
+                <img 
+                  src={quietHourImg} 
+                  alt="Quiet Hour Project" 
+                  className="w-full h-full object-cover opacity-90 group-hover:opacity-40 group-hover:scale-105 transition-all duration-700 ease-out" 
+                />
+                <div className="absolute inset-0 p-8 flex flex-col justify-end">
+                  <div className="translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+                    <h3 className="text-2xl font-bold uppercase tracking-wider mb-2 text-white" style={{ fontFamily: 'var(--font-hero)' }}>Quiet Hour</h3>
+                    <p className="text-white/80 text-xs tracking-[0.2em] uppercase font-sans">Film</p>
+                  </div>
                 </div>
-              </div>
-            </Link>
+              </Link>
+            </motion.div>
 
           </div>
 
