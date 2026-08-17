@@ -53,7 +53,7 @@ export default function Home() {
         </div>
 
         {/* Hero Content */}
-        <div className="relative z-10 flex-1 flex flex-col items-center justify-end pb-40 gap-8">
+        <div className="relative z-10 flex-1 flex flex-col items-center justify-center gap-8">
           
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
@@ -76,20 +76,7 @@ export default function Home() {
             </h2>
           </motion.div>
 
-          <div className="flex items-center gap-4 mt-4">
-            {[
-              { id: 'fb', icon: <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" /> },
-              { id: 'tw', icon: <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z" /> },
-              { id: 'yt', icon: <><path d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 11.75a29 29 0 00.46 5.33 2.78 2.78 0 001.94 2c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 001.94-2 29 29 0 00.46-5.33 29 29 0 00-.46-5.33z" /><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" /></> },
-              { id: 'ig', icon: <><rect x="2" y="2" width="20" height="20" rx="5" ry="5" /><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" /><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" /></> }
-            ].map(social => (
-              <a key={social.id} href="#" className="w-10 h-10 rounded-full border border-[#e9e6df]/60 flex items-center justify-center hover:bg-[#e9e6df] hover:text-[#1a1917] transition-colors text-[#e9e6df]">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4">
-                  {social.icon}
-                </svg>
-              </a>
-            ))}
-          </div>
+
         </div>
 
         {/* Scroll cue */}
