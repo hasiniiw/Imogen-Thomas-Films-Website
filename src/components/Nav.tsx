@@ -25,8 +25,8 @@ export default function Nav() {
         </div>
       </Link>
 
-      {/* Navigation Links (Centered absolutely on desktop) */}
-      <div className="flex gap-6 md:gap-8 md:absolute md:left-1/2 md:-translate-x-1/2 z-0">
+      {/* Navigation Links (Right aligned) */}
+      <div className="flex gap-6 md:gap-8 z-0">
         {links.map(({ label, to }) => {
           const active = pathname === to || (to !== '/' && pathname.startsWith(to))
           return (
