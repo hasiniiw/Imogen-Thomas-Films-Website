@@ -33,8 +33,10 @@ export default function Nav() {
             <Link
               key={to}
               to={to}
-              className={`text-xs md:text-sm tracking-[0.2em] font-light transition-all ${
-                active ? 'text-white' : 'text-white/70 hover:text-white'
+              className={`text-xs md:text-sm tracking-[0.2em] font-light transition-all border-b pb-1 ${
+                active 
+                  ? 'text-white border-white/30' 
+                  : 'text-white/70 border-transparent hover:text-[#9c6a46] hover:border-[#9c6a46]'
               }`}
               style={{ fontFamily: 'var(--font-hero)' }}
             >
