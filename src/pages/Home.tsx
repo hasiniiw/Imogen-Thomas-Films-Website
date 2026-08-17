@@ -140,17 +140,11 @@ export default function Home() {
               <div className="w-full h-px bg-white/10 mb-12"></div>
               
               {/* Stats */}
-              <div className="grid grid-cols-3 gap-6 mb-16">
+              <div className="flex gap-12 md:gap-20 mb-16">
                 <div>
                   <div className="text-4xl mb-3 font-bold" style={{ fontFamily: 'var(--font-hero)' }}>15</div>
                   <div className="text-white/40 text-[9px] tracking-[0.25em] uppercase font-sans leading-relaxed font-bold">
                     Years<br />Directing
-                  </div>
-                </div>
-                <div>
-                  <div className="text-4xl mb-3 font-bold" style={{ fontFamily: 'var(--font-hero)' }}>40+</div>
-                  <div className="text-white/40 text-[9px] tracking-[0.25em] uppercase font-sans leading-relaxed font-bold">
-                    Brand & Agency<br />Clients
                   </div>
                 </div>
                 <div>
