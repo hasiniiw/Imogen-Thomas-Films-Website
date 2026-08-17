@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-6 text-[11px] tracking-[0.25em] uppercase font-sans text-white/60">
           <span>© 2026 Imogen Thomas</span>
           <span className="hidden sm:inline text-white/30">|</span>
-          <span>Director & Screenwriter</span>
+          <span>Director, Screenwriter & Filmmaker</span>
         </div>
         
         {/* Acknowledgment of Country */}
