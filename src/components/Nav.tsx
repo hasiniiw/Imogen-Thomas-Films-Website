@@ -33,7 +33,7 @@ export default function Nav() {
             <Link
               key={to}
               to={to}
-              className={`text-xs md:text-sm tracking-[0.2em] font-light transition-all border-b pb-1 ${
+              className={`text-[10px] md:text-xs tracking-[0.2em] font-light transition-all border-b pb-1 ${
                 active 
                   ? 'text-white border-white/30' 
                   : 'text-white/70 border-transparent hover:text-[#9c6a46] hover:border-[#9c6a46]'
