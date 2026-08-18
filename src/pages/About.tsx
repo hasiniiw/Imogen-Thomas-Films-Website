@@ -46,7 +46,7 @@ export default function About() {
           <div className="absolute inset-0 bg-gradient-to-b from-sky-500/30 via-transparent to-transparent mix-blend-overlay pointer-events-none" />
           {/* Gradients to ensure text readability */}
           <div className="absolute inset-0 bg-gradient-to-r from-[#141311]/95 via-[#141311]/40 to-transparent pointer-events-none" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#141311]/80 via-transparent to-transparent pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#1a1917] via-[#1a1917]/20 to-transparent pointer-events-none" />
           {/* Darken top right for nav readability */}
           <div className="absolute inset-0 bg-gradient-to-bl from-[#141311]/80 via-transparent to-transparent pointer-events-none" />
         </div>
