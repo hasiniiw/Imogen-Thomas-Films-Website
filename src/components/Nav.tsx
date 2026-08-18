@@ -33,14 +33,17 @@ export default function Nav() {
             <Link
               key={to}
               to={to}
-              className={`text-[10px] md:text-xs tracking-[0.2em] font-light transition-all border-b pb-1 ${
-                active 
-                  ? 'text-white border-white/30' 
-                  : 'text-white/70 border-transparent hover:text-[#9c6a46] hover:border-[#9c6a46]'
+              className={`group relative text-[10px] md:text-xs tracking-[0.2em] font-light pb-1 transition-colors ${
+                active ? 'text-white' : 'text-white/70 hover:text-[#c99138]'
               }`}
               style={{ fontFamily: 'var(--font-hero)' }}
             >
               {label}
+              <span 
+                className={`absolute left-0 bottom-0 w-full h-px transition-transform duration-300 ease-out ${
+                  active ? 'bg-white/30 scale-x-100 origin-left' : 'bg-[#c99138] scale-x-0 origin-right group-hover:scale-x-100 group-hover:origin-left'
+                }`}
+              />
             </Link>
           )
         })}

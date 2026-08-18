@@ -163,9 +163,11 @@ export default function Home() {
               {/* CTA Link */}
               <Link 
                 to="/about" 
-                className="inline-block text-[#e9e6df] text-[10px] tracking-[0.3em] uppercase font-sans hover:text-[#9c6a46] transition-colors font-medium border-b border-[#e9e6df]/30 pb-1 hover:border-[#9c6a46]"
+                className="group relative inline-block text-[#e9e6df] text-[10px] tracking-[0.3em] uppercase font-sans hover:text-[#c99138] transition-colors font-medium pb-1"
               >
                 Read the full story
+                <span className="absolute left-0 bottom-0 w-full h-px bg-[#e9e6df]/30" />
+                <span className="absolute left-0 bottom-0 w-full h-px bg-[#c99138] scale-x-0 origin-right transition-transform duration-300 ease-out group-hover:scale-x-100 group-hover:origin-left" />
               </Link>
             </motion.div>
           </div>
@@ -192,9 +194,11 @@ export default function Home() {
             
             <Link 
               to="/work" 
-              className="hidden md:inline-block text-[#e9e6df] text-[10px] tracking-[0.3em] uppercase font-sans hover:text-[#9c6a46] transition-colors font-medium border-b border-[#e9e6df]/30 pb-1 hover:border-[#9c6a46]"
+              className="group relative hidden md:inline-block text-[#e9e6df] text-[10px] tracking-[0.3em] uppercase font-sans hover:text-[#c99138] transition-colors font-medium pb-1"
             >
               View Full Portfolio
+              <span className="absolute left-0 bottom-0 w-full h-px bg-[#e9e6df]/30" />
+              <span className="absolute left-0 bottom-0 w-full h-px bg-[#c99138] scale-x-0 origin-right transition-transform duration-300 ease-out group-hover:scale-x-100 group-hover:origin-left" />
             </Link>
           </div>
 
@@ -251,9 +255,11 @@ export default function Home() {
           <div className="mt-12 text-center md:hidden">
             <Link 
               to="/work" 
-              className="inline-block text-[#e9e6df] text-[10px] tracking-[0.3em] uppercase font-sans hover:text-[#9c6a46] transition-colors font-medium border-b border-[#e9e6df]/30 pb-1"
+              className="group relative inline-block text-[#e9e6df] text-[10px] tracking-[0.3em] uppercase font-sans hover:text-[#c99138] transition-colors font-medium pb-1"
             >
               View Full Portfolio
+              <span className="absolute left-0 bottom-0 w-full h-px bg-[#e9e6df]/30" />
+              <span className="absolute left-0 bottom-0 w-full h-px bg-[#c99138] scale-x-0 origin-right transition-transform duration-300 ease-out group-hover:scale-x-100 group-hover:origin-left" />
             </Link>
           </div>
 
