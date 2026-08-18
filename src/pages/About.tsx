@@ -1,33 +1,40 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Nav from '../components/Nav'
 import Footer from '../components/Footer'
 import aboutImg from '../imports/about-hero-2.jpg'
+import bts1 from '../imports/bts-1.jpg'
+import bts2 from '../imports/bts-2.jpg'
+import bts3 from '../imports/bts-3.jpg'
+import bts4 from '../imports/bts-4.jpg'
 
 const SLIDES = [
   {
-    src: 'https://images.unsplash.com/photo-1645760631046-bcd6bae5d640?w=700&h=500&fit=crop&auto=format',
-    alt: 'Emus in Australian outback field',
+    src: bts1,
+    alt: 'Crew filming emus',
   },
   {
-    src: 'https://images.unsplash.com/photo-1663256936394-ee943b28b695?w=700&h=500&fit=crop&auto=format',
-    alt: 'Alpine mountain landscape',
+    src: bts2,
+    alt: 'Crew filming with children on location',
   },
   {
-    src: 'https://images.unsplash.com/photo-1768885509990-1ebfd3e0257b?w=700&h=500&fit=crop&auto=format',
-    alt: 'Filmmakers operating camera equipment',
+    src: bts3,
+    alt: 'Director and crew member outdoors',
   },
   {
-    src: 'https://images.unsplash.com/photo-1783867174851-8b686b7e45ea?w=700&h=500&fit=crop&auto=format',
-    alt: 'Film crew on set outdoors',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1519122767930-5aef208890ac?w=700&h=500&fit=crop&auto=format',
-    alt: 'People around a campfire',
+    src: bts4,
+    alt: 'Crew filming on a hill',
   },
 ]
 
 export default function About() {
-  const [slide, setSlide] = useState(1)
+  const [slide, setSlide] = useState(0)
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setSlide((prev) => (prev + 1) % SLIDES.length)
+    }, 4000)
+    return () => clearInterval(timer)
+  }, [])
 
   const activeSlide = SLIDES[slide]
 
@@ -141,7 +148,7 @@ export default function About() {
                 <img 
                   src={activeSlide.src} 
                   alt={activeSlide.alt} 
-                  className="w-full h-full object-cover grayscale contrast-125 opacity-80 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-700" 
+                  className="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-all duration-700" 
                 />
               </div>
               {/* Dots */}
