@@ -58,9 +58,6 @@ export default function About() {
         <div className="max-w-[1400px] mx-auto w-full px-6 lg:px-16 flex-1 flex flex-col justify-center relative z-10 pt-20">
           
           <div className="w-full flex flex-col items-start text-left mb-16">
-             <div className="flex items-center gap-3 mb-6 text-[#9c6a46] text-[9px] font-sans tracking-[0.4em] uppercase font-bold">
-                DIRECTOR <span className="text-white/30">·</span> SCREENWRITER
-             </div>
              <h1 
                className="text-[#e9e6df] text-6xl md:text-7xl lg:text-[7rem] font-bold uppercase tracking-tight leading-[0.95] drop-shadow-lg" 
                style={{ fontFamily: 'var(--font-hero)' }}
@@ -74,9 +71,9 @@ export default function About() {
           
           {/* Lower Content */}
           <div className="w-full flex flex-col md:flex-row justify-between items-start gap-8 md:gap-12">
-            <h2 className="text-[#e9e6df] text-2xl md:text-3xl tracking-wide font-normal drop-shadow-sm" style={{ fontFamily: 'var(--font-hero)' }}>
-              Imogen Thomas
-            </h2>
+            <div className="text-[#9c6a46] text-[9px] md:text-[10px] tracking-[0.4em] uppercase font-sans font-medium">
+              Director <span className="text-white/30 mx-1 md:mx-2">·</span> Screenwriter <span className="text-white/30 mx-1 md:mx-2">·</span> Filmmaker
+            </div>
             <div className="w-full max-w-[500px]">
               <p className="text-white/60 text-sm md:text-[15px] font-light leading-[1.9] drop-shadow-sm">
                 Fifteen years of feature films, short fiction, and documentaries — shot on location, with an authentic touch, and a deep commitment to inclusive storytelling.
