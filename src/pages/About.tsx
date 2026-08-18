@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import Nav from '../components/Nav'
 import Footer from '../components/Footer'
-import aboutImg from '../imports/about-new.jpg'
+import aboutImg from '../imports/about-hero-2.jpg'
 
 const SLIDES = [
   {
@@ -34,29 +34,42 @@ export default function About() {
   return (
     <div className="bg-[#1a1917] text-[#e9e6df] min-h-screen flex flex-col font-sans">
       {/* Hero */}
-      <section className="relative h-[60vh] md:h-[70vh] flex flex-col bg-[#141311] overflow-hidden">
-        <img
-          src={aboutImg}
-          alt="Imogen Thomas"
-          className="absolute inset-0 w-full h-full object-cover contrast-125 opacity-40"
-          style={{ objectPosition: 'center 20%' }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-[#1a1917] pointer-events-none" />
-        <div className="relative z-10">
+      <section className="relative flex flex-col min-h-[70vh] border-b border-white/5 overflow-hidden bg-[#141311]">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src={aboutImg}
+            alt="Imogen Thomas background"
+            className="w-full h-full object-cover object-center opacity-80"
+          />
+          {/* Gradients to ensure text readability on the left, and fade nicely into the page below */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#141311]/95 via-[#141311]/60 to-transparent pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-[#1a1917] pointer-events-none" />
+        </div>
+
+        <div className="relative z-20">
           <Nav />
         </div>
-        <div className="relative z-10 flex-1 flex flex-col items-center justify-center pb-20">
-          <h1
-            className="text-[#e9e6df] text-5xl md:text-7xl font-bold uppercase tracking-wider text-center drop-shadow-[0_8px_24px_rgba(0,0,0,0.7)]"
-            style={{ fontFamily: 'var(--font-hero)' }}
-          >
-            About
-          </h1>
-          <h2 
-            className="text-[#e9e6df]/80 text-xs md:text-sm uppercase tracking-[0.3em] text-center mt-6" 
-          >
-            The Director
-          </h2>
+        
+        <div className="max-w-[1400px] mx-auto w-full px-6 lg:px-16 pt-12 pb-20 md:pt-20 md:pb-32 flex-1 flex flex-col justify-center relative z-10">
+          
+          {/* Text Left */}
+          <div className="w-full md:w-1/2 flex flex-col items-start text-left">
+             <div className="flex items-center gap-4 mb-8 text-[#9c6a46] text-[10px] font-sans tracking-[0.3em] uppercase">
+                <div className="w-8 h-px bg-[#9c6a46]/50"></div>
+                <span>The Director</span>
+             </div>
+             <h1 
+               className="text-[#e9e6df] text-6xl md:text-7xl lg:text-[5.5rem] font-bold uppercase tracking-tight leading-[0.95] mb-8" 
+               style={{ fontFamily: 'var(--font-hero)' }}
+             >
+               About<br/>Imogen
+             </h1>
+             <p className="text-white/80 text-sm md:text-[15px] font-light leading-[1.8] max-w-md">
+               A passionate filmmaker dedicated to inclusive, emotionally resonant storytelling drawn from the heart of the Australian landscape.
+             </p>
+          </div>
+          
         </div>
       </section>
 
