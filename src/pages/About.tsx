@@ -45,8 +45,8 @@ export default function About() {
           {/* Sky enhancement overlay */}
           <div className="absolute inset-0 bg-gradient-to-b from-sky-500/30 via-transparent to-transparent mix-blend-overlay pointer-events-none" />
           {/* Gradients to ensure text readability */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#141311]/95 via-[#141311]/40 to-transparent pointer-events-none" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#1a1917] via-[#1a1917]/40 to-transparent pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#141311]/80 via-[#141311]/20 to-transparent pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#1a1917] from-10% via-[#1a1917]/80 via-30% to-transparent pointer-events-none" />
           {/* Darken top right for nav readability */}
           <div className="absolute inset-0 bg-gradient-to-bl from-[#141311]/80 via-transparent to-transparent pointer-events-none" />
         </div>
@@ -83,12 +83,7 @@ export default function About() {
           
         </div>
         
-        {/* Scroll Indicator */}
-        <div className="max-w-[1400px] mx-auto w-full px-6 lg:px-16 pb-12 relative z-10">
-          <span className="text-white/30 text-[9px] tracking-[0.4em] uppercase font-sans">
-            Scroll
-          </span>
-        </div>
+
       </section>
 
       {/* Main Content Area */}
