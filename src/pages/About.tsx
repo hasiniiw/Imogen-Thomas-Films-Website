@@ -34,42 +34,63 @@ export default function About() {
   return (
     <div className="bg-[#1a1917] text-[#e9e6df] min-h-screen flex flex-col font-sans">
       {/* Hero */}
-      <section className="relative flex flex-col min-h-[70vh] border-b border-white/5 overflow-hidden bg-[#141311]">
+      <section className="relative flex flex-col min-h-screen overflow-hidden bg-[#141311]">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <img
             src={aboutImg}
             alt="Imogen Thomas background"
-            className="w-full h-full object-cover object-center opacity-80"
+            className="w-full h-full object-cover object-center opacity-90 saturate-[1.25]"
           />
-          {/* Gradients to ensure text readability on the left, and fade nicely into the page below */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#141311]/95 via-[#141311]/60 to-transparent pointer-events-none" />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-[#1a1917] pointer-events-none" />
+          {/* Sky enhancement overlay */}
+          <div className="absolute inset-0 bg-gradient-to-b from-sky-500/30 via-transparent to-transparent mix-blend-overlay pointer-events-none" />
+          {/* Gradients to ensure text readability */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#141311]/95 via-[#141311]/40 to-transparent pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#141311]/80 via-transparent to-transparent pointer-events-none" />
+          {/* Darken top right for nav readability */}
+          <div className="absolute inset-0 bg-gradient-to-bl from-[#141311]/80 via-transparent to-transparent pointer-events-none" />
         </div>
 
         <div className="relative z-20">
           <Nav />
         </div>
         
-        <div className="max-w-[1400px] mx-auto w-full px-6 lg:px-16 pt-12 pb-20 md:pt-20 md:pb-32 flex-1 flex flex-col justify-center relative z-10">
+        <div className="max-w-[1400px] mx-auto w-full px-6 lg:px-16 flex-1 flex flex-col justify-center relative z-10 pt-20">
           
-          {/* Text Left */}
-          <div className="w-full md:w-1/2 flex flex-col items-start text-left">
-             <div className="flex items-center gap-4 mb-8 text-[#9c6a46] text-[10px] font-sans tracking-[0.3em] uppercase">
-                <div className="w-8 h-px bg-[#9c6a46]/50"></div>
-                <span>The Director</span>
+          <div className="w-full flex flex-col items-start text-left mb-16">
+             <div className="flex items-center gap-3 mb-6 text-[#9c6a46] text-[9px] font-sans tracking-[0.4em] uppercase font-bold">
+                DIRECTOR <span className="text-white/30">·</span> SCREENWRITER
              </div>
              <h1 
-               className="text-[#e9e6df] text-6xl md:text-7xl lg:text-[5.5rem] font-bold uppercase tracking-tight leading-[0.95] mb-8" 
+               className="text-[#e9e6df] text-6xl md:text-7xl lg:text-[7rem] font-bold uppercase tracking-tight leading-[0.95] drop-shadow-lg" 
                style={{ fontFamily: 'var(--font-hero)' }}
              >
                About<br/>Imogen
              </h1>
-             <p className="text-white/80 text-sm md:text-[15px] font-light leading-[1.8] max-w-md">
-               A passionate filmmaker dedicated to inclusive, emotionally resonant storytelling drawn from the heart of the Australian landscape.
-             </p>
           </div>
           
+          {/* Divider Line */}
+          <div className="w-full h-px bg-white/10 mb-10" />
+          
+          {/* Lower Content */}
+          <div className="w-full flex flex-col md:flex-row justify-between items-start gap-8 md:gap-12">
+            <h2 className="text-[#e9e6df] text-2xl md:text-3xl tracking-wide font-normal drop-shadow-sm" style={{ fontFamily: 'var(--font-hero)' }}>
+              Imogen Thomas
+            </h2>
+            <div className="w-full max-w-[500px]">
+              <p className="text-white/60 text-sm md:text-[15px] font-light leading-[1.9] drop-shadow-sm">
+                Fifteen years of feature films, short fiction, and documentaries — shot on location, with an authentic touch, and a deep commitment to inclusive storytelling.
+              </p>
+            </div>
+          </div>
+          
+        </div>
+        
+        {/* Scroll Indicator */}
+        <div className="max-w-[1400px] mx-auto w-full px-6 lg:px-16 pb-12 relative z-10">
+          <span className="text-white/30 text-[9px] tracking-[0.4em] uppercase font-sans">
+            Scroll
+          </span>
         </div>
       </section>
 
