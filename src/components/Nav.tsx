@@ -34,7 +34,7 @@ export default function Nav() {
               key={to}
               to={to}
               className={`group relative text-[10px] md:text-xs tracking-[0.2em] font-light pb-1 transition-colors ${
-                active ? 'text-white' : 'text-white/70 hover:text-[#c99138]'
+                active ? 'text-white' : 'text-white/70 hover:text-white'
               }`}
               style={{ fontFamily: 'var(--font-hero)' }}
             >
