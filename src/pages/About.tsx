@@ -32,7 +32,7 @@ export default function About() {
   useEffect(() => {
     const timer = setInterval(() => {
       setSlide((prev) => (prev + 1) % SLIDES.length)
-    }, 4000)
+    }, 2500)
     return () => clearInterval(timer)
   }, [])
 
