@@ -94,7 +94,7 @@ export default function About() {
       </section>
 
       {/* Main Content Area */}
-      <div className="max-w-[1400px] mx-auto w-full px-6 lg:px-16 py-20 flex flex-col lg:flex-row gap-16">
+      <div className="max-w-[1400px] mx-auto w-full px-6 lg:px-16 pt-8 pb-20 flex flex-col lg:flex-row gap-16">
         
         {/* Left Column: Biography */}
         <div className="w-full lg:w-[55%]">
@@ -106,12 +106,9 @@ export default function About() {
           </div>
 
           <div className="text-white/70 text-[15px] font-light leading-[1.9] space-y-8 pr-0 lg:pr-12">
-            <p className="text-2xl text-[#e9e6df] font-medium leading-relaxed" style={{ fontFamily: 'var(--font-hero)' }}>
-              Imogen Thomas is an Australian director and screenwriter known for her emotionally rich storytelling and collaborative filmmaking style.
-            </p>
-            <div className="w-full h-px bg-white/10 my-8"></div>
+
             <p>
-              Her work spans feature films, short fiction, and documentaries—each marked by authenticity, compassion, and a deep commitment to inclusive storytelling.
+              Imogen's work spans feature films, short fiction, and documentaries—each marked by authenticity, compassion, and a deep commitment to inclusive storytelling.
             </p>
             <p>
               Thomas recently directed the short documentary <em className="text-white/90">APY Ranger Visit</em>, which shines a light on vital conservation efforts to protect critically endangered frog species in the Snowy Mountains region of New South Wales. The film continues her tradition of using cinema to spotlight underrepresented voices and urgent environmental issues.
