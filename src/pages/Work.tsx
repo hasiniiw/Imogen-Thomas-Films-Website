@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import Nav from '../components/Nav'
 import Footer from '../components/Footer'
 import emuRunnerImg from '../imports/emu-runner-work-2.jpg'
+import quietHourImg from '../imports/quiet-hour-work.jpg'
 
 const films = [
   {
@@ -24,8 +25,8 @@ const films = [
   {
     title: 'Quiet Hour',
     to: '/work/quiet-hour',
-    thumb: 'https://images.unsplash.com/photo-1544039161-b0c20826c6f6?w=1800&h=800&fit=crop&auto=format',
-    alt: 'Trees and pathway in light',
+    thumb: quietHourImg,
+    alt: 'Girl and boy standing on a rooftop',
     genre: 'SHORT',
     year: '2001',
   },
