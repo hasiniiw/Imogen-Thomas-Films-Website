@@ -2,12 +2,13 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import Nav from '../components/Nav'
 import Footer from '../components/Footer'
+import emuRunnerImg from '../imports/emu-runner-work-2.jpg'
 
 const films = [
   {
     title: 'Emu Runner',
     to: '/work/emu-runner',
-    thumb: 'https://images.unsplash.com/photo-1717957389547-cec922a4182f?w=1800&h=800&fit=crop&auto=format',
+    thumb: emuRunnerImg,
     alt: 'Emu in Australian outback',
     genre: 'FEATURE',
     year: '2018',
@@ -128,7 +129,7 @@ export default function Work() {
         {/* Film List */}
         <div className="max-w-[1400px] mx-auto w-full px-6 lg:px-16 grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-20">
           {filteredFilms.map((film, index) => (
-            <div key={film.to} className={index === 0 ? 'md:col-span-2' : ''}>
+            <div key={film.to} className={index === 0 ? 'md:col-span-2 md:max-w-4xl md:mx-auto w-full' : ''}>
               <FilmCard film={film} index={index} isFeatured={index === 0} />
             </div>
           ))}
