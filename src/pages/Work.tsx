@@ -4,6 +4,7 @@ import Nav from '../components/Nav'
 import Footer from '../components/Footer'
 import emuRunnerImg from '../imports/emu-runner-work-2.jpg'
 import quietHourImg from '../imports/quiet-hour-work.jpg'
+import noSleepAmericaImg from '../imports/no-sleep-america-work.jpg'
 
 const films = [
   {
@@ -41,8 +42,8 @@ const films = [
   {
     title: 'No Sleep America',
     to: '/work/no-sleep-america',
-    thumb: 'https://images.unsplash.com/photo-1509473791583-5cfc522750f4?w=1800&h=800&fit=crop&auto=format',
-    alt: 'Bonfire with silhouette of trees',
+    thumb: noSleepAmericaImg,
+    alt: 'Baker preparing dough',
     genre: 'DOCUMENTARY',
     year: '1999',
   },
