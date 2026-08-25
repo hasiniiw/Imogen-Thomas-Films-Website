@@ -5,6 +5,7 @@ import Footer from '../components/Footer'
 import emuRunnerImg from '../imports/emu-runner-work-2.jpg'
 import quietHourImg from '../imports/quiet-hour-work.jpg'
 import noSleepAmericaImg from '../imports/no-sleep-america-work.jpg'
+import mixedBagImg from '../imports/mixed-bag-work.jpg'
 
 const films = [
   {
@@ -16,12 +17,12 @@ const films = [
     year: '2018',
   },
   {
-    title: 'APY Ranger Visit',
-    to: '/work/apy-ranger-visit',
-    thumb: 'https://images.unsplash.com/photo-1663256936394-ee943b28b695?w=1800&h=800&fit=crop&auto=format',
-    alt: 'Alpine mountain landscape',
-    genre: 'DOCUMENTARY',
-    year: '2025',
+    title: 'Mixed Bag',
+    to: '/work/mixed-bag',
+    thumb: mixedBagImg,
+    alt: 'Young girl and older woman sitting on grass',
+    genre: 'SHORT',
+    year: '2008',
   },
   {
     title: 'Quiet Hour',
@@ -32,12 +33,12 @@ const films = [
     year: '2001',
   },
   {
-    title: 'Mixed Bag',
-    to: '/work/mixed-bag',
-    thumb: 'https://images.unsplash.com/photo-1645341174612-8b9bb7b1287e?w=1800&h=800&fit=crop&auto=format',
-    alt: 'Ostriches in a field',
-    genre: 'SHORT',
-    year: '2008',
+    title: 'APY Ranger Visit',
+    to: '/work/apy-ranger-visit',
+    thumb: 'https://images.unsplash.com/photo-1663256936394-ee943b28b695?w=1800&h=800&fit=crop&auto=format',
+    alt: 'Alpine mountain landscape',
+    genre: 'DOCUMENTARY',
+    year: '2025',
   },
   {
     title: 'No Sleep America',
