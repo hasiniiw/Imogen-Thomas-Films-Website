@@ -6,6 +6,7 @@ import emuRunnerImg from '../imports/emu-runner-work-2.jpg'
 import quietHourImg from '../imports/quiet-hour-work.jpg'
 import noSleepAmericaImg from '../imports/no-sleep-america-work.jpg'
 import mixedBagImg from '../imports/mixed-bag-work.jpg'
+import apyRangerImg from '../imports/apy-ranger-work.jpg'
 
 const films = [
   {
@@ -35,8 +36,8 @@ const films = [
   {
     title: 'APY Ranger Visit',
     to: '/work/apy-ranger-visit',
-    thumb: 'https://images.unsplash.com/photo-1663256936394-ee943b28b695?w=1800&h=800&fit=crop&auto=format',
-    alt: 'Alpine mountain landscape',
+    thumb: apyRangerImg,
+    alt: 'Gloved hands holding a small yellow and black frog',
     genre: 'DOCUMENTARY',
     year: '2025',
   },
