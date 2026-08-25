@@ -18,12 +18,12 @@ const films = [
     year: '2018',
   },
   {
-    title: 'Mixed Bag',
-    to: '/work/mixed-bag',
-    thumb: mixedBagImg,
-    alt: 'Young girl and older woman sitting on grass',
-    genre: 'SHORT',
-    year: '2008',
+    title: 'No Sleep America',
+    to: '/work/no-sleep-america',
+    thumb: noSleepAmericaImg,
+    alt: 'Baker preparing dough',
+    genre: 'DOCUMENTARY',
+    year: '1999',
   },
   {
     title: 'Quiet Hour',
@@ -42,12 +42,12 @@ const films = [
     year: '2025',
   },
   {
-    title: 'No Sleep America',
-    to: '/work/no-sleep-america',
-    thumb: noSleepAmericaImg,
-    alt: 'Baker preparing dough',
-    genre: 'DOCUMENTARY',
-    year: '1999',
+    title: 'Mixed Bag',
+    to: '/work/mixed-bag',
+    thumb: mixedBagImg,
+    alt: 'Young girl and older woman sitting on grass',
+    genre: 'SHORT',
+    year: '2008',
   },
 ]
 
