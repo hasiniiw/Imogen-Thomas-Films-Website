@@ -7,6 +7,7 @@ import quietHourImg from '../imports/quiet-hour-work.jpg'
 import noSleepAmericaImg from '../imports/no-sleep-america-work.jpg'
 import mixedBagImg from '../imports/mixed-bag-work.jpg'
 import apyRangerImg from '../imports/apy-ranger-work.jpg'
+import aboutImg from '../imports/about-hero-2.jpg'
 
 const films = [
   {
@@ -66,44 +67,57 @@ export default function Work() {
   }
 
   return (
-    <div className="bg-[#0f0e0c] min-h-screen flex flex-col font-sans">
-      {/* Hero Section (Dark) */}
-      <section className="relative flex flex-col pt-12 pb-32">
-        <div className="relative z-20 mb-32">
+    <div className="bg-[#1a1917] text-[#e9e6df] min-h-screen flex flex-col font-sans">
+      {/* Hero Section */}
+      <section className="relative flex flex-col min-h-[75vh] bg-[#141311] overflow-hidden">
+        {/* Background Image & Gradients */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src={aboutImg}
+            alt="Imogen Thomas work background"
+            className="w-full h-full object-cover object-center opacity-90 saturate-[1.25]"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-sky-500/30 via-transparent to-transparent mix-blend-overlay pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#141311]/80 via-[#141311]/20 to-transparent pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#1a1917] from-10% via-[#1a1917]/80 via-30% to-transparent pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-bl from-[#141311]/80 via-transparent to-transparent pointer-events-none" />
+        </div>
+
+        <div className="relative z-20">
           <Nav />
         </div>
 
-        <div className="max-w-[1400px] mx-auto w-full px-6 lg:px-16 flex flex-col text-white">
-          <div className="flex items-center gap-4 mb-10 text-white/50 text-xs font-sans tracking-[0.2em] uppercase">
-            <div className="w-8 h-px bg-white/20"></div>
+        <div className="max-w-[1400px] mx-auto w-full px-6 lg:px-16 flex-1 flex flex-col justify-end pb-20 relative z-10 pt-20 mt-auto">
+          <div className="flex items-center gap-4 mb-10 text-[#9c6a46] text-xs font-sans tracking-[0.2em] uppercase">
+            <div className="w-12 h-px bg-[#9c6a46]/40"></div>
             <span>Index of Films</span>
           </div>
 
           <h1 
-            className="text-6xl md:text-8xl lg:text-[9rem] font-normal tracking-tight leading-[0.9] mb-20"
+            className="text-[#e9e6df] text-6xl md:text-7xl lg:text-[7rem] font-bold uppercase tracking-tight leading-[0.95] drop-shadow-lg mb-12"
             style={{ fontFamily: 'var(--font-hero)' }}
           >
-            Selected work.
+            Selected<br/>Work
           </h1>
 
-          <div className="w-full h-px bg-white/10 mb-16"></div>
+          <div className="w-full h-px bg-white/10 mb-10"></div>
 
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-12">
-            <p className="text-white/60 text-lg md:text-xl font-light leading-relaxed max-w-[600px] text-balance">
+            <p className="text-white/60 text-sm md:text-[15px] font-light leading-[1.9] drop-shadow-sm max-w-[600px] text-balance">
               Feature films, documentaries, and shorts marked by authenticity, compassion, and a preference for inclusive storytelling and natural landscapes.
             </p>
-            <div className="text-white/40 text-[10px] md:text-xs tracking-[0.3em] uppercase font-medium whitespace-nowrap">
-              {films.length} FILMS <span className="mx-2">·</span> 1999—2025
+            <div className="text-[#9c6a46] text-[9px] md:text-[10px] tracking-[0.4em] uppercase font-sans font-medium whitespace-nowrap">
+              {films.length} FILMS <span className="text-white/30 mx-2">·</span> 1999—2025
             </div>
           </div>
         </div>
       </section>
 
-      {/* Main Content Area (Light) */}
-      <section className="bg-[#f5f4f0] text-[#1a1917] flex-1 pb-40">
+      {/* Main Content Area */}
+      <section className="bg-[#1a1917] flex-1 pb-40">
         
         {/* Filter Nav */}
-        <div className="max-w-[1400px] mx-auto w-full px-6 lg:px-16 pt-20 mb-20 border-b border-black/10">
+        <div className="max-w-[1400px] mx-auto w-full px-6 lg:px-16 pt-20 mb-20 border-b border-white/10">
           <div className="flex flex-wrap gap-8 md:gap-12 pb-6">
             {CATEGORIES.map((cat) => {
               const isActive = activeCategory === cat
@@ -112,7 +126,7 @@ export default function Work() {
                   key={cat}
                   onClick={() => setActiveCategory(cat)}
                   className={`group relative flex items-start gap-1 text-[10px] md:text-[11px] tracking-[0.25em] uppercase transition-colors duration-300 ${
-                    isActive ? 'text-black font-medium' : 'text-black/40 hover:text-black/70'
+                    isActive ? 'text-white font-medium' : 'text-white/40 hover:text-white/70'
                   }`}
                 >
                   <span>{cat}</span>
@@ -141,10 +155,7 @@ export default function Work() {
 
       </section>
 
-      <div className="bg-[#f5f4f0]">
-        {/* We keep the footer, but since the footer is black, it will contrast nicely at the bottom */}
-        <Footer />
-      </div>
+      <Footer />
     </div>
   )
 }
@@ -152,7 +163,7 @@ export default function Work() {
 function FilmCard({ film, index, isFeatured = false }: { film: (typeof films)[0], index: number, isFeatured?: boolean }) {
   return (
     <div className="flex flex-col group">
-      <Link to={film.to} className="w-full overflow-hidden mb-6 block bg-[#e8e6e1]">
+      <Link to={film.to} className="w-full overflow-hidden mb-6 block bg-[#141311]">
         <img
           src={film.thumb}
           alt={film.alt}
@@ -165,20 +176,20 @@ function FilmCard({ film, index, isFeatured = false }: { film: (typeof films)[0]
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 relative">
         <Link to={film.to} className="inline-block relative self-start">
           <h2 
-            className={`text-[#1a1917] font-normal tracking-tight leading-none mb-1 ${
+            className={`text-[#e9e6df] font-normal tracking-tight leading-none mb-1 ${
               isFeatured ? 'text-4xl md:text-6xl lg:text-[5rem]' : 'text-3xl md:text-4xl lg:text-5xl'
             }`}
             style={{ fontFamily: 'var(--font-hero)' }}
           >
             {film.title}
           </h2>
-          <span className="absolute -bottom-2 md:-bottom-3 left-0 w-full h-px bg-black/20 scale-x-100 origin-left transition-transform duration-500 group-hover:scale-x-0" />
-          <span className="absolute -bottom-2 md:-bottom-3 left-0 w-full h-px bg-[#c99138] scale-x-0 origin-right transition-transform duration-500 group-hover:scale-x-100 group-hover:origin-left" />
+          <span className="absolute -bottom-2 md:-bottom-3 left-0 w-full h-px bg-white/20 scale-x-100 origin-left transition-transform duration-500 group-hover:scale-x-0" />
+          <span className="absolute -bottom-2 md:-bottom-3 left-0 w-full h-px bg-[#9c6a46] scale-x-0 origin-right transition-transform duration-500 group-hover:scale-x-100 group-hover:origin-left" />
         </Link>
         
-        <div className="flex items-center gap-4 text-[9px] md:text-[10px] tracking-[0.3em] uppercase text-black/40 font-medium mb-1">
+        <div className="flex items-center gap-4 text-[9px] md:text-[10px] tracking-[0.3em] uppercase text-white/40 font-medium mb-1">
           <span>{film.genre} FILM</span>
-          <div className="w-6 h-px bg-black/20"></div>
+          <div className="w-6 h-px bg-white/20"></div>
           <span>{film.year}</span>
         </div>
       </div>
