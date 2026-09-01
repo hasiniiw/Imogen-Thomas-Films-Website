@@ -35,20 +35,20 @@ const films = [
     year: '2001',
   },
   {
-    title: 'APY Ranger Visit',
-    to: '/work/apy-ranger-visit',
-    thumb: apyRangerImg,
-    alt: 'Gloved hands holding a small yellow and black frog',
-    genre: 'DOCUMENTARY',
-    year: '2025',
-  },
-  {
     title: 'Mixed Bag',
     to: '/work/mixed-bag',
     thumb: mixedBagImg,
     alt: 'Young girl and older woman sitting on grass',
     genre: 'SHORT',
     year: '2008',
+  },
+  {
+    title: 'APY Ranger Visit',
+    to: '/work/apy-ranger-visit',
+    thumb: apyRangerImg,
+    alt: 'Gloved hands holding a small yellow and black frog',
+    genre: 'DOCUMENTARY',
+    year: '2025',
   },
 ]
 
