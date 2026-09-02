@@ -95,7 +95,7 @@ export default function Work() {
           </div>
 
           <h1 
-            className="text-[#e9e6df] text-6xl md:text-7xl lg:text-[7rem] font-bold uppercase tracking-tight leading-[0.95] drop-shadow-lg mb-12"
+            className="text-[#e9e6df] text-6xl md:text-7xl lg:text-[7rem] font-bold uppercase tracking-tight leading-[0.95] drop-shadow-lg mb-24"
             style={{ fontFamily: 'var(--font-hero)' }}
           >
             Selected<br/>Work
@@ -103,12 +103,14 @@ export default function Work() {
 
           <div className="w-full h-px bg-white/10 mb-10"></div>
 
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-12">
-            <p className="text-white/60 text-sm md:text-[15px] font-light leading-[1.9] drop-shadow-sm max-w-[600px] text-balance">
-              Feature films, documentaries, and shorts marked by authenticity, compassion, and a preference for inclusive storytelling and natural landscapes.
-            </p>
+          <div className="flex flex-col md:flex-row justify-between items-start gap-8 md:gap-12">
             <div className="text-[#9c6a46] text-[9px] md:text-[10px] tracking-[0.4em] uppercase font-sans font-medium whitespace-nowrap">
               {films.length} FILMS <span className="text-white/30 mx-2">·</span> 1999—2025
+            </div>
+            <div className="w-full max-w-[500px]">
+              <p className="text-white/60 text-sm md:text-[15px] font-light leading-[1.9] drop-shadow-sm">
+                Feature films, documentaries, and shorts marked by authenticity, compassion, and a preference for inclusive storytelling and natural landscapes.
+              </p>
             </div>
           </div>
         </div>
