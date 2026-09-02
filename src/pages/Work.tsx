@@ -8,6 +8,7 @@ import noSleepAmericaImg from '../imports/no-sleep-america-work.jpg'
 import mixedBagImg from '../imports/mixed-bag-work.jpg'
 import apyRangerImg from '../imports/apy-ranger-work.jpg'
 import aboutImg from '../imports/about-hero-2.jpg'
+import workHeroImg from '../imports/work-hero.jpg'
 
 const films = [
   {
@@ -73,7 +74,7 @@ export default function Work() {
         {/* Background Image & Gradients */}
         <div className="absolute inset-0 z-0">
           <img
-            src={aboutImg}
+            src={workHeroImg}
             alt="Imogen Thomas work background"
             className="w-full h-full object-cover object-center opacity-90 saturate-[1.25]"
           />
