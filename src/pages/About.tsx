@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { motion } from 'framer-motion'
 import Nav from '../components/Nav'
 import Footer from '../components/Footer'
 import aboutImg from '../imports/about-hero-2.jpg'
@@ -65,19 +66,27 @@ export default function About() {
         <div className="max-w-[1400px] mx-auto w-full px-6 lg:px-16 flex-1 flex flex-col justify-center relative z-10 pt-20">
           
           <div className="w-full flex flex-col items-start text-left mb-16">
-             <h1 
+             <motion.h1 
+               initial={{ opacity: 0, y: 30 }}
+               animate={{ opacity: 1, y: 0 }}
+               transition={{ duration: 0.8, ease: 'easeOut' }}
                className="text-[#e9e6df] text-6xl md:text-7xl lg:text-[7rem] font-bold uppercase tracking-tight leading-[0.95] drop-shadow-lg" 
                style={{ fontFamily: 'var(--font-hero)' }}
              >
                About<br/>Imogen
-             </h1>
+             </motion.h1>
           </div>
           
           {/* Divider Line */}
           <div className="w-full h-px bg-white/10 mb-10" />
           
           {/* Lower Content */}
-          <div className="w-full flex flex-col md:flex-row justify-between items-start gap-8 md:gap-12">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3, ease: 'easeOut' }}
+            className="w-full flex flex-col md:flex-row justify-between items-start gap-8 md:gap-12"
+          >
             <div className="text-[#9c6a46] text-[9px] md:text-[10px] tracking-[0.4em] uppercase font-sans font-medium">
               Director <span className="text-white/30 mx-1 md:mx-2">·</span> Screenwriter <span className="text-white/30 mx-1 md:mx-2">·</span> Filmmaker
             </div>
@@ -86,7 +95,7 @@ export default function About() {
                 Fifteen years of feature films, short fiction, and documentaries — shot on location, with an authentic touch, and a deep commitment to inclusive storytelling.
               </p>
             </div>
-          </div>
+          </motion.div>
           
         </div>
         
@@ -97,7 +106,13 @@ export default function About() {
       <div className="max-w-[1400px] mx-auto w-full px-6 lg:px-16 pt-8 pb-20 flex flex-col lg:flex-row gap-16">
         
         {/* Left Column: Biography */}
-        <div className="w-full lg:w-[55%]">
+        <motion.div 
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8, ease: 'easeOut' }}
+          className="w-full lg:w-[55%]"
+        >
           {/* Section Header */}
           <div className="flex items-center gap-4 mb-12 text-[#9c6a46] text-xs font-sans tracking-[0.2em] uppercase">
             <span>01</span>
@@ -105,19 +120,18 @@ export default function About() {
             <span>Biography</span>
           </div>
 
-          <div className="text-white/70 text-[15px] font-light leading-[1.9] space-y-8 pr-0 lg:pr-12">
-
+          <div className="text-[#e9e6df]/90 text-base md:text-[17px] font-normal leading-[1.8] space-y-8 pr-0 lg:pr-16">
             <p>
               Imogen's work spans feature films, short fiction, and documentaries—each marked by authenticity, compassion, and a deep commitment to inclusive storytelling.
             </p>
             <p>
-              Thomas recently directed the short documentary <em className="text-white/90">APY Ranger Visit</em>, which shines a light on vital conservation efforts to protect critically endangered frog species in the Snowy Mountains region of New South Wales. The film continues her tradition of using cinema to spotlight underrepresented voices and urgent environmental issues.
+              Thomas recently directed the short documentary <em className="text-white font-medium not-italic">APY Ranger Visit</em>, which shines a light on vital conservation efforts to protect critically endangered frog species in the Snowy Mountains region of New South Wales. The film continues her tradition of using cinema to spotlight underrepresented voices and urgent environmental issues.
             </p>
             <p>
-              Her debut feature film, <em className="text-white/90">Emu Runner</em>, premiered at the prestigious Toronto International Film Festival in 2018 and went on to screen at more than twenty international festivals. It received widespread critical acclaim, winning the Best Independent Film Award at the Gold Coast Film Festival and earning a 2019 AACTA nomination for Best Independent Film.
+              Her debut feature film, <em className="text-white font-medium not-italic">Emu Runner</em>, premiered at the prestigious Toronto International Film Festival in 2018 and went on to screen at more than twenty international festivals. It received widespread critical acclaim, winning the Best Independent Film Award at the Gold Coast Film Festival and earning a 2019 AACTA nomination for Best Independent Film.
             </p>
             <p>
-              A graduate of New York University's renowned Tisch School of the Arts, Thomas honed her craft across all aspects of filmmaking. Her thesis film, <em className="text-white/90">Mixed Bag</em>, premiered at the Montreal World Film Festival and was screened at festivals worldwide. It received a Gold Award from the Australian Cinematographers Society and was a finalist for both the Wasserman and King Awards at NYU's First Run Film Festival in New York and Los Angeles.
+              A graduate of New York University's renowned Tisch School of the Arts, Thomas honed her craft across all aspects of filmmaking. Her thesis film, <em className="text-white font-medium not-italic">Mixed Bag</em>, premiered at the Montreal World Film Festival and was screened at festivals worldwide. It received a Gold Award from the Australian Cinematographers Society and was a finalist for both the Wasserman and King Awards at NYU's First Run Film Festival in New York and Los Angeles.
             </p>
             <p>
               Thomas also holds a First-Class Honours BA in Drama from Flinders University in South Australia and has an extensive background in set and costume design for theatre—an experience that enriches the visual depth of her screen work.
@@ -126,10 +140,16 @@ export default function About() {
               Throughout her career, Thomas has worked with both trained actors and first-time performers, drawing out deeply authentic and resonant performances. Her approach is grounded in collaboration and a commitment to creating safe, inclusive, and accessible work environments for all.
             </p>
           </div>
-        </div>
+        </motion.div>
 
         {/* Right Column: Carousel & Extra Info */}
-        <div className="w-full lg:w-[45%] flex flex-col gap-12">
+        <motion.div 
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
+          className="w-full lg:w-[45%] flex flex-col gap-12"
+        >
           
           <div className="lg:sticky lg:top-12">
             {/* Section Header */}
@@ -165,7 +185,7 @@ export default function About() {
             
             <div className="bg-[#141311] border border-white/5 p-8 flex flex-col gap-4">
               <h3 className="text-[#e9e6df] uppercase tracking-widest text-xs font-bold mb-4">Education & Honours</h3>
-              <ul className="text-white/60 text-sm space-y-4 font-light">
+              <ul className="text-[#e9e6df]/90 text-[15px] space-y-4 font-normal">
                 <li className="flex gap-4"><span className="text-[#9c6a46]">—</span> NYU Tisch School of the Arts</li>
                 <li className="flex gap-4"><span className="text-[#9c6a46]">—</span> Flinders University, First-Class Honours BA</li>
                 <li className="flex gap-4"><span className="text-[#9c6a46]">—</span> Gold Award, Australian Cinematographers Society</li>
@@ -174,7 +194,7 @@ export default function About() {
             </div>
           </div>
 
-        </div>
+        </motion.div>
 
       </div>
 
