@@ -39,7 +39,7 @@ export default function Contact() {
         </motion.div>
 
         {/* Right Column: Contact Form */}
-        <section className="flex-1 flex flex-col justify-center px-8 md:px-12 lg:px-20 relative h-full pt-16 md:pt-0">
+        <section className="flex-1 flex flex-col justify-center px-8 md:px-12 lg:px-20 relative h-full pt-16 md:pt-0 pb-12">
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -132,6 +132,17 @@ export default function Contact() {
           </motion.div>
         </section>
       </div>
+
+      {/* Small Footer specific to Contact Page */}
+      <motion.div 
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 0.5 }}
+        className="absolute bottom-0 left-0 w-full bg-[#8f5a31] py-2 md:py-3 px-6 md:px-12 flex justify-between items-center text-[8px] md:text-[10px] tracking-[0.2em] uppercase text-white/90 z-50"
+      >
+        <span>© 2026 Imogen Thomas</span>
+        <span className="hidden sm:block">Director, Screenwriter & Filmmaker</span>
+      </motion.div>
     </div>
   )
 }
