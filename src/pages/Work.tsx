@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import Nav from '../components/Nav'
 import Footer from '../components/Footer'
@@ -96,18 +97,26 @@ export default function Work() {
               <span>Index of Films</span>
             </div>
 
-            <h1 
+            <motion.h1 
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: 'easeOut' }}
               className="text-[#e9e6df] text-6xl md:text-7xl lg:text-[7rem] font-bold uppercase tracking-tight leading-[0.95] drop-shadow-lg"
               style={{ fontFamily: 'var(--font-hero)' }}
             >
-              Work
-            </h1>
+              Selected<br/>Work
+            </motion.h1>
           </div>
 
           {/* Divider Line */}
           <div className="w-full h-px bg-white/10 mb-10"></div>
 
-          <div className="flex flex-col md:flex-row justify-between items-start gap-8 md:gap-12">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3, ease: 'easeOut' }}
+            className="flex flex-col md:flex-row justify-between items-start gap-8 md:gap-12"
+          >
             <div className="text-[#9c6a46] text-[9px] md:text-[10px] tracking-[0.4em] uppercase font-sans font-medium whitespace-nowrap">
               {films.length} FILMS <span className="text-white/30 mx-2">·</span> 1999—2025
             </div>
@@ -116,7 +125,7 @@ export default function Work() {
                 Feature films, documentaries, and shorts marked by authenticity, compassion, and a preference for inclusive storytelling and natural landscapes.
               </p>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
@@ -124,7 +133,13 @@ export default function Work() {
       <section className="bg-[#1a1917] flex-1 pb-40">
         
         {/* Filter Nav */}
-        <div className="max-w-[1400px] mx-auto w-full px-6 lg:px-16 pt-20 mb-20 border-b border-white/10">
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8, ease: 'easeOut' }}
+          className="max-w-[1400px] mx-auto w-full px-6 lg:px-16 pt-20 mb-20 border-b border-white/10"
+        >
           <div className="flex flex-wrap gap-8 md:gap-12 pb-6">
             {CATEGORIES.map((cat) => {
               const isActive = activeCategory === cat
@@ -149,14 +164,21 @@ export default function Work() {
               )
             })}
           </div>
-        </div>
+        </motion.div>
 
         {/* Film List */}
         <div className="max-w-[1400px] mx-auto w-full px-6 lg:px-16 grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-20">
           {filteredFilms.map((film, index) => (
-            <div key={film.to} className={index === 0 ? 'md:col-span-2 md:max-w-4xl md:mx-auto w-full' : ''}>
+            <motion.div 
+              key={film.to} 
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.8, delay: index === 0 ? 0 : 0.1, ease: 'easeOut' }}
+              className={index === 0 ? 'md:col-span-2 md:max-w-4xl md:mx-auto w-full' : ''}
+            >
               <FilmCard film={film} index={index} isFeatured={index === 0} />
-            </div>
+            </motion.div>
           ))}
         </div>
 
