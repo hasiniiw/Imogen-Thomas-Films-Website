@@ -1,8 +1,7 @@
 import { useState } from 'react'
+import { motion } from 'framer-motion'
 import Nav from '../components/Nav'
-import Footer from '../components/Footer'
-
-const HEADSHOT = 'https://images.unsplash.com/photo-1506863530036-1efeddceb993?w=500&h=650&fit=crop&auto=format'
+import contactPortrait from '../imports/contact-portrait.jpg'
 
 export default function Contact() {
   const [form, setForm] = useState({
@@ -14,85 +13,125 @@ export default function Contact() {
   }
 
   return (
-    <div className="bg-[#3d3c3a] text-white min-h-screen flex flex-col">
-      <Nav />
+    <div className="bg-[#1a1917] text-[#e9e6df] h-screen overflow-hidden flex flex-col font-sans relative">
+      
+      {/* The Navigation bar must sit above everything */}
+      <div className="absolute top-0 left-0 w-full z-50">
+        <Nav />
+      </div>
 
-      <section className="flex-1 flex flex-col items-center px-6 py-10 bg-[#3d3c3a]">
-        <h1
-          className="text-white text-5xl md:text-7xl font-display font-extrabold uppercase tracking-wide mb-12 text-center"
-          style={{ fontFamily: 'var(--font-display)', fontWeight: 800 }}
+      <div className="flex-1 flex flex-col md:flex-row h-full">
+        
+        {/* Left Column: Portrait Image */}
+        <motion.div 
+          initial={{ opacity: 0, x: -30 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1, ease: 'easeOut' }}
+          className="hidden md:block w-1/2 lg:w-[45%] h-full relative"
         >
-          Contact
-        </h1>
+          <img 
+            src={contactPortrait} 
+            alt="Imogen Thomas portrait" 
+            className="absolute inset-0 w-full h-full object-cover" 
+          />
+          {/* Gradient to smooth the edge into the form background */}
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-[#1a1917] pointer-events-none" />
+        </motion.div>
 
-        <div className="flex flex-col md:flex-row gap-10 md:gap-16 w-full max-w-3xl">
-          {/* Headshot */}
-          <div className="flex-shrink-0">
-            <div className="overflow-hidden bg-[#2a2927] w-52 md:w-64 mx-auto md:mx-0">
-              <img
-                src={HEADSHOT}
-                alt="Imogen Thomas — black and white portrait"
-                className="w-full object-cover grayscale"
-                style={{ aspectRatio: '3/4' }}
-              />
+        {/* Right Column: Contact Form */}
+        <section className="flex-1 flex flex-col justify-center px-8 md:px-12 lg:px-20 relative h-full pt-16 md:pt-0">
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
+            className="w-full max-w-[600px] flex flex-col"
+          >
+            <div className="flex items-center gap-4 mb-4 text-[#9c6a46] text-[10px] md:text-xs font-sans tracking-[0.2em] uppercase">
+              <div className="w-8 md:w-12 h-px bg-[#9c6a46]/40"></div>
+              <span>Let's tell a story</span>
             </div>
-          </div>
 
-          {/* Form */}
-          <form className="flex-1 flex flex-col gap-3" onSubmit={(e) => e.preventDefault()}>
-            <div className="flex gap-3">
-              <input
-                type="text"
-                name="firstName"
-                placeholder="First name"
-                value={form.firstName}
-                onChange={handleChange}
-                className="flex-1 bg-transparent border border-white/30 text-white text-sm font-sans font-light px-3 py-2 placeholder-white/40 focus:outline-none focus:border-white/60"
-              />
-              <input
-                type="text"
-                name="lastName"
-                placeholder="Last name"
-                value={form.lastName}
-                onChange={handleChange}
-                className="flex-1 bg-transparent border border-white/30 text-white text-sm font-sans font-light px-3 py-2 placeholder-white/40 focus:outline-none focus:border-white/60"
-              />
-            </div>
-            <input
-              type="email"
-              name="email"
-              placeholder="Email address"
-              value={form.email}
-              onChange={handleChange}
-              className="bg-transparent border border-white/30 text-white text-sm font-sans font-light px-3 py-2 placeholder-white/40 focus:outline-none focus:border-white/60"
-            />
-            <input
-              type="text"
-              name="subject"
-              placeholder="Subject"
-              value={form.subject}
-              onChange={handleChange}
-              className="bg-transparent border border-white/30 text-white text-sm font-sans font-light px-3 py-2 placeholder-white/40 focus:outline-none focus:border-white/60"
-            />
-            <textarea
-              name="message"
-              placeholder="Your message"
-              value={form.message}
-              onChange={handleChange}
-              rows={5}
-              className="bg-transparent border border-white/30 text-white text-sm font-sans font-light px-3 py-2 placeholder-white/40 focus:outline-none focus:border-white/60 resize-none"
-            />
-            <button
-              type="submit"
-              className="self-start border border-white/60 text-white text-[11px] tracking-[0.25em] uppercase font-sans px-5 py-2 hover:bg-white hover:text-[#3d3c3a] transition-all duration-200"
+            <h1
+              className="text-[#e9e6df] text-5xl md:text-6xl lg:text-[5.5rem] font-bold uppercase tracking-tight leading-[0.95] drop-shadow-lg mb-10"
+              style={{ fontFamily: 'var(--font-hero)' }}
             >
-              Send Message
-            </button>
-          </form>
-        </div>
-      </section>
-
-      <Footer />
+              Contact
+            </h1>
+            
+            <div className="w-full">
+              <form className="w-full flex flex-col gap-4" onSubmit={(e) => e.preventDefault()}>
+                <div className="flex flex-col xl:flex-row gap-4 xl:gap-5">
+                  <div className="flex-1 relative group">
+                    <input
+                      type="text"
+                      name="firstName"
+                      placeholder="First name"
+                      value={form.firstName}
+                      onChange={handleChange}
+                      className="w-full bg-transparent border-b border-white/20 text-[#e9e6df] text-sm font-sans font-light px-0 py-2 placeholder-white/40 focus:outline-none transition-colors peer"
+                    />
+                    <div className="absolute bottom-0 left-0 w-0 h-px bg-[#9c6a46] transition-all duration-300 peer-focus:w-full"></div>
+                  </div>
+                  <div className="flex-1 relative group">
+                    <input
+                      type="text"
+                      name="lastName"
+                      placeholder="Last name"
+                      value={form.lastName}
+                      onChange={handleChange}
+                      className="w-full bg-transparent border-b border-white/20 text-[#e9e6df] text-sm font-sans font-light px-0 py-2 placeholder-white/40 focus:outline-none transition-colors peer"
+                    />
+                    <div className="absolute bottom-0 left-0 w-0 h-px bg-[#9c6a46] transition-all duration-300 peer-focus:w-full"></div>
+                  </div>
+                </div>
+                
+                <div className="relative group">
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Email address"
+                    value={form.email}
+                    onChange={handleChange}
+                    className="w-full bg-transparent border-b border-white/20 text-[#e9e6df] text-sm font-sans font-light px-0 py-2 placeholder-white/40 focus:outline-none transition-colors peer"
+                  />
+                  <div className="absolute bottom-0 left-0 w-0 h-px bg-[#9c6a46] transition-all duration-300 peer-focus:w-full"></div>
+                </div>
+                
+                <div className="relative group">
+                  <input
+                    type="text"
+                    name="subject"
+                    placeholder="Subject"
+                    value={form.subject}
+                    onChange={handleChange}
+                    className="w-full bg-transparent border-b border-white/20 text-[#e9e6df] text-sm font-sans font-light px-0 py-2 placeholder-white/40 focus:outline-none transition-colors peer"
+                  />
+                  <div className="absolute bottom-0 left-0 w-0 h-px bg-[#9c6a46] transition-all duration-300 peer-focus:w-full"></div>
+                </div>
+                
+                <div className="relative group mt-2">
+                  <textarea
+                    name="message"
+                    placeholder="Your message"
+                    value={form.message}
+                    onChange={handleChange}
+                    rows={3}
+                    className="w-full bg-transparent border-b border-white/20 text-[#e9e6df] text-sm font-sans font-light px-0 py-2 placeholder-white/40 focus:outline-none resize-none transition-colors peer"
+                  />
+                  <div className="absolute bottom-0 left-0 w-0 h-px bg-[#9c6a46] transition-all duration-300 peer-focus:w-full"></div>
+                </div>
+                
+                <button
+                  type="submit"
+                  className="mt-6 w-full md:w-auto min-w-[200px] border border-white/20 text-[#e9e6df] text-[11px] tracking-[0.25em] uppercase font-sans font-medium px-8 py-4 hover:bg-[#9c6a46] hover:border-[#9c6a46] hover:text-white transition-all duration-300 self-start"
+                >
+                  Send Message
+                </button>
+              </form>
+            </div>
+          </motion.div>
+        </section>
+      </div>
     </div>
   )
 }
