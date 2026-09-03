@@ -70,7 +70,7 @@ export default function Work() {
   return (
     <div className="bg-[#1a1917] text-[#e9e6df] min-h-screen flex flex-col font-sans">
       {/* Hero Section */}
-      <section className="relative flex flex-col min-h-[75vh] bg-[#141311] overflow-hidden">
+      <section className="relative flex flex-col min-h-screen bg-[#141311] overflow-hidden">
         {/* Background Image & Gradients */}
         <div className="absolute inset-0 z-0">
           <img
@@ -88,19 +88,23 @@ export default function Work() {
           <Nav />
         </div>
 
-        <div className="max-w-[1400px] mx-auto w-full px-6 lg:px-16 flex-1 flex flex-col justify-end pb-20 relative z-10 pt-20 mt-auto">
-          <div className="flex items-center gap-4 mb-10 text-[#9c6a46] text-xs font-sans tracking-[0.2em] uppercase">
-            <div className="w-12 h-px bg-[#9c6a46]/40"></div>
-            <span>Index of Films</span>
+        <div className="max-w-[1400px] mx-auto w-full px-6 lg:px-16 flex-1 flex flex-col justify-center relative z-10 pt-20">
+          
+          <div className="w-full flex flex-col items-start text-left mb-16">
+            <div className="flex items-center gap-4 mb-10 text-[#9c6a46] text-xs font-sans tracking-[0.2em] uppercase">
+              <div className="w-12 h-px bg-[#9c6a46]/40"></div>
+              <span>Index of Films</span>
+            </div>
+
+            <h1 
+              className="text-[#e9e6df] text-6xl md:text-7xl lg:text-[7rem] font-bold uppercase tracking-tight leading-[0.95] drop-shadow-lg"
+              style={{ fontFamily: 'var(--font-hero)' }}
+            >
+              Work
+            </h1>
           </div>
 
-          <h1 
-            className="text-[#e9e6df] text-6xl md:text-7xl lg:text-[7rem] font-bold uppercase tracking-tight leading-[0.95] drop-shadow-lg mb-24"
-            style={{ fontFamily: 'var(--font-hero)' }}
-          >
-            Selected<br/>Work
-          </h1>
-
+          {/* Divider Line */}
           <div className="w-full h-px bg-white/10 mb-10"></div>
 
           <div className="flex flex-col md:flex-row justify-between items-start gap-8 md:gap-12">
