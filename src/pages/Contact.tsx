@@ -52,7 +52,7 @@ export default function Contact() {
             </div>
 
             <h1
-              className="text-[#e9e6df] text-5xl md:text-6xl lg:text-[5.5rem] font-bold uppercase tracking-tight leading-[0.95] drop-shadow-lg mb-10"
+              className="text-[#e9e6df] text-6xl md:text-7xl lg:text-[6.5rem] font-bold uppercase tracking-tight leading-[0.95] drop-shadow-lg mb-10"
               style={{ fontFamily: 'var(--font-hero)' }}
             >
               Contact

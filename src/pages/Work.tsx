@@ -101,7 +101,7 @@ export default function Work() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: 'easeOut' }}
-              className="text-[#e9e6df] text-6xl md:text-7xl lg:text-[7rem] font-bold uppercase tracking-tight leading-[0.95] drop-shadow-lg"
+              className="text-[#e9e6df] text-6xl md:text-7xl lg:text-[6.5rem] font-bold uppercase tracking-tight leading-[0.95] drop-shadow-lg"
               style={{ fontFamily: 'var(--font-hero)' }}
             >
               Selected<br/>Work
