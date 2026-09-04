@@ -153,9 +153,9 @@ export default function Home() {
                   </div>
                 </div>
                 <div>
-                  <div className="text-4xl mb-3 font-bold" style={{ fontFamily: 'var(--font-hero)' }}>9</div>
+                  <div className="text-4xl mb-3 font-bold" style={{ fontFamily: 'var(--font-hero)' }}>5</div>
                   <div className="text-white/40 text-[9px] tracking-[0.25em] uppercase font-sans leading-relaxed font-bold">
-                    Festival<br />Selections
+                    Festival<br />Awards
                   </div>
                 </div>
               </div>
