@@ -1,5 +1,6 @@
 import { ReactNode, useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
 import Nav from '../components/Nav'
 import Footer from '../components/Footer'
 
@@ -43,8 +44,18 @@ export default function FilmDetailShell({
       {/* Main Content */}
       <div className="flex-1 pb-32">
         {/* Title Block */}
-        <section className="px-6 lg:px-16 pt-0 pb-6 md:pb-8 -mt-10 md:-mt-16 relative z-0">
-          <div className="max-w-[1000px] mx-auto">
+        <section className="px-6 lg:px-16 pt-0 pb-6 md:pb-8 -mt-10 md:-mt-16">
+          <div className="max-w-[1000px] mx-auto relative">
+            
+            {/* Back Button (Floating left) */}
+            <Link 
+              to="/work" 
+              className="absolute top-0 md:top-1 -left-6 md:-left-12 xl:-left-16 z-[60] text-[#e9e6df]/30 hover:text-[#c99138] transition-colors"
+              title="Back to Selected Work"
+            >
+              <svg className="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+            </Link>
+
             <motion.div 
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
