@@ -1,6 +1,6 @@
 import { ReactNode, useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate, useLocation } from 'react-router-dom'
 import Nav from '../components/Nav'
 import Footer from '../components/Footer'
 
@@ -34,6 +34,20 @@ export default function FilmDetailShell({
   vimeoHash,
 }: Props) {
   const [isVideoPlaying, setIsVideoPlaying] = useState(false)
+  const navigate = useNavigate()
+  const location = useLocation()
+
+  const handleBack = (e: React.MouseEvent) => {
+    e.preventDefault()
+    if (location.state?.fromWork) {
+      // If we came directly from the Work page, pop the history stack
+      // This tells the browser to natively restore the exact scroll position!
+      navigate(-1)
+    } else {
+      // Fallback if accessed directly (e.g. fresh tab)
+      navigate('/work')
+    }
+  }
 
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -54,6 +68,7 @@ export default function FilmDetailShell({
             {/* Back Button (Floating left) */}
             <Link 
               to="/work" 
+              onClick={handleBack}
               className="absolute top-0 md:top-1 -left-6 md:-left-12 xl:-left-16 z-[60] text-[#e9e6df]/30 hover:text-[#c99138] transition-colors"
               title="Back to Selected Work"
             >

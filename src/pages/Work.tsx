@@ -192,7 +192,7 @@ export default function Work() {
 function FilmCard({ film, index, isFeatured = false }: { film: (typeof films)[0], index: number, isFeatured?: boolean }) {
   return (
     <div className="flex flex-col group">
-      <Link to={film.to} className="w-full overflow-hidden mb-6 block bg-[#141311]">
+      <Link to={film.to} state={{ fromWork: true }} className="w-full overflow-hidden mb-6 block bg-[#141311]">
         <img
           src={film.thumb}
           alt={film.alt}
@@ -203,7 +203,7 @@ function FilmCard({ film, index, isFeatured = false }: { film: (typeof films)[0]
       </Link>
       
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 relative">
-        <Link to={film.to} className="inline-block relative self-start">
+        <Link to={film.to} state={{ fromWork: true }} className="inline-block relative self-start">
           <h2 
             className={`text-[#e9e6df] font-normal tracking-tight leading-none mb-1 ${
               isFeatured ? 'text-4xl md:text-6xl lg:text-[5rem]' : 'text-3xl md:text-4xl lg:text-5xl'
