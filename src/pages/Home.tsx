@@ -196,7 +196,7 @@ export default function Home() {
               to="/work" 
               className="group relative hidden md:inline-block text-[#e9e6df] text-[10px] tracking-[0.3em] uppercase font-sans hover:text-[#c99138] transition-colors font-medium pb-1"
             >
-              View Full Portfolio
+              View All Projects
               <span className="absolute left-0 bottom-0 w-full h-px bg-[#e9e6df]/30" />
               <span className="absolute left-0 bottom-0 w-full h-px bg-[#c99138] scale-x-0 origin-right transition-transform duration-300 ease-out group-hover:scale-x-100 group-hover:origin-left" />
             </Link>
@@ -257,7 +257,7 @@ export default function Home() {
               to="/work" 
               className="group relative inline-block text-[#e9e6df] text-[10px] tracking-[0.3em] uppercase font-sans hover:text-[#c99138] transition-colors font-medium pb-1"
             >
-              View Full Portfolio
+              View All Projects
               <span className="absolute left-0 bottom-0 w-full h-px bg-[#e9e6df]/30" />
               <span className="absolute left-0 bottom-0 w-full h-px bg-[#c99138] scale-x-0 origin-right transition-transform duration-300 ease-out group-hover:scale-x-100 group-hover:origin-left" />
             </Link>
