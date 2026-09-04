@@ -4,6 +4,12 @@ import { Link, useNavigate, useLocation } from 'react-router-dom'
 import Nav from '../components/Nav'
 import Footer from '../components/Footer'
 
+export interface Testimonial {
+  quote: string
+  author: string
+  role: string
+}
+
 interface Detail {
   label: string
   value: string
@@ -20,6 +26,7 @@ interface Props {
   youtubeId?: string
   vimeoId?: string
   vimeoHash?: string
+  testimonials?: Testimonial[]
 }
 
 export default function FilmDetailShell({
@@ -32,6 +39,7 @@ export default function FilmDetailShell({
   youtubeId,
   vimeoId,
   vimeoHash,
+  testimonials,
 }: Props) {
   const [isVideoPlaying, setIsVideoPlaying] = useState(false)
   const navigate = useNavigate()
@@ -199,6 +207,43 @@ export default function FilmDetailShell({
             </div>
           </div>
         </section>
+
+        {/* Testimonials */}
+        {testimonials && testimonials.length > 0 && (
+          <section className="px-6 lg:px-16 mt-20">
+            <div className="max-w-[1000px] mx-auto border-t border-white/10 pt-16">
+              <div className="flex items-center gap-4 mb-10 text-[#9c6a46] text-[10px] uppercase tracking-[0.2em]">
+                <span>02</span>
+                <div className="w-8 h-px bg-[#9c6a46]/40"></div>
+                <span>Praise & Reviews</span>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+                {testimonials.map((t, i) => (
+                  <motion.div 
+                    key={i}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-50px" }}
+                    transition={{ duration: 0.8, delay: i * 0.15 }}
+                    className="flex flex-col bg-[#22211f] p-6 lg:p-8 rounded-sm relative group border border-white/5"
+                  >
+                    <svg className="absolute top-6 left-6 w-8 h-8 text-white/5 -z-0 group-hover:text-[#c99138]/10 transition-colors duration-500" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                    </svg>
+                    <p className="text-sm font-sans font-light leading-[1.8] text-[#e9e6df]/80 italic mb-8 flex-1 relative z-10 pt-2">
+                      "{t.quote}"
+                    </p>
+                    <div className="mt-auto pt-5 border-t border-white/10 relative z-10">
+                      <div className="text-[10px] font-medium tracking-widest text-[#e9e6df] uppercase mb-1">{t.author}</div>
+                      <div className="text-[9px] text-[#9c6a46] tracking-widest uppercase leading-snug">{t.role}</div>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
       </div>
 
       <Footer />

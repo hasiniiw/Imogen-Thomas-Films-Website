@@ -38,6 +38,23 @@ export default function EmuRunner() {
         { label: 'Starring', value: 'Rhae-Kye Waites, Wayne Blair, Maurial Spearim, Georgia Blizzard & Rob Carlton' },
         { label: 'Length/Format', value: '96 minutes 2K' },
       ]}
+      testimonials={[
+        {
+          quote: 'Thomas has made a deep, rich meditation on family, community, country and racial tensions that strides well beyond its girl – meets bird logline. Flightless the Dromaius novaehollandiae may be but "Emu Runner" soars.',
+          author: 'EDDIE COCKRELL',
+          role: 'Sydney Film Festival Review (Variety), 2019'
+        },
+        {
+          quote: 'The film is so beautifully made – deceptively simple and yet with so many resonant layers of meaning. The photography is beautiful, and the script is spare, making every word meaningful. Rhae-Kye Waites as Gem is amazing – I’ve not been able to get her performance out of my mind.',
+          author: 'JANE SCHOETTLE',
+          role: 'International Programmer, TIFF, 2018'
+        },
+        {
+          quote: 'Emu Runner is an incredibly special and multi-layered film. At its surface, it is a heartwarming and gentle family film, while providing an insightful commentary on contemporary Australia and the disconnect between the hearts of the community and the passionate mechanics of bureaucracy.',
+          author: 'AMANDA DUTHIE',
+          role: 'Artistic Director, Adelaide Film Festival, 2018'
+        }
+      ]}
     />
   )
 }
