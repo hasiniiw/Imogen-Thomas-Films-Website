@@ -18,6 +18,8 @@ interface Props {
   details: Detail[]
   festivalBadges?: ReactNode
   youtubeId?: string
+  vimeoId?: string
+  vimeoHash?: string
 }
 
 export default function FilmDetailShell({
@@ -28,6 +30,8 @@ export default function FilmDetailShell({
   details,
   festivalBadges,
   youtubeId,
+  vimeoId,
+  vimeoHash,
 }: Props) {
   const [isVideoPlaying, setIsVideoPlaying] = useState(false)
 
@@ -83,16 +87,26 @@ export default function FilmDetailShell({
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
               className="relative w-full aspect-video bg-[#141311] group cursor-pointer border border-[#2a2927]/10 overflow-hidden shadow-2xl"
-              onClick={() => youtubeId && setIsVideoPlaying(true)}
+              onClick={() => (youtubeId || vimeoId) && setIsVideoPlaying(true)}
             >
-              {isVideoPlaying && youtubeId ? (
-                <iframe
-                  src={`https://www.youtube.com/embed/${youtubeId}?autoplay=1&rel=0`}
-                  title={title}
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="absolute inset-0 w-full h-full border-0"
-                />
+              {isVideoPlaying && (youtubeId || vimeoId) ? (
+                youtubeId ? (
+                  <iframe
+                    src={`https://www.youtube.com/embed/${youtubeId}?autoplay=1&rel=0`}
+                    title={title}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="absolute inset-0 w-full h-full border-0"
+                  />
+                ) : (
+                  <iframe
+                    src={`https://player.vimeo.com/video/${vimeoId}${vimeoHash ? `?h=${vimeoHash}&` : '?'}autoplay=1&title=0&byline=0&portrait=0`}
+                    title={title}
+                    allow="autoplay; fullscreen; picture-in-picture"
+                    allowFullScreen
+                    className="absolute inset-0 w-full h-full border-0"
+                  />
+                )
               ) : (
                 <>
                   <img src={heroImage} alt="Video Thumbnail" className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-700" />

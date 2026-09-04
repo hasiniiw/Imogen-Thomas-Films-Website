@@ -8,6 +8,8 @@ export default function NoSleepAmerica() {
       title="No Sleep America"
       category="04 — DOCUMENTARY"
       heroImage={IMAGE}
+      vimeoId="1101384428"
+      vimeoHash="c03d45e1e9"
       synopsis="An observational documentary about the working day of a Russian bakery in Brighton Beach, New York."
       description={
         <>
