@@ -4,9 +4,9 @@ const IMAGE = 'https://images.unsplash.com/photo-1663256936394-ee943b28b695?w=14
 
 function FestivalBadge({ lines }: { lines: string[] }) {
   return (
-    <div className="border-2 border-[#2a2927]/60 rounded-full w-36 h-36 flex flex-col items-center justify-center text-center px-3">
+    <div className="border border-[#d8d4cb] rounded-full w-32 h-32 flex flex-col items-center justify-center text-center px-3">
       {lines.map((l, i) => (
-        <p key={i} className={`text-[#2a2927] font-display font-extrabold uppercase leading-tight ${i === 0 ? 'text-[9px] tracking-widest' : i === lines.length - 1 ? 'text-[9px] tracking-wider' : 'text-[11px]'}`}
+        <p key={i} className={`text-[#2a2927] font-display font-bold uppercase leading-tight ${i === 0 ? 'text-[8px] tracking-widest' : i === lines.length - 1 ? 'text-[8px] tracking-wider' : 'text-[10px]'}`}
           style={{ fontFamily: 'var(--font-display)' }}
         >
           {l}
@@ -20,22 +20,25 @@ export default function ApyRangerVisit() {
   return (
     <FilmDetailShell
       title="APY Ranger Visit"
-      media={
-        <img
-          src={IMAGE}
-          alt="Alpine rocky mountain landscape with blue sky"
-          className="w-full object-cover bg-[#2a2927]"
-          style={{ maxHeight: 520 }}
-        />
-      }
+      category="05 — DOCUMENTARY"
+      heroImage={IMAGE}
       synopsis="A group of APY (Anangu Pitjantjatjara Yankunytjatjara) rangers, their co-ordinators and ecologists travel to the Snowy Mountains to observe the work being carried out on the critically endangered frog species of the region."
-      year="2025"
-      genre="Documentary"
-      credits={[
+      description={
+        <>
+          <p>
+            A group of APY (Anangu Pitjantjatjara Yankunytjatjara) rangers, their co-ordinators and ecologists travel to the Snowy Mountains to observe the work being carried out on the critically endangered frog species of the region.
+          </p>
+          <p>
+            This documentary intimately captures the cross-cultural exchange of environmental knowledge, tracking the deeply rooted connection between the rangers and the delicate ecosystems they are fighting to protect.
+          </p>
+        </>
+      }
+      details={[
+        { label: 'Year', value: '2025' },
         { label: 'Producers', value: 'Imogen Thomas & Victor Evatt' },
         { label: 'Length / Format', value: '20 minutes 4K' },
         {
-          label: 'Made in Partnership with',
+          label: 'Partnership',
           value: 'Anangu Pitjantjatjara Yankunytjatjara and the Brungle Tumut Local Aboriginal Land Council',
         },
       ]}

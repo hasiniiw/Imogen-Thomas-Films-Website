@@ -1,25 +1,23 @@
 import FilmDetailShell from './FilmDetailShell'
 
+const IMAGE = 'https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=1400&h=600&fit=crop&auto=format'
+
 export default function QuietHour() {
   return (
     <FilmDetailShell
       title="Quiet Hour"
-      media={
-        <div className="w-full bg-[#1a1917] aspect-video flex items-center justify-center">
-          <div className="text-center text-white/40">
-            <div className="w-14 h-14 rounded-full border-2 border-white/30 flex items-center justify-center mx-auto mb-3">
-              <svg className="w-5 h-5 ml-1" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M8 5v14l11-7z" />
-              </svg>
-            </div>
-            <p className="text-xs font-sans tracking-widest uppercase opacity-60">Video — Quiet Hour</p>
-          </div>
-        </div>
-      }
+      category="02 — DRAMA"
+      heroImage={IMAGE}
       synopsis="An impending apartment move strains a mother and daughter's relationship as they pack up their lives with the help of a local teenage boy."
-      year="2001"
-      genre="Drama"
-      credits={[
+      description={
+        <>
+          <p>
+            An impending apartment move strains a mother and daughter's relationship as they pack up their lives with the help of a local teenage boy. The quiet observation of the packing process brings long-held tensions to the surface, exploring the fragile dynamic between mother and daughter in a time of transition.
+          </p>
+        </>
+      }
+      details={[
+        { label: 'Year', value: '2001' },
         { label: 'Writer / Director', value: 'Imogen Thomas' },
         { label: 'Producers', value: 'Teona Mitevska' },
         { label: 'Co-producer', value: 'Manisha Archarya' },
