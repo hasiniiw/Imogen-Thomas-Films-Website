@@ -8,6 +8,8 @@ export default function MixedBag() {
       title="Mixed Bag"
       category="03 — DRAMA"
       heroImage={IMAGE}
+      vimeoId="1101391339"
+      vimeoHash="23655c72af"
       synopsis="Travelling from the city, a woman finds herself having to stop in a remote country town only to be confronted by her own racial prejudices."
       description={
         <>
