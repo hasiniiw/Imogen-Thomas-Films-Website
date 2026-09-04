@@ -95,6 +95,14 @@ export default function FilmDetailShell({
                 </>
               )}
             </motion.div>
+
+            {/* Scroll Indicator (Gradient Line) */}
+            <motion.div 
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 100 }}
+              transition={{ delay: 1, duration: 1.5, ease: "easeOut" }}
+              className="mx-auto w-[1px] mt-8 md:mt-12 bg-gradient-to-b from-white/20 via-white/10 to-transparent"
+            />
           </div>
         </section>
 
