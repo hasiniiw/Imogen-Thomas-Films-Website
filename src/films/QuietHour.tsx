@@ -8,6 +8,8 @@ export default function QuietHour() {
       title="Quiet Hour"
       category="02 — DRAMA"
       heroImage={IMAGE}
+      vimeoId="1101378586"
+      vimeoHash="c031989b55"
       synopsis="An impending apartment move strains a mother and daughter's relationship as they pack up their lives with the help of a local teenage boy."
       description={
         <>
