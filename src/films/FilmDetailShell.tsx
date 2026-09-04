@@ -78,7 +78,7 @@ export default function FilmDetailShell({
               to="/work" 
               onClick={handleBack}
               className="absolute top-0 md:top-1 -left-6 md:-left-12 xl:-left-16 z-[60] text-[#e9e6df]/30 hover:text-[#c99138] transition-colors"
-              title="Back to Selected Work"
+              title="Back to Film Projects"
             >
               <svg className="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
             </Link>

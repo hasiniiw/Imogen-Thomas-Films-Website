@@ -104,7 +104,7 @@ export default function Work() {
               className="text-[#e9e6df] text-6xl md:text-7xl lg:text-[6.5rem] font-bold uppercase tracking-tight leading-[0.95] drop-shadow-lg"
               style={{ fontFamily: 'var(--font-hero)' }}
             >
-              Selected<br/>Work
+              Film<br/>Projects
             </motion.h1>
           </div>
 
