@@ -87,12 +87,9 @@ export default function FilmDetailShell({
                   <img src={heroImage} alt="Video Thumbnail" className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-700" />
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="w-20 h-20 md:w-28 md:h-28 rounded-full border-[1px] border-white/40 flex items-center justify-center group-hover:scale-110 group-hover:border-white/80 transition-all duration-500 bg-black/20 backdrop-blur-sm shadow-lg">
-                      <svg className="w-6 h-6 md:w-8 md:h-8 ml-1 md:ml-2 text-white/90" fill="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-6 h-6 md:w-8 md:h-8 text-white/90" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M8 5v14l11-7z" />
                       </svg>
-                    </div>
-                    <div className="absolute top-[50%] mt-16 md:mt-24 text-[9px] md:text-[10px] tracking-[0.3em] uppercase text-white/90 font-medium drop-shadow-md group-hover:text-white transition-colors">
-                      Play Film
                     </div>
                   </div>
                 </>
