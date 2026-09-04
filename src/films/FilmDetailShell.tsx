@@ -43,14 +43,14 @@ export default function FilmDetailShell({
       {/* Main Content */}
       <div className="flex-1 pb-32">
         {/* Title Block */}
-        <section className="px-6 lg:px-16 pt-0 pb-4 -mt-2 md:-mt-4">
+        <section className="px-6 lg:px-16 pt-0 pb-6 md:pb-8 -mt-10 md:-mt-16 relative z-0">
           <div className="max-w-[1000px] mx-auto">
             <motion.div 
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1, delay: 0.1 }}
             >
-              <div className="flex items-center gap-4 mb-4 text-[#9c6a46] text-[10px] md:text-xs font-sans tracking-[0.2em] uppercase">
+              <div className="flex items-center gap-4 mb-2 md:mb-4 text-[#9c6a46] text-[10px] md:text-xs font-sans tracking-[0.2em] uppercase">
                 <span>{category}</span>
                 <div className="w-12 h-px bg-[#9c6a46]/40"></div>
               </div>
