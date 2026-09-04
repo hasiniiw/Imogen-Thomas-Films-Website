@@ -103,44 +103,74 @@ export default function About() {
       </section>
 
       {/* Main Content Area */}
-      <div className="max-w-[1400px] mx-auto w-full px-6 lg:px-16 pt-8 pb-20 flex flex-col lg:flex-row gap-16">
+      <div className="max-w-[1400px] mx-auto w-full px-6 lg:px-16 pt-24 pb-32 flex flex-col lg:flex-row gap-16 lg:gap-24">
         
         {/* Left Column: Biography */}
-        <motion.div 
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8, ease: 'easeOut' }}
-          className="w-full lg:w-[55%]"
-        >
+        <div className="w-full lg:w-[55%]">
           {/* Section Header */}
-          <div className="flex items-center gap-4 mb-12 text-[#9c6a46] text-xs font-sans tracking-[0.2em] uppercase">
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8, ease: 'easeOut' }}
+            className="flex items-center gap-4 mb-16 text-[#9c6a46] text-xs font-sans tracking-[0.2em] uppercase"
+          >
             <span>01</span>
             <div className="w-12 h-px bg-[#9c6a46]/40"></div>
             <span>Biography</span>
-          </div>
+          </motion.div>
 
-          <div className="text-[#e9e6df]/90 text-base md:text-[17px] font-normal leading-[1.8] space-y-8 pr-0 lg:pr-16">
-            <p>
+          <div className="text-[#e9e6df]/90 text-base md:text-[17px] font-normal leading-[1.8] space-y-8 pr-0 lg:pr-12">
+            <motion.p
+               initial={{ opacity: 0, y: 25 }}
+               whileInView={{ opacity: 1, y: 0 }}
+               viewport={{ once: true, margin: "-50px" }}
+               transition={{ duration: 0.8, ease: 'easeOut' }}
+            >
               Imogen's work spans feature films, short fiction, and documentaries—each marked by authenticity, compassion, and a deep commitment to inclusive storytelling.
-            </p>
-            <p>
-              Thomas recently directed the short documentary <em className="text-white font-medium not-italic">APY Ranger Visit</em>, which shines a light on vital conservation efforts to protect critically endangered frog species in the Snowy Mountains region of New South Wales. The film continues her tradition of using cinema to spotlight underrepresented voices and urgent environmental issues.
-            </p>
-            <p>
-              Her debut feature film, <em className="text-white font-medium not-italic">Emu Runner</em>, premiered at the prestigious Toronto International Film Festival in 2018 and went on to screen at more than twenty international festivals. It received widespread critical acclaim, winning the Best Independent Film Award at the Gold Coast Film Festival and earning a 2019 AACTA nomination for Best Independent Film.
-            </p>
-            <p>
-              A graduate of New York University's renowned Tisch School of the Arts, Thomas honed her craft across all aspects of filmmaking. Her thesis film, <em className="text-white font-medium not-italic">Mixed Bag</em>, premiered at the Montreal World Film Festival and was screened at festivals worldwide. It received a Gold Award from the Australian Cinematographers Society and was a finalist for both the Wasserman and King Awards at NYU's First Run Film Festival in New York and Los Angeles.
-            </p>
-            <p>
+            </motion.p>
+            <motion.p
+               initial={{ opacity: 0, y: 25 }}
+               whileInView={{ opacity: 1, y: 0 }}
+               viewport={{ once: true, margin: "-50px" }}
+               transition={{ duration: 0.8, ease: 'easeOut' }}
+            >
+              Thomas recently directed the short documentary <em className="text-white font-semibold not-italic tracking-wide">APY Ranger Visit</em>, which shines a light on vital conservation efforts to protect critically endangered frog species in the Snowy Mountains region of New South Wales. The film continues her tradition of using cinema to spotlight underrepresented voices and urgent environmental issues.
+            </motion.p>
+            <motion.p
+               initial={{ opacity: 0, y: 25 }}
+               whileInView={{ opacity: 1, y: 0 }}
+               viewport={{ once: true, margin: "-50px" }}
+               transition={{ duration: 0.8, ease: 'easeOut' }}
+            >
+              Her debut feature film, <em className="text-white font-semibold not-italic tracking-wide">Emu Runner</em>, premiered at the prestigious Toronto International Film Festival in 2018 and went on to screen at more than twenty international festivals. It received widespread critical acclaim, winning the Best Independent Film Award at the Gold Coast Film Festival and earning a 2019 AACTA nomination for Best Independent Film.
+            </motion.p>
+            <motion.p
+               initial={{ opacity: 0, y: 25 }}
+               whileInView={{ opacity: 1, y: 0 }}
+               viewport={{ once: true, margin: "-50px" }}
+               transition={{ duration: 0.8, ease: 'easeOut' }}
+            >
+              A graduate of New York University's renowned Tisch School of the Arts, Thomas honed her craft across all aspects of filmmaking. Her thesis film, <em className="text-white font-semibold not-italic tracking-wide">Mixed Bag</em>, premiered at the Montreal World Film Festival and was screened at festivals worldwide. It received a Gold Award from the Australian Cinematographers Society and was a finalist for both the Wasserman and King Awards at NYU's First Run Film Festival in New York and Los Angeles.
+            </motion.p>
+            <motion.p
+               initial={{ opacity: 0, y: 25 }}
+               whileInView={{ opacity: 1, y: 0 }}
+               viewport={{ once: true, margin: "-50px" }}
+               transition={{ duration: 0.8, ease: 'easeOut' }}
+            >
               Thomas also holds a First-Class Honours BA in Drama from Flinders University in South Australia and has an extensive background in set and costume design for theatre—an experience that enriches the visual depth of her screen work.
-            </p>
-            <p>
+            </motion.p>
+            <motion.p
+               initial={{ opacity: 0, y: 25 }}
+               whileInView={{ opacity: 1, y: 0 }}
+               viewport={{ once: true, margin: "-50px" }}
+               transition={{ duration: 0.8, ease: 'easeOut' }}
+            >
               Throughout her career, Thomas has worked with both trained actors and first-time performers, drawing out deeply authentic and resonant performances. Her approach is grounded in collaboration and a commitment to creating safe, inclusive, and accessible work environments for all.
-            </p>
+            </motion.p>
           </div>
-        </motion.div>
+        </div>
 
         {/* Right Column: Carousel & Extra Info */}
         <motion.div 
