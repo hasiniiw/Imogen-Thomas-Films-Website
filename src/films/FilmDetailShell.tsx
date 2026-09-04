@@ -31,9 +31,9 @@ export default function FilmDetailShell({
   const [isVideoPlaying, setIsVideoPlaying] = useState(false)
 
   return (
-    <div className="bg-[#f4f2eb] text-[#2a2927] min-h-screen flex flex-col font-sans">
+    <div className="bg-[#2a2927] text-[#e9e6df] min-h-screen flex flex-col font-sans">
       <div className="relative z-50">
-        <Nav theme="light" />
+        <Nav />
       </div>
 
       {/* Main Content */}
@@ -51,7 +51,7 @@ export default function FilmDetailShell({
                 <div className="w-12 h-px bg-[#9c6a46]/40"></div>
               </div>
               <h1
-                className="text-[#1a1917] text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[0.95]"
+                className="text-[#e9e6df] text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[0.95]"
                 style={{ fontFamily: 'var(--font-hero)' }}
               >
                 {title}
@@ -114,12 +114,12 @@ export default function FilmDetailShell({
                   <div className="w-8 h-px bg-[#9c6a46]/40"></div>
                   <span>The Film</span>
                 </div>
-                <div className="text-lg md:text-xl lg:text-2xl font-sans font-light leading-[1.8] text-[#2a2927]/90 space-y-8">
+                <div className="text-lg md:text-xl lg:text-2xl font-sans font-light leading-[1.8] text-[#e9e6df]/90 space-y-8">
                   {description}
                 </div>
 
                 {festivalBadges && (
-                  <div className="mt-16 pt-16 border-t border-[#d8d4cb] flex flex-wrap gap-8">
+                  <div className="mt-16 pt-16 border-t border-white/10 flex flex-wrap gap-8">
                     {festivalBadges}
                   </div>
                 )}
@@ -134,16 +134,16 @@ export default function FilmDetailShell({
               >
                 <div className="flex flex-col">
                   {details.map((detail, i) => (
-                    <div key={i} className="flex flex-col sm:flex-row py-5 border-t border-[#d8d4cb] gap-2 sm:gap-8 hover:bg-[#eae6db] transition-colors -mx-4 px-4 rounded-md">
-                      <div className="sm:w-1/3 text-[10px] uppercase tracking-[0.2em] text-[#2a2927]/50 pt-1">
+                    <div key={i} className="flex flex-col sm:flex-row py-5 border-t border-white/10 gap-2 sm:gap-8 hover:bg-white/5 transition-colors -mx-4 px-4 rounded-md">
+                      <div className="sm:w-1/3 text-[10px] uppercase tracking-[0.2em] text-[#e9e6df]/50 pt-1">
                         {detail.label}
                       </div>
-                      <div className="sm:w-2/3 text-sm font-sans text-[#2a2927] leading-relaxed">
+                      <div className="sm:w-2/3 text-sm font-sans text-[#e9e6df] leading-relaxed">
                         {detail.value}
                       </div>
                     </div>
                   ))}
-                  <div className="border-t border-[#d8d4cb]"></div>
+                  <div className="border-t border-white/10"></div>
                 </div>
               </motion.div>
 
