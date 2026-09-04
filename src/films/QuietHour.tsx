@@ -1,6 +1,5 @@
 import FilmDetailShell from './FilmDetailShell'
-
-const IMAGE = 'https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=1400&h=600&fit=crop&auto=format'
+import IMAGE from '../imports/quiet-hour-new.jpg'
 
 export default function QuietHour() {
   return (
