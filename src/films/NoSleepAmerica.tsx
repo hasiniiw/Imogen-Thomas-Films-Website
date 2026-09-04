@@ -1,6 +1,5 @@
 import FilmDetailShell from './FilmDetailShell'
-
-const IMAGE = 'https://images.unsplash.com/photo-1509440159596-0249088772ff?w=1400&h=600&fit=crop&auto=format'
+import IMAGE from '../imports/no-sleep-america-new.jpg'
 
 export default function NoSleepAmerica() {
   return (
