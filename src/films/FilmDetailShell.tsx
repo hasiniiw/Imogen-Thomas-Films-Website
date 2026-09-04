@@ -1,4 +1,4 @@
-import { ReactNode, useState } from 'react'
+import { ReactNode, useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import Nav from '../components/Nav'
 import Footer from '../components/Footer'
@@ -29,6 +29,10 @@ export default function FilmDetailShell({
   youtubeId,
 }: Props) {
   const [isVideoPlaying, setIsVideoPlaying] = useState(false)
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   return (
     <div className="bg-[#2a2927] text-[#e9e6df] min-h-screen flex flex-col font-sans">
