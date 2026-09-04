@@ -1,6 +1,5 @@
 import FilmDetailShell from './FilmDetailShell'
-
-const IMAGE = 'https://images.unsplash.com/photo-1542204165-65bf26472b9b?w=1400&h=600&fit=crop&auto=format'
+import IMAGE from '../imports/mixed-bag-new.jpg'
 
 export default function MixedBag() {
   return (
