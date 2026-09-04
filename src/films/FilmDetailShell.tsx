@@ -215,7 +215,7 @@ export default function FilmDetailShell({
               <div className="flex items-center gap-4 mb-10 text-[#9c6a46] text-[10px] uppercase tracking-[0.2em]">
                 <span>02</span>
                 <div className="w-8 h-px bg-[#9c6a46]/40"></div>
-                <span>Praise & Reviews</span>
+                <span>Testimonials</span>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
                 {testimonials.map((t, i) => (
