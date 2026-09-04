@@ -10,23 +10,33 @@ export default function EmuRunner() {
       category="01 — FEATURE FILM"
       heroImage={IMAGE}
       youtubeId="z7TqkvUADEI"
-      synopsis="A grieving young Aboriginal girl finds solace and a deeper sense of belonging through her bond with a wild emu on her community's land."
+      synopsis="Her mother’s death propels a young girl to seek comfort in her ancestral lands, where a bond she forms with a wild emu rebuilds her spirit but also brings her into conflict with a social worker who could break her family apart."
       description={
         <>
           <p>
-            A grieving young Aboriginal girl finds solace and a deeper sense of belonging through her bond with a wild emu on her community's land. The film explores the profound connection between the young girl, her family, and the natural world around them as they navigate loss and healing.
+            Her mother’s death propels a young girl to seek comfort in her ancestral lands, where a bond she forms with a wild emu rebuilds her spirit but also brings her into conflict with a social worker who could break her family apart.
           </p>
-          <p>
-            Premiered at Toronto International Film Festival 2018. Winner of Best Independent Film at the Gold Coast Film Festival and received a 2019 AACTA nomination for Best Independent Film.
-          </p>
+          <div className="pt-6">
+            <a 
+              href="https://www.emurunnerfilm.com/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 text-[#e9e6df] hover:text-[#9c6a46] transition-colors font-sans text-xs tracking-[0.2em] uppercase border-b border-[#e9e6df]/30 hover:border-[#9c6a46] pb-1"
+            >
+              Emu Runner Website
+              <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            </a>
+          </div>
         </>
       }
       details={[
         { label: 'Year', value: '2018' },
-        { label: 'Writer / Director', value: 'Imogen Thomas' },
-        { label: 'Producers', value: 'Catriona McKenzie, Greer Simpkin & David Jowsey' },
-        { label: 'Length / Format', value: 'Feature' },
-        { label: 'Starring', value: 'Rhae-Kye Waites, Wayne Blair & Ningali Lawford-Wolf' },
+        { label: 'Genre', value: 'Drama' },
+        { label: 'Writer/Director', value: 'Imogen Thomas' },
+        { label: 'Producers', value: 'Imogen Thomas, Victor Evatt, Antonia Barnard, John Fink & Gabriel Barber Shipton' },
+        { label: 'First Nations Script Consultant', value: 'Frayne Barker' },
+        { label: 'Starring', value: 'Rhae-Kye Waites, Wayne Blair, Maurial Spearim, Georgia Blizzard & Rob Carlton' },
+        { label: 'Length/Format', value: '96 minutes 2K' },
       ]}
     />
   )
