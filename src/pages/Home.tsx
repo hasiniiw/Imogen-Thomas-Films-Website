@@ -163,6 +163,7 @@ export default function Home() {
               {/* CTA Link */}
               <Link 
                 to="/about" 
+                onClick={() => window.scrollTo(0, 0)}
                 className="group relative inline-block text-[#e9e6df] text-[10px] tracking-[0.3em] uppercase font-sans hover:text-[#c99138] transition-colors font-medium pb-1"
               >
                 Learn more about Imogen
