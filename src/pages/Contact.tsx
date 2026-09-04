@@ -68,6 +68,7 @@ export default function Contact() {
                       placeholder="First name"
                       value={form.firstName}
                       onChange={handleChange}
+                      required
                       className="w-full bg-transparent border-b border-white/20 text-[#e9e6df] text-sm font-sans font-light px-0 py-2 placeholder-white/40 focus:outline-none transition-colors peer"
                     />
                     <div className="absolute bottom-0 left-0 w-0 h-px bg-[#9c6a46] transition-all duration-300 peer-focus:w-full"></div>
@@ -79,6 +80,7 @@ export default function Contact() {
                       placeholder="Last name"
                       value={form.lastName}
                       onChange={handleChange}
+                      required
                       className="w-full bg-transparent border-b border-white/20 text-[#e9e6df] text-sm font-sans font-light px-0 py-2 placeholder-white/40 focus:outline-none transition-colors peer"
                     />
                     <div className="absolute bottom-0 left-0 w-0 h-px bg-[#9c6a46] transition-all duration-300 peer-focus:w-full"></div>
@@ -92,6 +94,7 @@ export default function Contact() {
                     placeholder="Email address"
                     value={form.email}
                     onChange={handleChange}
+                    required
                     className="w-full bg-transparent border-b border-white/20 text-[#e9e6df] text-sm font-sans font-light px-0 py-2 placeholder-white/40 focus:outline-none transition-colors peer"
                   />
                   <div className="absolute bottom-0 left-0 w-0 h-px bg-[#9c6a46] transition-all duration-300 peer-focus:w-full"></div>
@@ -115,6 +118,7 @@ export default function Contact() {
                     placeholder="Your message"
                     value={form.message}
                     onChange={handleChange}
+                    required
                     rows={3}
                     className="w-full bg-transparent border-b border-white/20 text-[#e9e6df] text-sm font-sans font-light px-0 py-2 placeholder-white/40 focus:outline-none resize-none transition-colors peer"
                   />
