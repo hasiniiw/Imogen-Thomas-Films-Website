@@ -194,6 +194,7 @@ export default function Home() {
             
             <Link 
               to="/work" 
+              onClick={() => window.scrollTo(0, 0)}
               className="group relative hidden md:inline-block text-[#e9e6df] text-[10px] tracking-[0.3em] uppercase font-sans hover:text-[#c99138] transition-colors font-medium pb-1"
             >
               View All Projects
@@ -255,6 +256,7 @@ export default function Home() {
           <div className="mt-12 text-center md:hidden">
             <Link 
               to="/work" 
+              onClick={() => window.scrollTo(0, 0)}
               className="group relative inline-block text-[#e9e6df] text-[10px] tracking-[0.3em] uppercase font-sans hover:text-[#c99138] transition-colors font-medium pb-1"
             >
               View All Projects
