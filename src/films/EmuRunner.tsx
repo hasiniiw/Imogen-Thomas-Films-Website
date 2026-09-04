@@ -1,6 +1,7 @@
 import FilmDetailShell from './FilmDetailShell'
+import emuRunnerHero from '../imports/emu-runner-hero.jpg'
 
-const IMAGE = 'https://images.unsplash.com/photo-1717957389547-cec922a4182f?w=1400&h=600&fit=crop&auto=format'
+const IMAGE = emuRunnerHero
 
 export default function EmuRunner() {
   return (
@@ -8,6 +9,7 @@ export default function EmuRunner() {
       title="Emu Runner"
       category="01 — FEATURE FILM"
       heroImage={IMAGE}
+      youtubeId="z7TqkvUADEI"
       synopsis="A grieving young Aboriginal girl finds solace and a deeper sense of belonging through her bond with a wild emu on her community's land."
       description={
         <>

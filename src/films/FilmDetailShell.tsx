@@ -1,4 +1,4 @@
-import { ReactNode } from 'react'
+import { ReactNode, useState } from 'react'
 import { motion } from 'framer-motion'
 import Nav from '../components/Nav'
 import Footer from '../components/Footer'
@@ -16,6 +16,7 @@ interface Props {
   description: ReactNode
   details: Detail[]
   festivalBadges?: ReactNode
+  youtubeId?: string
 }
 
 export default function FilmDetailShell({
@@ -26,7 +27,10 @@ export default function FilmDetailShell({
   description,
   details,
   festivalBadges,
+  youtubeId,
 }: Props) {
+  const [isVideoPlaying, setIsVideoPlaying] = useState(false)
+
   return (
     <div className="bg-[#1a1917] text-[#e9e6df] min-h-screen flex flex-col font-sans">
       <div className="relative z-50">
@@ -66,19 +70,34 @@ export default function FilmDetailShell({
 
       {/* Video Embed Section */}
       <section className="bg-[#1a1917] relative pb-20 pt-10">
-        <div className="max-w-[1600px] mx-auto px-6">
-          <div className="relative w-full aspect-video bg-[#141311] group cursor-pointer border border-white/5 overflow-hidden">
-             <img src={heroImage} alt="Video Thumbnail" className="w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-opacity duration-700 saturate-50" />
-             <div className="absolute inset-0 flex items-center justify-center">
-               <div className="w-20 h-20 md:w-28 md:h-28 rounded-full border-[1px] border-white/40 flex items-center justify-center group-hover:scale-110 group-hover:border-white/80 transition-all duration-500 bg-black/20 backdrop-blur-sm">
-                 <svg className="w-6 h-6 md:w-8 md:h-8 ml-1 md:ml-2 text-white/90" fill="currentColor" viewBox="0 0 24 24">
-                   <path d="M8 5v14l11-7z" />
-                 </svg>
-               </div>
-               <div className="absolute top-[50%] mt-16 md:mt-24 text-[9px] md:text-[10px] tracking-[0.3em] uppercase text-white/70 group-hover:text-white transition-colors">
-                 Play Film
-               </div>
-             </div>
+        <div className="max-w-[1200px] mx-auto px-6">
+          <div 
+            className="relative w-full aspect-video bg-[#141311] group cursor-pointer border border-white/5 overflow-hidden"
+            onClick={() => youtubeId && setIsVideoPlaying(true)}
+          >
+            {isVideoPlaying && youtubeId ? (
+              <iframe
+                src={`https://www.youtube.com/embed/${youtubeId}?autoplay=1&rel=0`}
+                title={title}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="absolute inset-0 w-full h-full border-0"
+              />
+            ) : (
+              <>
+                <img src={heroImage} alt="Video Thumbnail" className="w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-opacity duration-700 saturate-50" />
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="w-20 h-20 md:w-28 md:h-28 rounded-full border-[1px] border-white/40 flex items-center justify-center group-hover:scale-110 group-hover:border-white/80 transition-all duration-500 bg-black/20 backdrop-blur-sm">
+                    <svg className="w-6 h-6 md:w-8 md:h-8 ml-1 md:ml-2 text-white/90" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M8 5v14l11-7z" />
+                    </svg>
+                  </div>
+                  <div className="absolute top-[50%] mt-16 md:mt-24 text-[9px] md:text-[10px] tracking-[0.3em] uppercase text-white/70 group-hover:text-white transition-colors">
+                    Play Film
+                  </div>
+                </div>
+              </>
+            )}
           </div>
         </div>
       </section>
