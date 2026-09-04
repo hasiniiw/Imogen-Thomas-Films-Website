@@ -7,7 +7,7 @@ import emuRunnerImg from '../imports/emu-runner-work-2.jpg'
 import quietHourImg from '../imports/quiet-hour-new.jpg'
 import noSleepAmericaImg from '../imports/no-sleep-america-new.jpg'
 import mixedBagImg from '../imports/mixed-bag-new.jpg'
-import apyRangerImg from '../imports/apy-ranger-work.jpg'
+import apyRangerImg from '../imports/apy-ranger-new.jpg'
 import aboutImg from '../imports/about-hero-2.jpg'
 import workHeroImg from '../imports/work-hero.jpg'
 

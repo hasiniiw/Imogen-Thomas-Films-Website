@@ -1,6 +1,5 @@
 import FilmDetailShell from './FilmDetailShell'
-
-const IMAGE = 'https://images.unsplash.com/photo-1663256936394-ee943b28b695?w=1400&h=580&fit=crop&auto=format'
+import IMAGE from '../imports/apy-ranger-new.jpg'
 
 function FestivalBadge({ lines }: { lines: string[] }) {
   return (
