@@ -120,11 +120,6 @@ export default function Work() {
             <div className="text-[#9c6a46] text-[9px] md:text-[10px] tracking-[0.4em] uppercase font-sans font-medium whitespace-nowrap">
               {films.length} FILMS <span className="text-white/30 mx-2">·</span> 1999—2025
             </div>
-            <div className="w-full max-w-[500px]">
-              <p className="text-white/60 text-sm md:text-[15px] font-light leading-[1.9] drop-shadow-sm">
-                Feature films, documentaries, and shorts marked by authenticity, compassion, and a preference for inclusive storytelling and natural landscapes.
-              </p>
-            </div>
           </motion.div>
         </div>
       </section>
