@@ -72,7 +72,7 @@ export default function Home() {
               className="text-[#e9e6df]/95 text-sm md:text-lg lg:text-xl font-bold uppercase tracking-[0.2em] text-center" 
               style={{ fontFamily: 'var(--font-sans)' }}
             >
-              Director <span className="mx-3 text-[#e9e6df]/60 font-light">|</span> Screenwriter <span className="mx-3 text-[#e9e6df]/60 font-light">|</span> Filmmaker
+              Writer <span className="mx-3 text-[#e9e6df]/60 font-light">|</span> Director
             </h2>
           </motion.div>
 
