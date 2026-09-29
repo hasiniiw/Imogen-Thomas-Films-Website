@@ -158,11 +158,7 @@ export default function Home() {
           {/* Section Header */}
           <div className="flex items-center justify-between mb-16">
             <div className="flex flex-col gap-4">
-              <div className="flex items-center gap-4 text-[#9c6a46] text-xs font-sans tracking-[0.2em] uppercase">
-                <span>02</span>
-                <div className="w-12 h-px bg-[#9c6a46]/40"></div>
-                <span>Work</span>
-              </div>
+
               <h2 className="text-3xl md:text-5xl font-bold uppercase tracking-tight" style={{ fontFamily: 'var(--font-hero)' }}>
                 Featured Projects
               </h2>
