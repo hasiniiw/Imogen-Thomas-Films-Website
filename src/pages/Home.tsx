@@ -118,13 +118,7 @@ export default function Home() {
               transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
               className="max-w-xl"
             >
-              {/* Section Header */}
-              <div className="flex items-center gap-4 mb-8 text-[#9c6a46] text-xs font-sans tracking-[0.2em] uppercase">
-                <span>01</span>
-                <div className="w-12 h-px bg-[#9c6a46]/40"></div>
-                <span>About</span>
-              </div>
-              
+
               {/* Main Heading */}
               <h2 
                 className="text-3xl md:text-4xl lg:text-5xl mb-8 leading-[1.2] font-bold uppercase tracking-tight" 
