@@ -62,10 +62,10 @@ export default function Home() {
             className="flex flex-col items-center gap-3"
           >
             <h1
-              className="text-[#e9e6df] text-5xl md:text-7xl lg:text-[6rem] font-bold uppercase tracking-wider text-center drop-shadow-[0_8px_24px_rgba(0,0,0,0.7)]"
+              className="text-[#e9e6df] text-4xl md:text-6xl lg:text-[5rem] font-bold uppercase tracking-wider text-center drop-shadow-[0_8px_24px_rgba(0,0,0,0.7)]"
               style={{ fontFamily: 'var(--font-hero)' }}
             >
-              Imogen Thomas
+              Imogen Thomas Films
             </h1>
             
             <h2 
