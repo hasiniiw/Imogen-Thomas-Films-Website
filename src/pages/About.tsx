@@ -88,7 +88,7 @@ export default function About() {
             className="w-full flex flex-col md:flex-row justify-between items-start gap-8 md:gap-12"
           >
             <div className="text-[#9c6a46] text-[9px] md:text-[10px] tracking-[0.4em] uppercase font-sans font-medium">
-              Director <span className="text-white/30 mx-1 md:mx-2">·</span> Screenwriter <span className="text-white/30 mx-1 md:mx-2">·</span> Filmmaker
+              Director <span className="text-white/30 mx-1 md:mx-2">·</span> Writer
             </div>
           </motion.div>
           
