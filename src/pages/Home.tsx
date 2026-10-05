@@ -88,6 +88,11 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Decorative Divider */}
+      <div className="w-full flex justify-center bg-[#1a1917] relative z-20">
+        <div className="w-full max-w-[1400px] h-[2px] bg-[#8f5a31]/50" />
+      </div>
+
       {/* ── About Section ── */}
       <section className="bg-[#1a1917] text-[#e9e6df] py-20 lg:py-0">
         <div className="max-w-[1400px] mx-auto w-full flex flex-col lg:flex-row min-h-screen">
@@ -150,6 +155,11 @@ export default function Home() {
           
         </div>
       </section>
+
+      {/* Decorative Divider */}
+      <div className="w-full flex justify-center bg-[#1a1917]">
+        <div className="w-full max-w-[1400px] h-[2px] bg-[#8f5a31]/50" />
+      </div>
 
       {/* ── Selected Works Section ── */}
       <section className="bg-[#141311] text-[#e9e6df] py-20 lg:py-0 min-h-screen flex flex-col justify-center">
