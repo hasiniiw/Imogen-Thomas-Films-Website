@@ -80,17 +80,6 @@ export default function About() {
           {/* Divider Line */}
           <div className="w-full h-px bg-white/10 mb-10" />
           
-          {/* Lower Content */}
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3, ease: 'easeOut' }}
-            className="w-full flex flex-col md:flex-row justify-between items-start gap-8 md:gap-12"
-          >
-            <div className="text-[#9c6a46] text-[9px] md:text-[10px] tracking-[0.4em] uppercase font-sans font-medium">
-              Director <span className="text-white/30 mx-1 md:mx-2">·</span> Writer
-            </div>
-          </motion.div>
           
         </div>
         
@@ -102,18 +91,6 @@ export default function About() {
         
         {/* Left Column: Biography */}
         <div className="w-full lg:w-[55%]">
-          {/* Section Header */}
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.8, ease: 'easeOut' }}
-            className="flex items-center gap-4 mb-16 text-[#9c6a46] text-xs font-sans tracking-[0.2em] uppercase"
-          >
-            <span>01</span>
-            <div className="w-12 h-px bg-[#9c6a46]/40"></div>
-            <span>Biography</span>
-          </motion.div>
 
           <div className="text-[#e9e6df]/90 text-base md:text-[17px] font-normal leading-[1.8] space-y-8 pr-0 lg:pr-12">
             <motion.p
@@ -177,12 +154,6 @@ export default function About() {
         >
           
           <div className="lg:sticky lg:top-12">
-            {/* Section Header */}
-            <div className="flex items-center gap-4 mb-8 text-[#9c6a46] text-xs font-sans tracking-[0.2em] uppercase">
-              <span>02</span>
-              <div className="w-12 h-px bg-[#9c6a46]/40"></div>
-              <span>Behind the Scenes</span>
-            </div>
 
             {/* Carousel */}
             <div className="bg-[#111] border border-white/5 p-4 md:p-6 mb-8">
