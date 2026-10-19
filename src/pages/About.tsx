@@ -75,7 +75,7 @@ export default function About() {
         {/* Left Column: Biography */}
         <div className="w-full lg:w-[55%]">
 
-          <div className="text-[#e9e6df]/90 text-base md:text-[17px] font-normal leading-[1.8] space-y-8 pr-0 lg:pr-12">
+          <div className="text-[#e9e6df]/90 text-[13.5px] md:text-[15px] font-normal leading-[1.75] space-y-6 pr-0 lg:pr-12">
             <motion.p
                initial={{ opacity: 0, y: 25 }}
                whileInView={{ opacity: 1, y: 0 }}
@@ -180,21 +180,21 @@ export default function About() {
               </div>
             </div>
             
-            <div className="bg-[#141311] border border-white/5 p-8 flex flex-col gap-4">
-              <h3 className="text-[#e9e6df] uppercase tracking-widest text-xs font-bold mb-2">Education</h3>
-              <ul className="text-[#e9e6df]/90 text-[15px] space-y-5 font-normal">
+            <div className="bg-[#141311] border border-white/5 p-6 md:p-8 flex flex-col gap-4">
+              <h3 className="text-[#e9e6df] uppercase tracking-widest text-[11px] font-bold mb-1">Education</h3>
+              <ul className="text-[#e9e6df]/90 text-[14px] space-y-4 font-normal">
                 <li className="flex gap-4">
                   <span className="text-[#9c6a46] shrink-0 mt-0.5">—</span>
-                  <div className="space-y-1">
-                    <p className="font-medium text-white text-[15px]">Masters of Fine Arts</p>
-                    <p className="text-white/60 text-sm">New York University, Tisch School of Arts</p>
+                  <div className="space-y-0.5">
+                    <p className="font-medium text-white text-[14px]">Masters of Fine Arts</p>
+                    <p className="text-white/60 text-[13px]">New York University, Tisch School of Arts</p>
                   </div>
                 </li>
                 <li className="flex gap-4">
                   <span className="text-[#9c6a46] shrink-0 mt-0.5">—</span>
-                  <div className="space-y-1">
-                    <p className="font-medium text-white text-[15px]">Bachelor of Arts Honours Degree (First Class) Drama</p>
-                    <p className="text-white/60 text-sm">Flinders University, SA</p>
+                  <div className="space-y-0.5">
+                    <p className="font-medium text-white text-[14px]">Bachelor of Arts Honours Degree (First Class) Drama</p>
+                    <p className="text-white/60 text-[13px]">Flinders University, SA</p>
                   </div>
                 </li>
               </ul>

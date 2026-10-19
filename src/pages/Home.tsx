@@ -134,7 +134,7 @@ export default function Home() {
               </h2>
               
               {/* Paragraphs */}
-              <div className="text-white/70 text-[15px] font-sans font-light leading-[1.8] space-y-6 mb-12">
+              <div className="text-white/70 text-[13.5px] md:text-[14px] font-sans font-light leading-[1.75] space-y-5 mb-12">
                 <p>
                   Imogen Thomas is an Australian director and screenwriter known for her emotionally rich storytelling and collaborative filmmaking style. Her work spans feature films, short fiction, and documentaries—each marked by authenticity, compassion, and a deep commitment to inclusive storytelling.
                 </p>
