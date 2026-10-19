@@ -181,12 +181,22 @@ export default function About() {
             </div>
             
             <div className="bg-[#141311] border border-white/5 p-8 flex flex-col gap-4">
-              <h3 className="text-[#e9e6df] uppercase tracking-widest text-xs font-bold mb-4">Education & Honours</h3>
-              <ul className="text-[#e9e6df]/90 text-[15px] space-y-4 font-normal">
-                <li className="flex gap-4"><span className="text-[#9c6a46]">—</span> NYU Tisch School of the Arts</li>
-                <li className="flex gap-4"><span className="text-[#9c6a46]">—</span> Flinders University, First-Class Honours BA</li>
-                <li className="flex gap-4"><span className="text-[#9c6a46]">—</span> Gold Award, Australian Cinematographers Society</li>
-                <li className="flex gap-4"><span className="text-[#9c6a46]">—</span> 2019 AACTA Nominee</li>
+              <h3 className="text-[#e9e6df] uppercase tracking-widest text-xs font-bold mb-2">Education</h3>
+              <ul className="text-[#e9e6df]/90 text-[15px] space-y-5 font-normal">
+                <li className="flex gap-4">
+                  <span className="text-[#9c6a46] shrink-0 mt-0.5">—</span>
+                  <div className="space-y-1">
+                    <p className="font-medium text-white text-[15px]">Masters of Fine Arts</p>
+                    <p className="text-white/60 text-sm">New York University, Tisch School of Arts</p>
+                  </div>
+                </li>
+                <li className="flex gap-4">
+                  <span className="text-[#9c6a46] shrink-0 mt-0.5">—</span>
+                  <div className="space-y-1">
+                    <p className="font-medium text-white text-[15px]">Bachelor of Arts Honours Degree (First Class) Drama</p>
+                    <p className="text-white/60 text-sm">Flinders University, SA</p>
+                  </div>
+                </li>
               </ul>
             </div>
           </div>
