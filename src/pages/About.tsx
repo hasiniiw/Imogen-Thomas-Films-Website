@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { motion } from 'framer-motion'
 import Nav from '../components/Nav'
 import Footer from '../components/Footer'
@@ -8,36 +8,19 @@ import bts2 from '../imports/bts-2.jpg'
 import bts3 from '../imports/bts-3.jpg'
 import bts4 from '../imports/bts-4.jpg'
 
-const SLIDES = [
-  {
-    src: bts1,
-    alt: 'Crew filming emus',
-  },
-  {
-    src: bts2,
-    alt: 'Crew filming with children on location',
-  },
-  {
-    src: bts3,
-    alt: 'Director and crew member outdoors',
-  },
-  {
-    src: bts4,
-    alt: 'Crew filming on a hill',
-  },
+const BTS_IMAGES = [
+  { src: bts1, alt: 'Crew filming emus' },
+  { src: bts2, alt: 'Crew filming with children on location' },
+  { src: bts3, alt: 'Director and crew member outdoors' },
+  { src: bts4, alt: 'Crew filming on a hill' },
 ]
 
 export default function About() {
-  const [slide, setSlide] = useState(0)
+  const [currentIdx, setCurrentIdx] = useState(0)
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setSlide((prev) => (prev + 1) % SLIDES.length)
-    }, 2500)
-    return () => clearInterval(timer)
-  }, [])
-
-  const activeSlide = SLIDES[slide]
+  const advanceImage = () => {
+    setCurrentIdx((prev) => (prev + 1) % BTS_IMAGES.length)
+  }
 
   return (
     <div className="bg-[#1a1917] text-[#e9e6df] min-h-screen flex flex-col font-sans">
@@ -155,26 +138,44 @@ export default function About() {
           
           <div className="lg:sticky lg:top-12">
 
-            {/* Carousel */}
+            {/* Image Box: Changes on Hover and Stays */}
             <div className="bg-[#111] border border-white/5 p-4 md:p-6 mb-8">
-              <div className="overflow-hidden bg-black aspect-[4/3] relative group">
-                <img 
-                  src={activeSlide.src} 
-                  alt={activeSlide.alt} 
-                  className="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-all duration-700" 
-                />
+              <div
+                className="overflow-hidden bg-black aspect-[4/3] relative group cursor-pointer"
+                onMouseEnter={advanceImage}
+                onClick={advanceImage}
+              >
+                {BTS_IMAGES.map((img, i) => (
+                  <img
+                    key={i}
+                    src={img.src}
+                    alt={img.alt}
+                    className={`w-full h-full object-cover absolute inset-0 transition-all duration-700 ease-out group-hover:scale-105 ${
+                      i === currentIdx
+                        ? 'opacity-90 z-10'
+                        : 'opacity-0 z-0 pointer-events-none'
+                    }`}
+                  />
+                ))}
               </div>
-              {/* Dots */}
-              <div className="flex justify-center gap-3 mt-6">
-                {SLIDES.map((_, i) => (
+
+              {/* Dots to manually change image */}
+              <div className="flex justify-center items-center gap-1 mt-4">
+                {BTS_IMAGES.map((_, i) => (
                   <button
                     key={i}
-                    onClick={() => setSlide(i)}
-                    className={`w-1.5 h-1.5 rounded-full transition-all duration-300 ${
-                      i === slide ? 'bg-[#9c6a46] w-4' : 'bg-white/20 hover:bg-white/50'
-                    }`}
-                    aria-label={`Slide ${i + 1}`}
-                  />
+                    onClick={() => setCurrentIdx(i)}
+                    className="p-1 cursor-pointer group/dot flex items-center justify-center"
+                    aria-label={`Show photo ${i + 1}`}
+                  >
+                    <span
+                      className={`h-1 rounded-full transition-all duration-300 block ${
+                        i === currentIdx
+                          ? 'bg-[#9c6a46] w-3.5'
+                          : 'bg-white/20 group-hover/dot:bg-white/50 w-1'
+                      }`}
+                    />
+                  </button>
                 ))}
               </div>
             </div>
