@@ -42,7 +42,7 @@ export default function About() {
   return (
     <div className="bg-[#1a1917] text-[#e9e6df] min-h-screen flex flex-col font-sans">
       {/* Hero */}
-      <section className="relative flex flex-col min-h-screen overflow-hidden bg-[#141311]">
+      <section className="relative flex flex-col min-h-[70vh] lg:min-h-[80vh] overflow-hidden bg-[#141311]">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <img
@@ -87,7 +87,7 @@ export default function About() {
       </section>
 
       {/* Main Content Area */}
-      <div className="max-w-[1400px] mx-auto w-full px-6 lg:px-16 pt-24 pb-32 flex flex-col lg:flex-row gap-16 lg:gap-24">
+      <div className="max-w-[1400px] mx-auto w-full px-6 lg:px-16 pt-8 lg:pt-12 pb-32 flex flex-col lg:flex-row gap-16 lg:gap-24">
         
         {/* Left Column: Biography */}
         <div className="w-full lg:w-[55%]">
