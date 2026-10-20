@@ -15,6 +15,51 @@ const BTS_IMAGES = [
   { src: bts4, alt: 'Crew filming on a hill' },
 ]
 
+const AWARDS = [
+  {
+    film: 'Mixed Bag',
+    award: 'Best Female Actress',
+    festival: 'Show Me A Film, New Zealand',
+    status: 'Winner',
+  },
+  {
+    film: 'Emu Runner',
+    award: 'Peer Award for Best Independent Film',
+    festival: 'Gold Coast Film Festival',
+    status: 'Winner',
+  },
+  {
+    film: 'Mixed Bag',
+    award: 'Gold Award',
+    festival: 'Australian Cinematographers Society (ACSA)',
+    status: 'Winner',
+  },
+  {
+    film: 'APY Ranger Visit',
+    award: 'Best Documentary Award',
+    festival: 'Heart of Gold Film Festival',
+    status: 'Finalist',
+  },
+  {
+    film: 'Mixed Bag',
+    award: 'Wasserman & King Award',
+    festival: 'First Run Film Festival, NYU',
+    status: 'Finalist',
+  },
+  {
+    film: 'Emu Runner',
+    award: 'Best Indie Film',
+    festival: 'AACTA Awards',
+    status: 'Nominated',
+  },
+  {
+    film: 'Emu Runner',
+    award: "Grolsch People's Choice Award",
+    festival: 'Toronto International Film Festival',
+    status: 'Nominated',
+  },
+]
+
 export default function About() {
   const [currentIdx, setCurrentIdx] = useState(0)
 
@@ -70,7 +115,7 @@ export default function About() {
       </section>
 
       {/* Main Content Area */}
-      <div className="max-w-[1400px] mx-auto w-full px-6 lg:px-16 pt-8 lg:pt-12 pb-32 flex flex-col lg:flex-row gap-16 lg:gap-24">
+      <div className="max-w-[1400px] mx-auto w-full px-6 lg:px-16 pt-8 lg:pt-12 pb-20 lg:pb-24 flex flex-col lg:flex-row gap-16 lg:gap-24">
         
         {/* Left Column: Biography */}
         <div className="w-full lg:w-[55%]">
@@ -204,6 +249,55 @@ export default function About() {
         </motion.div>
 
       </div>
+
+      {/* ── Awards Section ── */}
+      <section className="bg-[#141311] border-t border-white/5 py-12 md:py-16">
+        <div className="max-w-[1400px] mx-auto w-full px-6 lg:px-16">
+          
+          {/* Header */}
+          <div className="flex items-center gap-3 mb-8">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#9c6a46]" />
+            <h2
+              className="text-[#e9e6df] text-xs font-bold uppercase tracking-[0.25em]"
+              style={{ fontFamily: 'var(--font-hero)' }}
+            >
+              Awards
+            </h2>
+          </div>
+
+          {/* Clean 2-Column Minimal List */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-2">
+            {AWARDS.map((item, i) => (
+              <div
+                key={i}
+                className="py-3 border-b border-white/5 flex items-start justify-between gap-4"
+              >
+                <div className="space-y-0.5 min-w-0">
+                  <div className="flex flex-wrap items-baseline gap-x-2 text-[13.5px]">
+                    <span className="font-semibold text-white">{item.film}</span>
+                    <span className="text-[#9c6a46] text-xs">—</span>
+                    <span className="text-[#e9e6df]/90">{item.award}</span>
+                  </div>
+                  <p className="text-white/45 text-xs font-normal">
+                    {item.festival}
+                  </p>
+                </div>
+
+                <span
+                  className={`text-[9px] tracking-[0.18em] uppercase font-bold px-2 py-0.5 rounded-xs shrink-0 border ${
+                    item.status === 'Winner'
+                      ? 'text-[#e6b17e] bg-[#8f5a31]/20 border-[#8f5a31]/40'
+                      : 'text-white/55 bg-white/5 border-white/10'
+                  }`}
+                >
+                  {item.status}
+                </span>
+              </div>
+            ))}
+          </div>
+
+        </div>
+      </section>
 
       <Footer />
     </div>
