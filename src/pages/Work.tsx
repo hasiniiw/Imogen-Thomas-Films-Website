@@ -87,6 +87,20 @@ export default function Work() {
             >
               Film<br/>Projects
             </motion.h1>
+
+            <motion.a
+              href="#films"
+              onClick={(e) => {
+                e.preventDefault()
+                document.getElementById('films')?.scrollIntoView({ behavior: 'smooth' })
+              }}
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
+              className="mt-6 md:mt-8 inline-block text-[#9c6a46] hover:text-[#b87d53] transition-colors duration-300 text-[10px] md:text-[11px] tracking-[0.3em] uppercase font-sans font-medium cursor-pointer"
+            >
+              Scroll to view films
+            </motion.a>
           </div>
 
           {/* Divider Line */}
@@ -95,7 +109,7 @@ export default function Work() {
       </section>
 
       {/* Main Content Area */}
-      <section className="bg-[#1a1917] flex-1 pt-8 lg:pt-12 pb-40">
+      <section id="films" className="bg-[#1a1917] flex-1 pt-8 lg:pt-12 pb-40">
         
         {/* Film List */}
         <div className="max-w-[1400px] mx-auto w-full px-6 lg:px-16 grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-20">
