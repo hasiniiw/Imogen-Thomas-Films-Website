@@ -57,7 +57,7 @@ export default function Work() {
   return (
     <div className="bg-[#1a1917] text-[#e9e6df] min-h-screen flex flex-col font-sans">
       {/* Hero Section */}
-      <section className="relative flex flex-col min-h-screen bg-[#141311] overflow-hidden">
+      <section className="relative flex flex-col min-h-[70vh] lg:min-h-[80vh] bg-[#141311] overflow-hidden">
         {/* Background Image & Gradients */}
         <div className="absolute inset-0 z-0">
           <img
@@ -90,12 +90,12 @@ export default function Work() {
           </div>
 
           {/* Divider Line */}
-          <div className="w-full h-px bg-white/10 mb-10"></div>
+          <div className="w-full h-px bg-white/10 mb-10" />
         </div>
       </section>
 
       {/* Main Content Area */}
-      <section className="bg-[#1a1917] flex-1 pt-16 md:pt-24 pb-40">
+      <section className="bg-[#1a1917] flex-1 pt-8 lg:pt-12 pb-40">
         
         {/* Film List */}
         <div className="max-w-[1400px] mx-auto w-full px-6 lg:px-16 grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-20">
