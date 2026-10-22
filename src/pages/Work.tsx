@@ -11,14 +11,6 @@ import workHeroImg from '../imports/work-hero.jpg'
 
 const films = [
   {
-    title: 'Emu Runner',
-    to: '/work/emu-runner',
-    thumb: emuRunnerImg,
-    alt: 'Emu in Australian outback',
-    genre: 'FEATURE',
-    year: '2018',
-  },
-  {
     title: 'APY Ranger Visit',
     to: '/work/apy-ranger-visit',
     thumb: apyRangerImg,
@@ -27,12 +19,12 @@ const films = [
     year: '2025',
   },
   {
-    title: 'Quiet Hour',
-    to: '/work/quiet-hour',
-    thumb: quietHourImg,
-    alt: 'Girl and boy standing on a rooftop',
-    genre: 'SHORT',
-    year: '2001',
+    title: 'Emu Runner',
+    to: '/work/emu-runner',
+    thumb: emuRunnerImg,
+    alt: 'Emu in Australian outback',
+    genre: 'FEATURE',
+    year: '2018',
   },
   {
     title: 'Mixed Bag',
@@ -41,6 +33,14 @@ const films = [
     alt: 'Young girl and older woman sitting on grass',
     genre: 'SHORT',
     year: '2008',
+  },
+  {
+    title: 'Quiet Hour',
+    to: '/work/quiet-hour',
+    thumb: quietHourImg,
+    alt: 'Girl and boy standing on a rooftop',
+    genre: 'SHORT',
+    year: '2001',
   },
   {
     title: 'No Sleep America',
