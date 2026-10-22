@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import Nav from '../components/Nav'
@@ -8,7 +7,6 @@ import quietHourImg from '../imports/quiet-hour-new.jpg'
 import noSleepAmericaImg from '../imports/no-sleep-america-new.jpg'
 import mixedBagImg from '../imports/mixed-bag-new.jpg'
 import apyRangerImg from '../imports/apy-ranger-new.jpg'
-import aboutImg from '../imports/about-hero-2.jpg'
 import workHeroImg from '../imports/work-hero.jpg'
 
 const films = [
@@ -54,19 +52,7 @@ const films = [
   },
 ]
 
-const CATEGORIES = ['ALL', 'FEATURE', 'DOCUMENTARY', 'SHORT']
-
 export default function Work() {
-  const [activeCategory, setActiveCategory] = useState('ALL')
-
-  const filteredFilms = films.filter(
-    (f) => activeCategory === 'ALL' || f.genre === activeCategory
-  )
-
-  const getCount = (cat: string) => {
-    if (cat === 'ALL') return films.length
-    return films.filter((f) => f.genre === cat).length
-  }
 
   return (
     <div className="bg-[#1a1917] text-[#e9e6df] min-h-screen flex flex-col font-sans">
@@ -109,45 +95,11 @@ export default function Work() {
       </section>
 
       {/* Main Content Area */}
-      <section className="bg-[#1a1917] flex-1 pb-40">
+      <section className="bg-[#1a1917] flex-1 pt-16 md:pt-24 pb-40">
         
-        {/* Filter Nav */}
-        <motion.div 
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8, ease: 'easeOut' }}
-          className="max-w-[1400px] mx-auto w-full px-6 lg:px-16 pt-20 mb-20 border-b border-white/10"
-        >
-          <div className="flex flex-wrap gap-8 md:gap-12 pb-6">
-            {CATEGORIES.map((cat) => {
-              const isActive = activeCategory === cat
-              return (
-                <button
-                  key={cat}
-                  onClick={() => setActiveCategory(cat)}
-                  className={`group relative flex items-start gap-1 text-[10px] md:text-[11px] tracking-[0.25em] uppercase transition-colors duration-300 ${
-                    isActive ? 'text-white font-medium' : 'text-white/40 hover:text-white/70'
-                  }`}
-                >
-                  <span>{cat}</span>
-                  <span className="text-[8px] leading-none opacity-60">{getCount(cat)}</span>
-                  
-                  {/* Active/Hover Underline */}
-                  <span 
-                    className={`absolute -bottom-[25px] left-0 h-[2px] bg-[#9c6a46] transition-all duration-300 ${
-                      isActive ? 'w-full' : 'w-0 group-hover:w-full'
-                    }`}
-                  />
-                </button>
-              )
-            })}
-          </div>
-        </motion.div>
-
         {/* Film List */}
         <div className="max-w-[1400px] mx-auto w-full px-6 lg:px-16 grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-20">
-          {filteredFilms.map((film, index) => (
+          {films.map((film, index) => (
             <motion.div 
               key={film.to} 
               initial={{ opacity: 0, y: 40 }}
