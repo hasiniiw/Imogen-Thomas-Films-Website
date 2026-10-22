@@ -92,11 +92,6 @@ export default function Work() {
         <div className="max-w-[1400px] mx-auto w-full px-6 lg:px-16 flex-1 flex flex-col justify-center relative z-10 pt-20">
           
           <div className="w-full flex flex-col items-start text-left mb-16">
-            <div className="flex items-center gap-4 mb-10 text-[#9c6a46] text-xs font-sans tracking-[0.2em] uppercase">
-              <div className="w-12 h-px bg-[#9c6a46]/40"></div>
-              <span>Index of Films</span>
-            </div>
-
             <motion.h1 
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -110,17 +105,6 @@ export default function Work() {
 
           {/* Divider Line */}
           <div className="w-full h-px bg-white/10 mb-10"></div>
-
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3, ease: 'easeOut' }}
-            className="flex flex-col md:flex-row justify-between items-start gap-8 md:gap-12"
-          >
-            <div className="text-[#9c6a46] text-[9px] md:text-[10px] tracking-[0.4em] uppercase font-sans font-medium whitespace-nowrap">
-              {films.length} FILMS <span className="text-white/30 mx-2">·</span> 1999—2025
-            </div>
-          </motion.div>
         </div>
       </section>
 
