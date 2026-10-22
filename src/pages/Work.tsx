@@ -19,12 +19,12 @@ const films = [
     year: '2018',
   },
   {
-    title: 'No Sleep America',
-    to: '/work/no-sleep-america',
-    thumb: noSleepAmericaImg,
-    alt: 'Baker preparing dough',
+    title: 'APY Ranger Visit',
+    to: '/work/apy-ranger-visit',
+    thumb: apyRangerImg,
+    alt: 'Gloved hands holding a small yellow and black frog',
     genre: 'DOCUMENTARY',
-    year: '1999',
+    year: '2025',
   },
   {
     title: 'Quiet Hour',
@@ -43,12 +43,12 @@ const films = [
     year: '2008',
   },
   {
-    title: 'APY Ranger Visit',
-    to: '/work/apy-ranger-visit',
-    thumb: apyRangerImg,
-    alt: 'Gloved hands holding a small yellow and black frog',
+    title: 'No Sleep America',
+    to: '/work/no-sleep-america',
+    thumb: noSleepAmericaImg,
+    alt: 'Baker preparing dough',
     genre: 'DOCUMENTARY',
-    year: '2025',
+    year: '1999',
   },
 ]
 
@@ -57,7 +57,7 @@ export default function Work() {
   return (
     <div className="bg-[#1a1917] text-[#e9e6df] min-h-screen flex flex-col font-sans">
       {/* Hero Section */}
-      <section className="relative flex flex-col min-h-[70vh] lg:min-h-[80vh] bg-[#141311] overflow-hidden">
+      <section className="relative flex flex-col min-h-screen bg-[#141311] overflow-hidden">
         {/* Background Image & Gradients */}
         <div className="absolute inset-0 z-0">
           <img
@@ -90,12 +90,12 @@ export default function Work() {
           </div>
 
           {/* Divider Line */}
-          <div className="w-full h-px bg-white/10 mb-10" />
+          <div className="w-full h-px bg-white/10 mb-10"></div>
         </div>
       </section>
 
       {/* Main Content Area */}
-      <section className="bg-[#1a1917] flex-1 pt-8 lg:pt-12 pb-32">
+      <section className="bg-[#1a1917] flex-1 pt-16 md:pt-24 pb-40">
         
         {/* Film List */}
         <div className="max-w-[1400px] mx-auto w-full px-6 lg:px-16 grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-20">
@@ -105,10 +105,9 @@ export default function Work() {
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.8, delay: index === 0 ? 0 : 0.1, ease: 'easeOut' }}
-              className={index === 0 ? 'md:col-span-2 md:max-w-4xl md:mx-auto w-full' : ''}
+              transition={{ duration: 0.8, delay: (index % 2) * 0.1, ease: 'easeOut' }}
             >
-              <FilmCard film={film} index={index} isFeatured={index === 0} />
+              <FilmCard film={film} />
             </motion.div>
           ))}
         </div>
@@ -120,25 +119,21 @@ export default function Work() {
   )
 }
 
-function FilmCard({ film, index, isFeatured = false }: { film: (typeof films)[0], index: number, isFeatured?: boolean }) {
+function FilmCard({ film }: { film: (typeof films)[0] }) {
   return (
     <div className="flex flex-col group">
       <Link to={film.to} state={{ fromWork: true }} className="w-full overflow-hidden mb-6 block bg-[#141311]">
         <img
           src={film.thumb}
           alt={film.alt}
-          className={`w-full object-cover transition-transform duration-1000 group-hover:scale-[1.03] ${
-            isFeatured ? 'aspect-[21/9] md:aspect-[2.35/1]' : 'aspect-[4/3] md:aspect-[3/2]'
-          }`}
+          className="w-full object-cover aspect-[4/3] md:aspect-[3/2] transition-transform duration-1000 group-hover:scale-[1.03]"
         />
       </Link>
       
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 relative">
         <Link to={film.to} state={{ fromWork: true }} className="inline-block relative self-start">
           <h2 
-            className={`text-[#e9e6df] font-normal tracking-tight leading-none mb-1 ${
-              isFeatured ? 'text-4xl md:text-6xl lg:text-[5rem]' : 'text-3xl md:text-4xl lg:text-5xl'
-            }`}
+            className="text-[#e9e6df] font-normal tracking-tight leading-none mb-1 text-3xl md:text-4xl lg:text-5xl"
             style={{ fontFamily: 'var(--font-hero)' }}
           >
             {film.title}
