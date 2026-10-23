@@ -63,9 +63,9 @@ export default function Work() {
           <img
             src={workHeroImg}
             alt="Imogen Thomas work background"
-            className="w-full h-full object-cover object-center opacity-90 saturate-[1.25]"
+            className="w-full h-full object-cover object-[center_20%] opacity-90 saturate-[1.25]"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-sky-500/30 via-transparent to-transparent mix-blend-overlay pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-b from-sky-500/20 via-transparent to-transparent mix-blend-overlay pointer-events-none" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#141311]/80 via-[#141311]/20 to-transparent pointer-events-none" />
           <div className="absolute inset-0 bg-gradient-to-t from-[#1a1917] from-10% via-[#1a1917]/80 via-30% to-transparent pointer-events-none" />
           <div className="absolute inset-0 bg-gradient-to-bl from-[#141311]/80 via-transparent to-transparent pointer-events-none" />
@@ -75,9 +75,9 @@ export default function Work() {
           <Nav />
         </div>
 
-        <div className="max-w-[1400px] mx-auto w-full px-6 lg:px-16 flex-1 flex flex-col justify-center relative z-10 pt-20">
+        <div className="max-w-[1400px] mx-auto w-full px-6 lg:px-16 flex-1 flex flex-col justify-center relative z-10 pt-14 md:pt-16 pb-4">
           
-          <div className="w-full flex flex-col items-start text-left mb-16">
+          <div className="w-full flex flex-col items-start text-left mb-2 md:mb-3">
             <motion.h1 
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -97,28 +97,28 @@ export default function Work() {
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
-              className="mt-6 md:mt-8 inline-block text-[#9c6a46] hover:text-[#b87d53] transition-colors duration-300 text-[10px] md:text-[11px] tracking-[0.3em] uppercase font-sans font-medium cursor-pointer"
+              className="mt-4 md:mt-5 inline-block text-[#9c6a46] hover:text-[#b87d53] transition-colors duration-300 text-[10px] md:text-[11px] tracking-[0.3em] uppercase font-sans font-medium cursor-pointer"
             >
               Scroll to view films
             </motion.a>
           </div>
 
           {/* Divider Line */}
-          <div className="w-full h-px bg-white/10 mb-10" />
+          <div className="w-full h-px bg-white/10 mb-4 md:mb-6" />
         </div>
       </section>
 
       {/* Main Content Area */}
-      <section id="films" className="bg-[#1a1917] flex-1 pt-8 lg:pt-12 pb-40">
+      <section id="films" className="bg-[#1a1917] flex-1 pt-6 md:pt-8 pb-40">
         
         {/* Film List */}
         <div className="max-w-[1400px] mx-auto w-full px-6 lg:px-16 grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-20">
           {films.map((film, index) => (
             <motion.div 
               key={film.to} 
-              initial={{ opacity: 0, y: 40 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
+              viewport={{ once: true, amount: 0 }}
               transition={{ duration: 0.8, delay: (index % 2) * 0.1, ease: 'easeOut' }}
             >
               <FilmCard film={film} />

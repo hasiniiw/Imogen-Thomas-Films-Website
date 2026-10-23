@@ -91,9 +91,9 @@ export default function About() {
           <Nav />
         </div>
         
-        <div className="max-w-[1400px] mx-auto w-full px-6 lg:px-16 flex-1 flex flex-col justify-center relative z-10 pt-20">
+        <div className="max-w-[1400px] mx-auto w-full px-6 lg:px-16 flex-1 flex flex-col justify-center relative z-10 pt-14 md:pt-16 pb-4">
           
-          <div className="w-full flex flex-col items-start text-left mb-16">
+          <div className="w-full flex flex-col items-start text-left mb-8 md:mb-10">
              <motion.h1 
                initial={{ opacity: 0, y: 30 }}
                animate={{ opacity: 1, y: 0 }}
@@ -106,34 +106,29 @@ export default function About() {
           </div>
           
           {/* Divider Line */}
-          <div className="w-full h-px bg-white/10 mb-10" />
-          
-          
+          <div className="w-full h-px bg-white/10 mb-4 md:mb-6" />
         </div>
-        
 
       </section>
 
       {/* Main Content Area */}
-      <div className="max-w-[1400px] mx-auto w-full px-6 lg:px-16 pt-8 lg:pt-12 pb-20 lg:pb-24 flex flex-col lg:flex-row gap-16 lg:gap-24">
+      <div className="max-w-[1400px] mx-auto w-full px-6 lg:px-16 pt-4 md:pt-6 pb-20 lg:pb-24 flex flex-col lg:flex-row gap-16 lg:gap-24">
         
         {/* Left Column: Biography */}
         <div className="w-full lg:w-[55%]">
 
           <div className="text-[#e9e6df]/90 text-[13.5px] md:text-[15px] font-normal leading-[1.75] space-y-6 pr-0 lg:pr-12">
             <motion.p
-               initial={{ opacity: 0, y: 25 }}
-               whileInView={{ opacity: 1, y: 0 }}
-               viewport={{ once: true, margin: "-50px" }}
+               initial={{ opacity: 0, y: 20 }}
+               animate={{ opacity: 1, y: 0 }}
                transition={{ duration: 0.8, ease: 'easeOut' }}
             >
               Imogen's work spans feature films, short fiction, and documentaries—each marked by authenticity, compassion, and a deep commitment to inclusive storytelling.
             </motion.p>
             <motion.p
-               initial={{ opacity: 0, y: 25 }}
-               whileInView={{ opacity: 1, y: 0 }}
-               viewport={{ once: true, margin: "-50px" }}
-               transition={{ duration: 0.8, ease: 'easeOut' }}
+               initial={{ opacity: 0, y: 20 }}
+               animate={{ opacity: 1, y: 0 }}
+               transition={{ duration: 0.8, delay: 0.15, ease: 'easeOut' }}
             >
               Thomas recently directed the short documentary <em className="text-white font-semibold not-italic tracking-wide">APY Ranger Visit</em>, which shines a light on vital conservation efforts to protect critically endangered frog species in the Snowy Mountains region of New South Wales. The film continues her tradition of using cinema to spotlight underrepresented voices and urgent environmental issues.
             </motion.p>
@@ -174,9 +169,9 @@ export default function About() {
 
         {/* Right Column: Carousel & Extra Info */}
         <motion.div 
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, margin: "0px" }}
           transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
           className="w-full lg:w-[45%] flex flex-col gap-12"
         >
@@ -186,7 +181,7 @@ export default function About() {
             {/* Image Box: Changes on Hover and Stays */}
             <div className="bg-[#111] border border-white/5 p-4 md:p-6 mb-8">
               <div
-                className="overflow-hidden bg-black aspect-[4/3] relative group cursor-pointer"
+                className="overflow-hidden bg-black aspect-[4/3] md:aspect-[3/2] relative group cursor-pointer"
                 onMouseEnter={advanceImage}
                 onClick={advanceImage}
               >
