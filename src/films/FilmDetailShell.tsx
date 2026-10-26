@@ -76,11 +76,12 @@ export default function FilmDetailShell({
             <Link
               to="/work"
               onClick={handleBack}
-              className="absolute top-0 md:top-1 -left-6 md:-left-12 xl:-left-16 z-[60] text-[#e9e6df]/30 hover:text-[#c99138] transition-colors"
+              className="absolute top-1 md:top-2 -left-8 md:-left-14 xl:-left-20 z-[60] text-[#e9e6df]/50 hover:text-[#c99138] transition-all duration-200 p-1 group flex items-center justify-center"
               title="Back to Film Projects"
+              aria-label="Back to Film Projects"
             >
               <svg
-                className="w-4 h-4 md:w-5 md:h-5"
+                className="w-7 h-7 md:w-8 md:h-8 group-hover:-translate-x-1 transition-transform duration-200"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -88,7 +89,7 @@ export default function FilmDetailShell({
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  strokeWidth="1.5"
+                  strokeWidth="1.75"
                   d="M10 19l-7-7m0 0l7-7m-7 7h18"
                 ></path>
               </svg>
