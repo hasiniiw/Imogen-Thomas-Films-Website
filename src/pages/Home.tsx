@@ -13,6 +13,14 @@ export default function Home() {
   const [parallaxY, setParallaxY] = useState(0)
 
   useEffect(() => {
+    // Enable section scroll snapping on Home page
+    document.documentElement.classList.add("home-scroll-snap")
+    return () => {
+      document.documentElement.classList.remove("home-scroll-snap")
+    }
+  }, [])
+
+  useEffect(() => {
     const onScroll = () => {
       if (!heroRef.current) return
       if (heroRef.current.getBoundingClientRect().bottom > 0) {
@@ -28,7 +36,7 @@ export default function Home() {
       {/* ── Hero ── */}
       <section
         ref={heroRef}
-        className="relative h-screen overflow-hidden flex flex-col bg-[#1a1917]"
+        className="relative h-screen overflow-hidden flex flex-col bg-[#1a1917] snap-start"
       >
         {/* Image set to cover so it fills the screen completely */}
         <div
@@ -81,22 +89,37 @@ export default function Home() {
         </div>
 
         {/* Scroll cue */}
-        <div className="relative z-10 flex flex-col items-center pb-10 gap-2">
-          <span className="inline-block text-[#e9e6df]/60 text-[10px] tracking-[0.45em] uppercase font-sans translate-y-14">
-            Scroll
-          </span>
-          <div className="w-px h-8 bg-transparent" />
+        <div className="relative z-10 flex flex-col items-center pb-8 gap-2">
+          <a
+            href="#about"
+            onClick={(e) => {
+              e.preventDefault()
+              document
+                .getElementById("about")
+                ?.scrollIntoView({ behavior: "smooth" })
+            }}
+            className="group cursor-pointer flex flex-col items-center gap-2 hover:opacity-100 transition-opacity"
+            aria-label="Scroll to about section"
+          >
+            <span className="inline-block text-[#e9e6df]/60 group-hover:text-[#e9e6df] text-[10px] tracking-[0.45em] uppercase font-sans transition-colors">
+              Scroll
+            </span>
+            <div className="w-px h-6 bg-white/20 group-hover:bg-[#9c6a46] transition-colors" />
+          </a>
         </div>
       </section>
 
-      {/* Decorative Divider */}
-      <div className="w-full flex justify-center bg-[#1a1917] relative z-20">
-        <div className="w-full max-w-[1400px] h-[2px] bg-[#8f5a31]/50" />
-      </div>
-
       {/* ── About Section ── */}
-      <section className="bg-[#1a1917] text-[#e9e6df] py-20 lg:py-0">
-        <div className="max-w-[1400px] mx-auto w-full flex flex-col lg:flex-row min-h-screen">
+      <section
+        id="about"
+        className="bg-[#1a1917] text-[#e9e6df] py-16 lg:py-0 min-h-screen flex flex-col justify-center snap-start relative"
+      >
+        {/* Decorative Divider */}
+        <div className="w-full flex justify-center absolute top-0 left-0 right-0 z-20">
+          <div className="w-full max-w-[1400px] h-[2px] bg-[#8f5a31]/50" />
+        </div>
+
+        <div className="max-w-[1400px] mx-auto w-full flex flex-col lg:flex-row items-center">
           {/* Image Left */}
           <div className="w-full lg:w-[45%] p-6 lg:p-16 flex items-center justify-center">
             <motion.div
@@ -158,13 +181,16 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Decorative Divider */}
-      <div className="w-full flex justify-center bg-[#1a1917]">
-        <div className="w-full max-w-[1400px] h-[2px] bg-[#8f5a31]/50" />
-      </div>
-
       {/* ── Selected Works Section ── */}
-      <section className="bg-[#141311] text-[#e9e6df] py-20 lg:py-0 min-h-screen flex flex-col justify-center">
+      <section
+        id="featured-projects"
+        className="bg-[#141311] text-[#e9e6df] py-16 lg:py-0 min-h-screen flex flex-col justify-center snap-start relative"
+      >
+        {/* Decorative Divider */}
+        <div className="w-full flex justify-center absolute top-0 left-0 right-0 z-20">
+          <div className="w-full max-w-[1400px] h-[2px] bg-[#8f5a31]/50" />
+        </div>
+
         <div className="max-w-[1400px] mx-auto w-full px-6 lg:px-16">
           {/* Section Header */}
           <div className="flex items-center justify-between mb-16">
@@ -268,7 +294,9 @@ export default function Home() {
         </div>
       </section>
 
-      <Footer />
+      <div className="snap-end">
+        <Footer />
+      </div>
     </div>
   )
 }

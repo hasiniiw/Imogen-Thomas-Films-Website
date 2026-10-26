@@ -19,6 +19,11 @@ body {
   color: #ffffff;
 }
 
+html.home-scroll-snap {
+  scroll-snap-type: y proximity;
+  scroll-behavior: smooth;
+}
+
 ::-webkit-scrollbar {
   width: 4px;
 }
