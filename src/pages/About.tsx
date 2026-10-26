@@ -288,8 +288,7 @@ export default function About() {
         <div className="max-w-[1400px] mx-auto w-full px-6 lg:px-16">
           
           {/* Header */}
-          <div className="flex items-center gap-2.5 mb-6 pb-3 border-b border-white/10">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#9c6a46]" />
+          <div className="mb-6 pb-3 border-b border-white/10">
             <h2
               className="text-[#e9e6df] text-xs font-bold uppercase tracking-[0.25em]"
               style={{ fontFamily: 'var(--font-hero)' }}
