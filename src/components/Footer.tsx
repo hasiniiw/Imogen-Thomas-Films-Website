@@ -4,6 +4,13 @@ interface FooterProps {
   showAcknowledgment?: boolean
 }
 
+const FOOTER_LINKS = [
+  { label: 'Home', to: '/' },
+  { label: 'About', to: '/about' },
+  { label: 'Work', to: '/work' },
+  { label: 'Contact', to: '/contact' },
+]
+
 export default function Footer({ showAcknowledgment = true }: FooterProps) {
   if (!showAcknowledgment) {
     return (
@@ -16,24 +23,15 @@ export default function Footer({ showAcknowledgment = true }: FooterProps) {
 
           {/* Right: Quick Links */}
           <div className="flex items-center gap-5 sm:gap-6 text-[10px] md:text-[11px] tracking-[0.2em] uppercase font-sans text-white/80">
-            <Link
-              to="/work"
-              className="hover:text-white transition-colors pb-0.5 border-b border-transparent hover:border-white/40"
-            >
-              Work
-            </Link>
-            <Link
-              to="/about"
-              className="hover:text-white transition-colors pb-0.5 border-b border-transparent hover:border-white/40"
-            >
-              About
-            </Link>
-            <Link
-              to="/contact"
-              className="hover:text-white transition-colors pb-0.5 border-b border-transparent hover:border-white/40"
-            >
-              Contact
-            </Link>
+            {FOOTER_LINKS.map(({ label, to }) => (
+              <Link
+                key={to}
+                to={to}
+                className="hover:text-white transition-colors pb-0.5 border-b border-transparent hover:border-white/40"
+              >
+                {label}
+              </Link>
+            ))}
           </div>
         </div>
       </footer>
@@ -60,24 +58,15 @@ export default function Footer({ showAcknowledgment = true }: FooterProps) {
 
           {/* Right: Quick Links */}
           <div className="flex items-center gap-5 sm:gap-6 text-[10px] md:text-[11px] tracking-[0.2em] uppercase font-sans text-white/80">
-            <Link
-              to="/work"
-              className="hover:text-white transition-colors pb-0.5 border-b border-transparent hover:border-white/40"
-            >
-              Work
-            </Link>
-            <Link
-              to="/about"
-              className="hover:text-white transition-colors pb-0.5 border-b border-transparent hover:border-white/40"
-            >
-              About
-            </Link>
-            <Link
-              to="/contact"
-              className="hover:text-white transition-colors pb-0.5 border-b border-transparent hover:border-white/40"
-            >
-              Contact
-            </Link>
+            {FOOTER_LINKS.map(({ label, to }) => (
+              <Link
+                key={to}
+                to={to}
+                className="hover:text-white transition-colors pb-0.5 border-b border-transparent hover:border-white/40"
+              >
+                {label}
+              </Link>
+            ))}
           </div>
         </div>
       </div>

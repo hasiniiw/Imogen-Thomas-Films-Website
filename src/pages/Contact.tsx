@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { motion } from "framer-motion"
+import { Link } from "react-router-dom"
 import Nav from "../components/Nav"
 import contactPortrait from "../imports/contact-portrait.jpg"
 
@@ -152,6 +153,20 @@ export default function Contact() {
         className="absolute bottom-0 left-0 w-full bg-[#8f5a31] py-2 md:py-3 px-6 md:px-12 flex justify-between items-center text-[8px] md:text-[10px] tracking-[0.2em] uppercase text-white/90 z-50"
       >
         <span>© 2026 Imogen Thomas</span>
+        <div className="flex items-center gap-4 sm:gap-6 text-white/80">
+          <Link to="/" className="hover:text-white transition-colors">
+            Home
+          </Link>
+          <Link to="/about" className="hover:text-white transition-colors">
+            About
+          </Link>
+          <Link to="/work" className="hover:text-white transition-colors">
+            Work
+          </Link>
+          <Link to="/contact" className="hover:text-white transition-colors">
+            Contact
+          </Link>
+        </div>
       </motion.div>
     </div>
   )
