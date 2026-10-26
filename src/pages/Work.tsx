@@ -88,21 +88,7 @@ export default function Work() {
               Projects
             </motion.h1>
 
-            <motion.a
-              href="#films"
-              onClick={(e) => {
-                e.preventDefault()
-                document
-                  .getElementById("films")
-                  ?.scrollIntoView({ behavior: "smooth" })
-              }}
-              initial={{ opacity: 0, y: 15 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-              className="mt-4 md:mt-5 inline-block text-[#9c6a46] hover:text-[#b87d53] transition-colors duration-300 text-[10px] md:text-[11px] tracking-[0.3em] uppercase font-sans font-medium cursor-pointer"
-            >
-              Scroll to view films
-            </motion.a>
+
           </div>
 
           {/* Divider Line */}
