@@ -39,7 +39,7 @@ export default function Footer({ showAcknowledgment = true }: FooterProps) {
   }
 
   return (
-    <footer className="bg-[#8f5a31] pt-14 md:pt-20 pb-8 md:pb-12 px-6 lg:px-16 text-white">
+    <footer className="bg-[#8f5a31] pt-10 md:pt-14 pb-8 md:pb-12 px-6 lg:px-16 text-white">
       <div className="max-w-[1400px] mx-auto w-full flex flex-col gap-10 md:gap-12">
         {/* Acknowledgment of Country */}
         <div className="max-w-[640px]">
