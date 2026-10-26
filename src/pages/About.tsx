@@ -294,7 +294,7 @@ export default function About() {
               className="text-[#e9e6df] text-xs font-bold uppercase tracking-[0.25em]"
               style={{ fontFamily: 'var(--font-hero)' }}
             >
-              Awards & Recognition
+              Awards
             </h2>
           </div>
 
