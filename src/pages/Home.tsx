@@ -82,7 +82,7 @@ export default function Home() {
               style={{ fontFamily: "var(--font-sans)" }}
             >
               Writer{" "}
-              <span className="mx-3 text-[#c99138] font-light">|</span>{" "}
+              <span className="mx-3 text-white font-light">|</span>{" "}
               Director
             </h2>
           </motion.div>
