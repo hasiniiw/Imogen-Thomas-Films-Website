@@ -1,28 +1,6 @@
 import FilmDetailShell from "./FilmDetailShell"
 import IMAGE from "../imports/apy-ranger-new.jpg"
 
-function FestivalBadge({ lines }: { lines: string[] }) {
-  return (
-    <div className="border border-[#d8d4cb] rounded-full w-32 h-32 flex flex-col items-center justify-center text-center px-3">
-      {lines.map((l, i) => (
-        <p
-          key={i}
-          className={`text-[#2a2927] font-display font-bold uppercase leading-tight ${
-            i === 0
-              ? "text-[8px] tracking-widest"
-              : i === lines.length - 1
-                ? "text-[8px] tracking-wider"
-                : "text-[10px]"
-          }`}
-          style={{ fontFamily: "var(--font-display)" }}
-        >
-          {l}
-        </p>
-      ))}
-    </div>
-  )
-}
-
 export default function ApyRangerVisit() {
   return (
     <FilmDetailShell
@@ -56,27 +34,6 @@ export default function ApyRangerVisit() {
             "Anangu Pitjantjatjara Yankunytjatjara and the Brungle Tumut Local Aboriginal Land Council",
         },
       ]}
-      festivalBadges={
-        <>
-          <FestivalBadge
-            lines={[
-              "Heart of Gold",
-              "International Short",
-              "Film Festival",
-              "Official Selection",
-              "— 2025 —",
-            ]}
-          />
-          <FestivalBadge
-            lines={[
-              "Official Selection",
-              "Canberra Short",
-              "Film Festival",
-              "2025",
-            ]}
-          />
-        </>
-      }
     />
   )
 }
