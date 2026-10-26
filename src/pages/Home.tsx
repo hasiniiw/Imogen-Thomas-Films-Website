@@ -142,7 +142,7 @@ export default function Home() {
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
+              viewport={{ once: false, amount: 0.3 }}
               transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
               className="max-w-xl"
             >
@@ -195,26 +195,38 @@ export default function Home() {
           {/* Section Header */}
           <div className="flex items-center justify-between mb-16">
             <div className="flex flex-col gap-4">
-              <h2
+              <motion.h2
+                initial={{ opacity: 0, y: 45 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: false, amount: 0.3 }}
+                transition={{ duration: 0.9, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
                 className="text-3xl md:text-5xl font-bold uppercase tracking-tight"
                 style={{ fontFamily: "var(--font-hero)" }}
               >
                 Featured Projects
-              </h2>
+              </motion.h2>
             </div>
 
-            <Link
-              to="/work"
-              onClick={() => {
-                document.documentElement.classList.remove("home-scroll-snap")
-                window.scrollTo({ top: 0, left: 0, behavior: "instant" })
-              }}
-              className="group relative hidden md:inline-block text-[#e9e6df] text-[10px] tracking-[0.3em] uppercase font-sans hover:text-[#c99138] transition-colors font-medium pb-1"
+            <motion.div
+              initial={{ opacity: 0, y: 25 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false, amount: 0.3 }}
+              transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
+              className="hidden md:inline-block"
             >
-              View All Projects
-              <span className="absolute left-0 bottom-0 w-full h-px bg-[#e9e6df]/30" />
-              <span className="absolute left-0 bottom-0 w-full h-px bg-[#c99138] scale-x-0 origin-right transition-transform duration-300 ease-out group-hover:scale-x-100 group-hover:origin-left" />
-            </Link>
+              <Link
+                to="/work"
+                onClick={() => {
+                  document.documentElement.classList.remove("home-scroll-snap")
+                  window.scrollTo({ top: 0, left: 0, behavior: "instant" })
+                }}
+                className="group relative inline-block text-[#e9e6df] text-[10px] tracking-[0.3em] uppercase font-sans hover:text-[#c99138] transition-colors font-medium pb-1"
+              >
+                View All Projects
+                <span className="absolute left-0 bottom-0 w-full h-px bg-[#e9e6df]/30" />
+                <span className="absolute left-0 bottom-0 w-full h-px bg-[#c99138] scale-x-0 origin-right transition-transform duration-300 ease-out group-hover:scale-x-100 group-hover:origin-left" />
+              </Link>
+            </motion.div>
           </div>
 
           {/* Grid */}
