@@ -9,12 +9,10 @@ export default function Footer({ showAcknowledgment = true }: FooterProps) {
     return (
       <footer className="bg-[#8f5a31] pt-16 md:pt-24 pb-8 md:pb-10 px-6 lg:px-16 text-white">
         <div className="max-w-[1400px] mx-auto w-full flex flex-col md:flex-row items-center justify-between gap-5 md:gap-8 text-center md:text-left">
-          {/* Left: Copyright and Role Info */}
-          <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 text-[10px] md:text-[11px] tracking-[0.22em] uppercase font-sans text-white/90">
-            <span className="font-medium">© 2026 Imogen Thomas</span>
-            <span className="hidden sm:inline text-white/40">•</span>
-            <span className="text-white/70">Director, Screenwriter & Filmmaker</span>
-          </div>
+          {/* Left: Copyright */}
+          <span className="font-medium text-[10px] md:text-[11px] tracking-[0.22em] uppercase font-sans text-white/95">
+            © 2026 Imogen Thomas
+          </span>
 
           {/* Right: Quick Links */}
           <div className="flex items-center gap-5 sm:gap-6 text-[10px] md:text-[11px] tracking-[0.2em] uppercase font-sans text-white/80">

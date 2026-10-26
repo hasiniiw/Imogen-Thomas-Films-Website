@@ -152,9 +152,6 @@ export default function Contact() {
         className="absolute bottom-0 left-0 w-full bg-[#8f5a31] py-2 md:py-3 px-6 md:px-12 flex justify-between items-center text-[8px] md:text-[10px] tracking-[0.2em] uppercase text-white/90 z-50"
       >
         <span>© 2026 Imogen Thomas</span>
-        <span className="hidden sm:block">
-          Director, Screenwriter & Filmmaker
-        </span>
       </motion.div>
     </div>
   )
