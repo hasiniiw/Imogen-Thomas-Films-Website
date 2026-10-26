@@ -1,5 +1,6 @@
 import { motion } from "framer-motion"
-import { Link } from "react-router-dom"
+import { Link, useNavigationType } from "react-router-dom"
+import { useLayoutEffect } from "react"
 import Nav from "../components/Nav"
 import Footer from "../components/Footer"
 import emuRunnerImg from "../imports/emu-runner-work-2.jpg"
@@ -53,6 +54,15 @@ const films = [
 ]
 
 export default function Work() {
+  const navType = useNavigationType()
+
+  useLayoutEffect(() => {
+    if (navType !== "POP") {
+      document.documentElement.classList.remove("home-scroll-snap")
+      window.scrollTo({ top: 0, left: 0, behavior: "instant" })
+    }
+  }, [navType])
+
   return (
     <div className="bg-[#1a1917] text-[#e9e6df] min-h-screen flex flex-col font-sans">
       {/* Hero Section */}

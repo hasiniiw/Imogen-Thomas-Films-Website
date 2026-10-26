@@ -5,7 +5,7 @@ import {
   useLocation,
   useNavigationType,
 } from "react-router-dom"
-import { useEffect } from "react"
+import { useLayoutEffect } from "react"
 import Home from "./pages/Home"
 import About from "./pages/About"
 import Work from "./pages/Work"
@@ -20,10 +20,11 @@ function ScrollToTop() {
   const { pathname } = useLocation()
   const navType = useNavigationType()
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     // Only scroll to top if we are pushing a new route, not popping (hitting back)
     if (navType !== "POP") {
-      window.scrollTo(0, 0)
+      document.documentElement.classList.remove("home-scroll-snap")
+      window.scrollTo({ top: 0, left: 0, behavior: "instant" })
     }
   }, [pathname, navType])
 
