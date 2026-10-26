@@ -188,7 +188,7 @@ export default function FilmDetailShell({
                   <div className="w-8 h-px bg-[#9c6a46]/40"></div>
                   <span>The Film</span>
                 </div>
-                <div className="text-lg md:text-xl lg:text-2xl font-sans font-light leading-[1.8] text-[#e9e6df]/90 space-y-8">
+                <div className="text-lg md:text-xl font-sans font-light leading-[1.8] text-[#e9e6df]/90 space-y-6">
                   {description}
                 </div>
 
