@@ -17,7 +17,7 @@ interface Detail {
 
 interface Props {
   title: string
-  category: string
+  category?: string
   heroImage: string
   synopsis: string
   description: ReactNode
@@ -99,10 +99,6 @@ export default function FilmDetailShell({
               animate={{ opacity: 1 }}
               transition={{ duration: 1, delay: 0.1 }}
             >
-              <div className="flex items-center gap-4 mb-2 md:mb-4 text-[#9c6a46] text-[10px] md:text-xs font-sans tracking-[0.2em] uppercase">
-                <span>{category}</span>
-                <div className="w-12 h-px bg-[#9c6a46]/40"></div>
-              </div>
               <h1
                 className="text-[#e9e6df] text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[0.95]"
                 style={{ fontFamily: "var(--font-hero)" }}
