@@ -183,10 +183,8 @@ export default function FilmDetailShell({
                 transition={{ duration: 1, delay: 0.3 }}
                 className="lg:col-span-7"
               >
-                <div className="flex items-center gap-4 mb-8 text-[#9c6a46] text-[10px] uppercase tracking-[0.2em]">
-                  <span>01</span>
-                  <div className="w-8 h-px bg-[#9c6a46]/40"></div>
-                  <span>The Film</span>
+                <div className="mb-8 text-[#9c6a46] text-xs md:text-sm font-medium uppercase tracking-[0.2em]">
+                  <span>Synopsis</span>
                 </div>
                 <div className="text-lg md:text-xl font-sans font-light leading-[1.8] text-[#e9e6df]/90 space-y-6">
                   {description}
@@ -231,9 +229,7 @@ export default function FilmDetailShell({
         {testimonials && testimonials.length > 0 && (
           <section className="px-6 lg:px-16 mt-20">
             <div className="max-w-[1000px] mx-auto border-t border-white/10 pt-16">
-              <div className="flex items-center gap-4 mb-10 text-[#9c6a46] text-[10px] uppercase tracking-[0.2em]">
-                <span>02</span>
-                <div className="w-8 h-px bg-[#9c6a46]/40"></div>
+              <div className="mb-10 text-[#9c6a46] text-xs md:text-sm font-medium uppercase tracking-[0.2em]">
                 <span>Testimonials</span>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
