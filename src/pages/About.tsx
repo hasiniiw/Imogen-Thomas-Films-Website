@@ -366,7 +366,7 @@ export default function About() {
         </div>
       </motion.section>
 
-      <Footer />
+      <Footer showAcknowledgment={false} />
     </div>
   )
 }

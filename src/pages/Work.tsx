@@ -132,7 +132,7 @@ export default function Work() {
         </div>
       </section>
 
-      <Footer />
+      <Footer showAcknowledgment={false} />
     </div>
   )
 }
