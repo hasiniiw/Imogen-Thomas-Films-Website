@@ -50,8 +50,8 @@ export default function Contact() {
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
             className="w-full max-w-[600px] flex flex-col"
           >
-            <div className="flex items-center gap-4 mb-4 text-[#9c6a46] text-[10px] md:text-xs font-sans tracking-[0.2em] uppercase">
-              <div className="w-8 md:w-12 h-px bg-[#9c6a46]/40"></div>
+            <div className="flex items-center gap-4 mb-4 text-[#c99138] text-[10px] md:text-xs font-sans tracking-[0.2em] uppercase">
+              <div className="w-8 md:w-12 h-px bg-[#c99138]/40"></div>
               <span>Let's tell a story</span>
             </div>
 
@@ -78,7 +78,7 @@ export default function Contact() {
                       required
                       className="w-full bg-transparent border-b border-white/20 text-[#e9e6df] text-sm font-sans font-light px-0 py-2 placeholder-white/40 focus:outline-none transition-colors peer"
                     />
-                    <div className="absolute bottom-0 left-0 w-0 h-px bg-[#9c6a46] transition-all duration-300 peer-focus:w-full"></div>
+                    <div className="absolute bottom-0 left-0 w-0 h-px bg-[#c99138] transition-all duration-300 peer-focus:w-full"></div>
                   </div>
                   <div className="flex-1 relative group">
                     <input
@@ -90,7 +90,7 @@ export default function Contact() {
                       required
                       className="w-full bg-transparent border-b border-white/20 text-[#e9e6df] text-sm font-sans font-light px-0 py-2 placeholder-white/40 focus:outline-none transition-colors peer"
                     />
-                    <div className="absolute bottom-0 left-0 w-0 h-px bg-[#9c6a46] transition-all duration-300 peer-focus:w-full"></div>
+                    <div className="absolute bottom-0 left-0 w-0 h-px bg-[#c99138] transition-all duration-300 peer-focus:w-full"></div>
                   </div>
                 </div>
 
@@ -104,7 +104,7 @@ export default function Contact() {
                     required
                     className="w-full bg-transparent border-b border-white/20 text-[#e9e6df] text-sm font-sans font-light px-0 py-2 placeholder-white/40 focus:outline-none transition-colors peer"
                   />
-                  <div className="absolute bottom-0 left-0 w-0 h-px bg-[#9c6a46] transition-all duration-300 peer-focus:w-full"></div>
+                  <div className="absolute bottom-0 left-0 w-0 h-px bg-[#c99138] transition-all duration-300 peer-focus:w-full"></div>
                 </div>
 
                 <div className="relative group">
@@ -116,7 +116,7 @@ export default function Contact() {
                     onChange={handleChange}
                     className="w-full bg-transparent border-b border-white/20 text-[#e9e6df] text-sm font-sans font-light px-0 py-2 placeholder-white/40 focus:outline-none transition-colors peer"
                   />
-                  <div className="absolute bottom-0 left-0 w-0 h-px bg-[#9c6a46] transition-all duration-300 peer-focus:w-full"></div>
+                  <div className="absolute bottom-0 left-0 w-0 h-px bg-[#c99138] transition-all duration-300 peer-focus:w-full"></div>
                 </div>
 
                 <div className="relative group mt-2">
@@ -129,12 +129,12 @@ export default function Contact() {
                     rows={3}
                     className="w-full bg-transparent border-b border-white/20 text-[#e9e6df] text-sm font-sans font-light px-0 py-2 placeholder-white/40 focus:outline-none resize-none transition-colors peer"
                   />
-                  <div className="absolute bottom-0 left-0 w-0 h-px bg-[#9c6a46] transition-all duration-300 peer-focus:w-full"></div>
+                  <div className="absolute bottom-0 left-0 w-0 h-px bg-[#c99138] transition-all duration-300 peer-focus:w-full"></div>
                 </div>
 
                 <button
                   type="submit"
-                  className="mt-6 w-full md:w-auto min-w-[200px] border border-white/20 text-[#e9e6df] text-[11px] tracking-[0.25em] uppercase font-sans font-medium px-8 py-4 hover:bg-[#9c6a46] hover:border-[#9c6a46] hover:text-white transition-all duration-300 self-start"
+                  className="mt-6 w-full md:w-auto min-w-[200px] border border-white/20 text-[#e9e6df] text-[11px] tracking-[0.25em] uppercase font-sans font-medium px-8 py-4 hover:bg-[#c99138] hover:border-[#c99138] hover:text-white transition-all duration-300 self-start"
                 >
                   Send Message
                 </button>

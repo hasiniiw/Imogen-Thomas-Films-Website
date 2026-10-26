@@ -243,7 +243,7 @@ export default function About() {
                     <span
                       className={`h-1 rounded-full transition-all duration-300 block ${
                         i === currentIdx
-                          ? 'bg-[#9c6a46] w-3.5'
+                          ? 'bg-[#c99138] w-3.5'
                           : 'bg-white/20 group-hover/dot:bg-white/50 w-1'
                       }`}
                     />
@@ -256,14 +256,14 @@ export default function About() {
               <h3 className="text-[#e9e6df] uppercase tracking-widest text-[11px] font-bold mb-1">Education</h3>
               <ul className="text-[#e9e6df]/90 text-[14px] space-y-4 font-normal">
                 <li className="flex gap-4">
-                  <span className="text-[#9c6a46] shrink-0 mt-0.5">—</span>
+                  <span className="text-[#c99138] shrink-0 mt-0.5">—</span>
                   <div className="space-y-0.5">
                     <p className="font-medium text-white text-[14px]">Masters of Fine Arts</p>
                     <p className="text-white/60 text-[13px]">New York University, Tisch School of Arts</p>
                   </div>
                 </li>
                 <li className="flex gap-4">
-                  <span className="text-[#9c6a46] shrink-0 mt-0.5">—</span>
+                  <span className="text-[#c99138] shrink-0 mt-0.5">—</span>
                   <div className="space-y-0.5">
                     <p className="font-medium text-white text-[14px]">Bachelor of Arts Honours Degree (First Class) Drama</p>
                     <p className="text-white/60 text-[13px]">Flinders University, SA</p>
@@ -311,12 +311,12 @@ export default function About() {
                     className="group/link inline-flex items-center gap-1.5 self-start"
                   >
                     <h3
-                      className="text-[#e9e6df] text-base md:text-lg font-bold tracking-tight group-hover/link:text-white transition-colors"
+                      className="text-[#e9e6df] text-base md:text-lg font-bold tracking-tight group-hover/link:text-[#c99138] transition-colors"
                       style={{ fontFamily: 'var(--font-hero)' }}
                     >
                       {group.film}
                     </h3>
-                    <span className="text-white/30 text-xs transition-transform group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 group-hover/link:text-[#9c6a46]">
+                    <span className="text-white/30 text-xs transition-transform group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 group-hover/link:text-[#c99138]">
                       ↗
                     </span>
                   </Link>
@@ -345,8 +345,8 @@ export default function About() {
 
                       <div className="shrink-0 pt-0.5 sm:pt-0">
                         {item.status === 'Winner' ? (
-                          <span className="inline-flex items-center gap-1.5 text-[9.5px] tracking-[0.18em] uppercase font-semibold text-[#e6b17e]">
-                            <span className="w-1.5 h-1.5 rounded-full bg-[#e6b17e]" />
+                          <span className="inline-flex items-center gap-1.5 text-[9.5px] tracking-[0.18em] uppercase font-semibold text-[#c99138]">
+                            <span className="w-1.5 h-1.5 rounded-full bg-[#c99138]" />
                             Winner
                           </span>
                         ) : (

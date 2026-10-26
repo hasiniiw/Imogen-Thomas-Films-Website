@@ -145,17 +145,17 @@ function FilmCard({ film }: { film: typeof films[0] }) {
           className="inline-block relative self-start"
         >
           <h2
-            className="text-[#e9e6df] font-normal tracking-tight leading-none mb-1 text-3xl md:text-4xl lg:text-5xl"
+            className="text-[#e9e6df] group-hover:text-[#c99138] transition-colors duration-300 font-normal tracking-tight leading-none mb-1 text-3xl md:text-4xl lg:text-5xl"
             style={{ fontFamily: "var(--font-hero)" }}
           >
             {film.title}
           </h2>
           <span className="absolute -bottom-2 md:-bottom-3 left-0 w-full h-px bg-white/20 scale-x-100 origin-left transition-transform duration-500 group-hover:scale-x-0" />
-          <span className="absolute -bottom-2 md:-bottom-3 left-0 w-full h-px bg-[#9c6a46] scale-x-0 origin-right transition-transform duration-500 group-hover:scale-x-100 group-hover:origin-left" />
+          <span className="absolute -bottom-2 md:-bottom-3 left-0 w-full h-px bg-[#c99138] scale-x-0 origin-right transition-transform duration-500 group-hover:scale-x-100 group-hover:origin-left" />
         </Link>
 
         <div className="flex items-center gap-4 text-[9px] md:text-[10px] tracking-[0.3em] uppercase text-white/40 font-medium mb-1">
-          <span>{film.genre} FILM</span>
+          <span className="group-hover:text-[#c99138]/90 transition-colors duration-300">{film.genre} FILM</span>
           <div className="w-6 h-px bg-white/20"></div>
           <span>{film.year}</span>
         </div>

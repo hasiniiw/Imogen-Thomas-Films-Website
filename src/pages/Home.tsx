@@ -82,7 +82,7 @@ export default function Home() {
               style={{ fontFamily: "var(--font-sans)" }}
             >
               Writer{" "}
-              <span className="mx-3 text-[#e9e6df]/60 font-light">|</span>{" "}
+              <span className="mx-3 text-[#c99138] font-light">|</span>{" "}
               Director
             </h2>
           </motion.div>
@@ -104,7 +104,7 @@ export default function Home() {
             <span className="inline-block text-[#e9e6df]/60 group-hover:text-[#e9e6df] text-[10px] tracking-[0.45em] uppercase font-sans transition-colors">
               Scroll
             </span>
-            <div className="w-px h-6 bg-white/20 group-hover:bg-[#9c6a46] transition-colors" />
+            <div className="w-px h-6 bg-white/20 group-hover:bg-[#c99138] transition-colors" />
           </a>
         </div>
       </section>
@@ -239,7 +239,7 @@ export default function Home() {
                     >
                       Emu Runner
                     </h3>
-                    <p className="text-white/80 text-xs tracking-[0.2em] uppercase font-sans">
+                    <p className="text-[#c99138] text-xs tracking-[0.2em] uppercase font-sans font-medium">
                       Feature Film
                     </p>
                   </div>
@@ -271,7 +271,7 @@ export default function Home() {
                     >
                       Quiet Hour
                     </h3>
-                    <p className="text-white/80 text-xs tracking-[0.2em] uppercase font-sans">
+                    <p className="text-[#c99138] text-xs tracking-[0.2em] uppercase font-sans font-medium">
                       Film
                     </p>
                   </div>

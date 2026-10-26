@@ -27,7 +27,7 @@ export default function Footer({ showAcknowledgment = true }: FooterProps) {
               <Link
                 key={to}
                 to={to}
-                className="hover:text-white transition-colors pb-0.5 border-b border-transparent hover:border-white/40"
+                className="hover:text-[#c99138] transition-colors pb-0.5 border-b border-transparent hover:border-[#c99138]"
               >
                 {label}
               </Link>
@@ -62,7 +62,7 @@ export default function Footer({ showAcknowledgment = true }: FooterProps) {
               <Link
                 key={to}
                 to={to}
-                className="hover:text-white transition-colors pb-0.5 border-b border-transparent hover:border-white/40"
+                className="hover:text-[#c99138] transition-colors pb-0.5 border-b border-transparent hover:border-[#c99138]"
               >
                 {label}
               </Link>

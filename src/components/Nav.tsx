@@ -42,7 +42,7 @@ export default function Nav({ theme = "dark" }: { theme?: "light" | "dark" }) {
               : "text-white/70 hover:text-white"
 
           const underlineColor = isLight ? "bg-[#1a1917]/30" : "bg-white/30"
-          const hoverUnderlineColor = isLight ? "bg-[#9c6a46]" : "bg-[#c99138]"
+          const hoverUnderlineColor = "bg-[#c99138]"
 
           return (
             <Link

@@ -183,7 +183,7 @@ export default function FilmDetailShell({
                 transition={{ duration: 1, delay: 0.3 }}
                 className="lg:col-span-7"
               >
-                <div className="mb-8 text-[#9c6a46] text-xs md:text-sm font-medium uppercase tracking-[0.2em]">
+                <div className="mb-8 text-[#c99138] text-xs md:text-sm font-medium uppercase tracking-[0.2em]">
                   <span>Synopsis</span>
                 </div>
                 <div className="text-lg md:text-xl font-sans font-light leading-[1.8] text-[#e9e6df]/90 space-y-6">
@@ -229,7 +229,7 @@ export default function FilmDetailShell({
         {testimonials && testimonials.length > 0 && (
           <section className="px-6 lg:px-16 mt-20">
             <div className="max-w-[1000px] mx-auto border-t border-white/10 pt-16">
-              <div className="mb-10 text-[#9c6a46] text-xs md:text-sm font-medium uppercase tracking-[0.2em]">
+              <div className="mb-10 text-[#c99138] text-xs md:text-sm font-medium uppercase tracking-[0.2em]">
                 <span>Testimonials</span>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
@@ -256,7 +256,7 @@ export default function FilmDetailShell({
                       <div className="text-[10px] font-medium tracking-widest text-[#e9e6df] uppercase mb-1">
                         {t.author}
                       </div>
-                      <div className="text-[9px] text-[#9c6a46] tracking-widest uppercase leading-snug">
+                      <div className="text-[9px] text-[#c99138] tracking-widest uppercase leading-snug">
                         {t.role}
                       </div>
                     </div>
