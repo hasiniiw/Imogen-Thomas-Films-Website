@@ -1,5 +1,5 @@
-import FilmDetailShell from './FilmDetailShell'
-import IMAGE from '../imports/quiet-hour-new.jpg'
+import FilmDetailShell from "./FilmDetailShell"
+import IMAGE from "../imports/quiet-hour-new.jpg"
 
 export default function QuietHour() {
   return (
@@ -13,16 +13,20 @@ export default function QuietHour() {
       description={
         <>
           <p>
-            An impending apartment move strains a mother and daughter's relationship as they pack up their lives with the help of a local teenage boy. The quiet observation of the packing process brings long-held tensions to the surface, exploring the fragile dynamic between mother and daughter in a time of transition.
+            An impending apartment move strains a mother and daughter's
+            relationship as they pack up their lives with the help of a local
+            teenage boy. The quiet observation of the packing process brings
+            long-held tensions to the surface, exploring the fragile dynamic
+            between mother and daughter in a time of transition.
           </p>
         </>
       }
       details={[
-        { label: 'Year', value: '2001' },
-        { label: 'Writer / Director', value: 'Imogen Thomas' },
-        { label: 'Producers', value: 'Teona Mitevska' },
-        { label: 'Co-producer', value: 'Manisha Archarya' },
-        { label: 'Length / Format', value: '12 minutes 16mm' },
+        { label: "Year", value: "2001" },
+        { label: "Writer / Director", value: "Imogen Thomas" },
+        { label: "Producers", value: "Teona Mitevska" },
+        { label: "Co-producer", value: "Manisha Archarya" },
+        { label: "Length / Format", value: "12 minutes 16mm" },
       ]}
     />
   )

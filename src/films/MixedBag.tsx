@@ -1,5 +1,5 @@
-import FilmDetailShell from './FilmDetailShell'
-import IMAGE from '../imports/mixed-bag-new.jpg'
+import FilmDetailShell from "./FilmDetailShell"
+import IMAGE from "../imports/mixed-bag-new.jpg"
 
 export default function MixedBag() {
   return (
@@ -13,17 +13,21 @@ export default function MixedBag() {
       description={
         <>
           <p>
-            Travelling from the city, a woman finds herself having to stop in a remote country town only to be confronted by her own racial prejudices. As she interacts with the local community, her preconceived notions are challenged in subtle but profound ways, leading to an unexpected journey of self-reflection.
+            Travelling from the city, a woman finds herself having to stop in a
+            remote country town only to be confronted by her own racial
+            prejudices. As she interacts with the local community, her
+            preconceived notions are challenged in subtle but profound ways,
+            leading to an unexpected journey of self-reflection.
           </p>
         </>
       }
       details={[
-        { label: 'Year', value: '2008' },
-        { label: 'Writer / Director', value: 'Imogen Thomas' },
-        { label: 'Executive Producer', value: 'Victor Evatt & Anna Howard' },
-        { label: 'First Nations Script', value: 'Frayne Barker' },
-        { label: 'Starring', value: 'Arna Maria Winchester & Brooke Rose' },
-        { label: 'Length / Format', value: '15 minutes HD' },
+        { label: "Year", value: "2008" },
+        { label: "Writer / Director", value: "Imogen Thomas" },
+        { label: "Executive Producer", value: "Victor Evatt & Anna Howard" },
+        { label: "First Nations Script", value: "Frayne Barker" },
+        { label: "Starring", value: "Arna Maria Winchester & Brooke Rose" },
+        { label: "Length / Format", value: "15 minutes HD" },
       ]}
     />
   )

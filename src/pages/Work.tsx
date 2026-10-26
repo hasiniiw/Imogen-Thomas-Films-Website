@@ -1,59 +1,58 @@
-import { motion } from 'framer-motion'
-import { Link } from 'react-router-dom'
-import Nav from '../components/Nav'
-import Footer from '../components/Footer'
-import emuRunnerImg from '../imports/emu-runner-work-2.jpg'
-import quietHourImg from '../imports/quiet-hour-new.jpg'
-import noSleepAmericaImg from '../imports/no-sleep-america-new.jpg'
-import mixedBagImg from '../imports/mixed-bag-new.jpg'
-import apyRangerImg from '../imports/apy-ranger-new.jpg'
-import workHeroImg from '../imports/work-hero.jpg'
+import { motion } from "framer-motion"
+import { Link } from "react-router-dom"
+import Nav from "../components/Nav"
+import Footer from "../components/Footer"
+import emuRunnerImg from "../imports/emu-runner-work-2.jpg"
+import quietHourImg from "../imports/quiet-hour-new.jpg"
+import noSleepAmericaImg from "../imports/no-sleep-america-new.jpg"
+import mixedBagImg from "../imports/mixed-bag-new.jpg"
+import apyRangerImg from "../imports/apy-ranger-new.jpg"
+import workHeroImg from "../imports/work-hero.jpg"
 
 const films = [
   {
-    title: 'APY Ranger Visit',
-    to: '/work/apy-ranger-visit',
+    title: "APY Ranger Visit",
+    to: "/work/apy-ranger-visit",
     thumb: apyRangerImg,
-    alt: 'Gloved hands holding a small yellow and black frog',
-    genre: 'DOCUMENTARY',
-    year: '2025',
+    alt: "Gloved hands holding a small yellow and black frog",
+    genre: "DOCUMENTARY",
+    year: "2025",
   },
   {
-    title: 'Emu Runner',
-    to: '/work/emu-runner',
+    title: "Emu Runner",
+    to: "/work/emu-runner",
     thumb: emuRunnerImg,
-    alt: 'Emu in Australian outback',
-    genre: 'FEATURE',
-    year: '2018',
+    alt: "Emu in Australian outback",
+    genre: "FEATURE",
+    year: "2018",
   },
   {
-    title: 'Mixed Bag',
-    to: '/work/mixed-bag',
+    title: "Mixed Bag",
+    to: "/work/mixed-bag",
     thumb: mixedBagImg,
-    alt: 'Young girl and older woman sitting on grass',
-    genre: 'SHORT',
-    year: '2008',
+    alt: "Young girl and older woman sitting on grass",
+    genre: "SHORT",
+    year: "2008",
   },
   {
-    title: 'Quiet Hour',
-    to: '/work/quiet-hour',
+    title: "Quiet Hour",
+    to: "/work/quiet-hour",
     thumb: quietHourImg,
-    alt: 'Girl and boy standing on a rooftop',
-    genre: 'SHORT',
-    year: '2001',
+    alt: "Girl and boy standing on a rooftop",
+    genre: "SHORT",
+    year: "2001",
   },
   {
-    title: 'No Sleep America',
-    to: '/work/no-sleep-america',
+    title: "No Sleep America",
+    to: "/work/no-sleep-america",
     thumb: noSleepAmericaImg,
-    alt: 'Baker preparing dough',
-    genre: 'DOCUMENTARY',
-    year: '1999',
+    alt: "Baker preparing dough",
+    genre: "DOCUMENTARY",
+    year: "1999",
   },
 ]
 
 export default function Work() {
-
   return (
     <div className="bg-[#1a1917] text-[#e9e6df] min-h-screen flex flex-col font-sans">
       {/* Hero Section */}
@@ -76,27 +75,30 @@ export default function Work() {
         </div>
 
         <div className="max-w-[1400px] mx-auto w-full px-6 lg:px-16 flex-1 flex flex-col justify-center relative z-10 pt-14 md:pt-16 pb-4">
-          
           <div className="w-full flex flex-col items-start text-left mb-2 md:mb-3">
-            <motion.h1 
+            <motion.h1
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: 'easeOut' }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
               className="text-[#e9e6df] text-6xl md:text-7xl lg:text-[6.5rem] font-bold uppercase tracking-tight leading-[0.95] drop-shadow-lg"
-              style={{ fontFamily: 'var(--font-hero)' }}
+              style={{ fontFamily: "var(--font-hero)" }}
             >
-              Film<br/>Projects
+              Film
+              <br />
+              Projects
             </motion.h1>
 
             <motion.a
               href="#films"
               onClick={(e) => {
                 e.preventDefault()
-                document.getElementById('films')?.scrollIntoView({ behavior: 'smooth' })
+                document
+                  .getElementById("films")
+                  ?.scrollIntoView({ behavior: "smooth" })
               }}
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
+              transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
               className="mt-4 md:mt-5 inline-block text-[#9c6a46] hover:text-[#b87d53] transition-colors duration-300 text-[10px] md:text-[11px] tracking-[0.3em] uppercase font-sans font-medium cursor-pointer"
             >
               Scroll to view films
@@ -110,22 +112,24 @@ export default function Work() {
 
       {/* Main Content Area */}
       <section id="films" className="bg-[#1a1917] flex-1 pt-6 md:pt-8 pb-40">
-        
         {/* Film List */}
         <div className="max-w-[1400px] mx-auto w-full px-6 lg:px-16 grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-20">
           {films.map((film, index) => (
-            <motion.div 
-              key={film.to} 
+            <motion.div
+              key={film.to}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0 }}
-              transition={{ duration: 0.8, delay: (index % 2) * 0.1, ease: 'easeOut' }}
+              transition={{
+                duration: 0.8,
+                delay: (index % 2) * 0.1,
+                ease: "easeOut",
+              }}
             >
               <FilmCard film={film} />
             </motion.div>
           ))}
         </div>
-
       </section>
 
       <Footer />
@@ -133,29 +137,37 @@ export default function Work() {
   )
 }
 
-function FilmCard({ film }: { film: (typeof films)[0] }) {
+function FilmCard({ film }: { film: typeof films[0] }) {
   return (
     <div className="flex flex-col group">
-      <Link to={film.to} state={{ fromWork: true }} className="w-full overflow-hidden mb-6 block bg-[#141311]">
+      <Link
+        to={film.to}
+        state={{ fromWork: true }}
+        className="w-full overflow-hidden mb-6 block bg-[#141311]"
+      >
         <img
           src={film.thumb}
           alt={film.alt}
           className="w-full object-cover aspect-[4/3] md:aspect-[3/2] transition-transform duration-1000 group-hover:scale-[1.03]"
         />
       </Link>
-      
+
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 relative">
-        <Link to={film.to} state={{ fromWork: true }} className="inline-block relative self-start">
-          <h2 
+        <Link
+          to={film.to}
+          state={{ fromWork: true }}
+          className="inline-block relative self-start"
+        >
+          <h2
             className="text-[#e9e6df] font-normal tracking-tight leading-none mb-1 text-3xl md:text-4xl lg:text-5xl"
-            style={{ fontFamily: 'var(--font-hero)' }}
+            style={{ fontFamily: "var(--font-hero)" }}
           >
             {film.title}
           </h2>
           <span className="absolute -bottom-2 md:-bottom-3 left-0 w-full h-px bg-white/20 scale-x-100 origin-left transition-transform duration-500 group-hover:scale-x-0" />
           <span className="absolute -bottom-2 md:-bottom-3 left-0 w-full h-px bg-[#9c6a46] scale-x-0 origin-right transition-transform duration-500 group-hover:scale-x-100 group-hover:origin-left" />
         </Link>
-        
+
         <div className="flex items-center gap-4 text-[9px] md:text-[10px] tracking-[0.3em] uppercase text-white/40 font-medium mb-1">
           <span>{film.genre} FILM</span>
           <div className="w-6 h-px bg-white/20"></div>
