@@ -149,7 +149,7 @@ export default function About() {
         {/* Left Column: Biography */}
         <div className="w-full lg:w-[55%]">
 
-          <div className="text-[#e9e6df]/90 text-[13.5px] md:text-[15px] font-normal leading-[1.75] space-y-6 pr-0 lg:pr-12">
+          <div className="text-[#e9e6df]/90 text-[12.5px] md:text-[14px] font-normal leading-[1.75] space-y-6 pr-0 lg:pr-12">
             <motion.p
                initial={{ opacity: 0, y: 20 }}
                animate={{ opacity: 1, y: 0 }}
