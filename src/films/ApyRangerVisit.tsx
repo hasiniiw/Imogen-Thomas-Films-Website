@@ -7,11 +7,11 @@ export default function ApyRangerVisit() {
       title="APY Ranger Visit"
       category="05 — DOCUMENTARY"
       heroImage={IMAGE}
-      synopsis="A group of APY (Anangu Pitjantjatjara Yankunytjatjara) rangers, their co-ordinators and ecologists travel to the Snowy Mountains to observe the work being carried out on the critically endangered frog species of the region."
+      synopsis="A group of APY (Aṉangu Pitjantjatjara Yankunytjatjara) rangers, their co-ordinators and ecologists travel to the Snowy Mountains to observe the work being carried out on the critically endangered frog species of the region."
       description={
         <>
           <p>
-            A group of APY (Anangu Pitjantjatjara Yankunytjatjara) rangers,
+            A group of APY (Aṉangu Pitjantjatjara Yankunytjatjara) rangers,
             their co-ordinators and ecologists travel to the Snowy Mountains to
             observe the work being carried out on the critically endangered frog
             species of the region.
@@ -31,7 +31,7 @@ export default function ApyRangerVisit() {
         {
           label: "Partnership",
           value:
-            "Anangu Pitjantjatjara Yankunytjatjara and the Brungle Tumut Local Aboriginal Land Council",
+            "Aṉangu Pitjantjatjara Yankunytjatjara and the Brungle Tumut Local Aboriginal Land Council",
         },
       ]}
     />
