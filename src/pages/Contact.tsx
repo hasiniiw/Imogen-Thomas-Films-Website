@@ -50,8 +50,8 @@ export default function Contact() {
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
             className="w-full max-w-[600px] flex flex-col"
           >
-            <div className="flex items-center gap-4 mb-4 text-[#c99138] text-[10px] md:text-xs font-sans tracking-[0.2em] uppercase">
-              <div className="w-8 md:w-12 h-px bg-[#c99138]/40"></div>
+            <div className="hidden md:flex items-center gap-4 mb-4 text-[#c99138] text-xs font-sans tracking-[0.2em] uppercase">
+              <div className="w-12 h-px bg-[#c99138]/40"></div>
               <span>Let's tell a story</span>
             </div>
 
